@@ -1,2 +1,3 @@
-# chromice.github.io
-My Personal Site
+# My personal site
+
+Visit [goodmoaning.me](http://goodmoaning.me) to see it.
