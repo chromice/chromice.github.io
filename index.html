@@ -6,40 +6,61 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<link href="/assets/styles/main.css" rel="stylesheet">
-	<script src="/assets/scripts/main.js"></script>
-	<!--[if lt IE 9]><script src="/assets/scripts/html5shiv.js"></script><![endif]-->
+	<link href="http://microformats.org/profile/hcard" rel="profile">
+	<link href="/compiled/styles.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="/compiled/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-	<main id="about">
+	<main class="profile h-card vcard">
 		<header>
-			<a href="/"><img src="/assets/graphics/photo.jpg" alt="Anton Muraviev"></a>
-			<h1><span class="w">Hello there! My name is </span><strong>Anton Muraviev</strong></h1>
-			<h2><span class="w">I am a full-stack </span><strong>web developer and interaction designer</strong><span class="w"> from </span><em>Bristol, United Kingdom</em></h2>
+			<a class="u-url url" href="http://goodmoaning.me"><img class="u-photo photo" src="/assets/graphics/photo.jpg" alt="Anton Muraviev"></a>
+			<h1><span class="w">Hello there! My name is</span> <strong class="p-name fn">Anton Muraviev</strong></h1>
+			<h2 class="p-note note"><span class="w">I am a</span> <span class="p-role role">web developer and designer</span> <span class="p-adr adr">from <span class="p-locality locality">Bristol</span>, <span class="p-country-name country-name">United Kingdom</span></span></h2>
 		</header>
 		
 		<p>I&rsquo;ve been making things&hellip; happen&hellip; mostly on screens of various sizes since 2001: apps, websites, databases, video games &ndash; you name it, I probably have some experience in that area.</p>
 		
-		<aside>
+		<aside class="projects">
 			<h3>Client projects</h3>
 			
-			<ul>
-				<li><a href="http://martinboroson.com">Martin Boroson</a> (interaction and visual design; front-end and back-end development) &ndash; a personal website for an expert on meditation, coach and professional speaker.</li>
-				<li><a href="http://boxsteambrewery.com">Box Steam Brewery</a> (interaction design; front-end and back-end development) &ndash; a lower-budget e-commerce solution for a small brewery. Powered by Perch CMS and Snipcart shopping cart.</li>
-				<li><a href="http://aub.ac.uk">Arts University Bournemouth</a> (concept design; front-end and back-end development) &ndash; a gold award winner in the best website category at Heist Awards 2014.</li>
-			</ul>
+			<ul class="client"><!--
+				--><li><a href="http://aub.ac.uk">
+					<h4>aub.ac.uk</h4>
+					<img src="/assets/graphics/test-aub.png" alt="Arts University Bournemouth website">
+					<p>A gold award winner in the best university website category at Heist Awards 2014.</p>
+				</a></li><!--
+				--><li><a href="http://martinboroson.com">
+					<h4>martinboroson.com</h4>
+					<img src="/assets/graphics/test-boroson.png" alt="Martin Boroson's website">
+					<p>A personal website for a meditation expert, coach and professional speaker.</p>
+				</a></li><!--
+				--><li><a href="http://boxsteambrewery.com">
+					<h4>boxsteambrewery.com</h4>
+					<img src="/assets/graphics/test-box.png" alt="Box Steam Brewery website">
+					<p>A lower-budget e-commerce solution for a small brewery.</p>
+				</a></li><!--
+			--></ul>
 			
 			
 			<h3>Personal projects</h3>
 			
-			<ul>
-				<li><a href="//github.com/chromice/timelier.app">timelier.app</a> &ndash; a simple time tracking app I made using Backbone.js and MacGap.</li>
-				<li><a href="//github.com/chromice/order.less">order.less</a> &ndash; a versatile LESS library I use in front-end development to create complex layouts with strong typography.</li>
-				<li><a href="//github.com/chromice/ae">ae.php</a> &ndash; a lightweight drop-in PHP library that enables me to route requests, cache responses, validate forms, process images, access database, and profile and debug.</li>
-			</ul>
+			<ul class="personal"><!--
+				--><li><a href="//github.com/chromice/order.less">
+					<h4>order.less</h4>
+					<p>A versatile Less library for designing complex layouts in browser with column grids, baseline alignment, and strong typographic contrast.</p>
+				</a></li><!--
+				--><li><a href="//github.com/chromice/ae">
+					<h4>ae.php</h4>
+					<p>A minimal PHP library for requests routing, responses caching, forms validation, images processing, database access, and profiling and debugging.</p>
+				</a></li><!--
+				--><li><a href="//github.com/chromice/timelier.app">
+					<h4>timelier.app</h4>
+					<p>A simple time tracking app.</p>
+				</a></li><!--
+			--></ul>
 		</aside>
 		
-		<p>If you are thinking about hiring someone with my skills, looking for a reliable collaborator, or just want to ask me something, feel free to drop me an email at <a href="mailto:anton@goodmoaning.me">anton@goodmoaning.me</a></p>
+		<p>If you are thinking about hiring someone with my skills, looking for a reliable collaborator, or just want to ask me something, feel free to drop me an email at <a class="u-email email" href="mailto:anton@goodmoaning.me">anton@goodmoaning.me</a></p>
 		
 		<footer>
 			<h2>&hellip;and I am many things more!</h2>
@@ -54,13 +75,6 @@
 			</ul>
 		</footer>
 	</main>
-	<aside>
-
-		
-	</aside>
-	<aside>
-
-		
-	</aside>
+	<script src="/compiled/scripts.js"></script>
 </body>
 </html>
