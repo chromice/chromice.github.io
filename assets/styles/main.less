@@ -36,7 +36,7 @@
 .use-baseline-grid(18px, 1.4, normal);
 
 html {
-	background: #fefefe;
+	background: #d8d8d8;
 	color: #444;
 	.font-baseline();
 }
@@ -47,11 +47,49 @@ html {
 
 
 /*
-	Images
+	Figures
 */
 img {
 	max-width: 100%;
+}
+figure {
+	background: #f6f6f6;
+	margin: 0;
 	
+	// OS X + Browser chrome for site screenshots
+	&.chrome {
+		overflow: hidden;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.2);
+		border-radius: 3px;
+		padding-top: 11px;
+		background: url(/assets/graphics/chrome.png) no-repeat;
+		background-size: 1024px 11px;
+		
+		figcaption {
+			position: relative;
+			padding: 4px 5px 4px;
+			border-bottom: 1px solid #d1d1d1;
+			background: #fff;
+			color: #666;
+			
+			.font(8px, 1, normal);
+			
+			&:before {
+				content: 'http://';
+				color: #aaa;
+			}
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: block;
+				border: 3px solid #f6f6f6;
+				content: '';
+			}
+		}
+	}
 }
 
 /*
@@ -166,10 +204,13 @@ main.profile aside {
 	Projects
 */
 .projects {
-	text-align: center;
-	
 	h4 {
 		.invisible();
+	}
+	
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 	
 	ul {
@@ -178,11 +219,19 @@ main.profile aside {
 	
 	li {
 		position: relative;
-		overflow: hidden;
 		display: inline-block;
 		.width(1, 3);
+		.margin-left(@grid-gutter, 3);
 		.margin-bottom(1);
 		vertical-align: top;
+		
+		&:first-child {
+			.margin-left(0);
+		}
+	}
+	
+	figure {
+		max-height: 100%;
 	}
 	
 	.client {
@@ -203,14 +252,13 @@ main.profile aside {
 		
 		p {
 			position: absolute;
-			.bottom(0);
-			.left(0);
-			.right(0);
+			.bottom(0.75);
+			.right((@grid-gutter / -2));
+			width: 200px;
 			margin: 0;
-			padding: 0 4%;
-			.padding-top(0.5);
-			background: #fff;
-			background: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1.0) 0.1em, #fff);
+			padding: (@grid-gutter / 2);
+			background: fade(#333, 85%);
+			color: #eee;
 		}
 	}
 	

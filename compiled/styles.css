@@ -491,7 +491,7 @@ main.profile {
   }
 }
 html {
-  background: #fefefe;
+  background: #d8d8d8;
   color: #444;
   font: 18px / 1.4 'Helvetica Neue', sans-serif;
 }
@@ -499,10 +499,45 @@ html {
 	Headings
 */
 /*
-	Images
+	Figures
 */
 img {
   max-width: 100%;
+}
+figure {
+  background: #f6f6f6;
+  margin: 0;
+}
+figure.chrome {
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding-top: 11px;
+  background: url(/assets/graphics/chrome.png) no-repeat;
+  background-size: 1024px 11px;
+}
+figure.chrome figcaption {
+  position: relative;
+  padding: 4px 5px 4px;
+  border-bottom: 1px solid #d1d1d1;
+  background: #fff;
+  color: #666;
+  font: 400 8px / 1 'Helvetica Neue', sans-serif;
+  font-size: 0.44444444rem;
+}
+figure.chrome figcaption:before {
+  content: 'http://';
+  color: #aaa;
+}
+figure.chrome figcaption:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border: 3px solid #f6f6f6;
+  content: '';
 }
 /*
 	Misc
@@ -575,18 +610,26 @@ main.profile aside {
 /*
 	Projects
 */
-.projects {
-  text-align: center;
+.projects a {
+  color: inherit;
+  text-decoration: none;
 }
 .projects li {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   width: 30.72916666%;
   width: calc(33.33333333% - 20px);
+  margin-left: 3.90625%;
+  margin-left: calc(0% + 0px + 30px);
   margin-bottom: 25.2px;
   margin-bottom: 1.4rem;
   vertical-align: top;
+}
+.projects li:first-child {
+  margin-left: 0;
+}
+.projects figure {
+  max-height: 100%;
 }
 .projects .client li {
   display: block;
@@ -605,15 +648,15 @@ main.profile aside {
 }
 .projects .client p {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 18.9px;
+  bottom: 1.05rem;
+  right: -1.46484375%;
+  right: calc(0% + 0px + -15px);
+  width: 200px;
   margin: 0;
-  padding: 0 4%;
-  padding-top: 12.6px;
-  padding-top: 0.7rem;
-  background: #fff;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff 0.1em, #fff);
+  padding: 15px;
+  background: rgba(51, 51, 51, 0.85);
+  color: #eee;
 }
 
 /*# sourceMappingURL=.//styles.css.map */
