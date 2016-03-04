@@ -14,8 +14,8 @@
 @color-project-bg: #d8d8d8;
 @color-project-text: #444;
 
-@color-personal-bg: #282828;
-@color-personal-text: #eee;
+@color-personal-bg: @color-project-bg;
+@color-personal-text: @color-project-text;
 
 
 // =======================
@@ -78,8 +78,13 @@ figure {
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.2);
 		border-radius: 3px;
 		padding-top: 11px;
-		background: url(/assets/graphics/chrome.png) no-repeat;
-		background-size: 1024px 11px;
+		background: url(/assets/graphics/chrome.png) no-repeat 0 -11px;
+		background-size: 2048px 22px;
+		
+		img {
+			max-width: none;
+			width: 100%;
+		}
 		
 		figcaption {
 			position: relative;
@@ -115,9 +120,15 @@ a {
 	color: inherit;
 }
 
+
 /*
 	Misc
 */
+p {
+	margin: 0;
+	.margin-bottom(1);
+}
+
 .w {
 	.invisible();
 }
@@ -160,7 +171,8 @@ main.profile {
 	float: left;
 	.border-box();
 	width: @sidebar-width;
-	padding: (@grid-gutter / 2);
+	padding: 0 (@grid-gutter);
+	.padding-top(1);
 	margin-left: (@sidebar-width * -1);
 	background: @color-personal-bg;
 	color: @color-personal-text;
@@ -200,7 +212,7 @@ main.profile {
 		width: @image-width;
 		max-width: 100%;
 		margin: 0 auto;
-		.margin-top(1);
+		.margin-top(2);
 		border-radius: 50%;
 		
 		&:before {
@@ -218,41 +230,78 @@ main.profile {
 		}
 	}
 	
-	// Name
-	h1 {
-		.margin-top(1);
-		.margin-bottom(0);
-		.font-align(35px, 1.4, bold);
+	
+	h1, h2 {
+		display: inline;
+		margin: 0;
+	}
+	.p-name, .p-role, .p-adr {
+		display: block;
 	}
 	
-	h2 {
-		margin: 0;
-		.font-align(16px, 1.5, bolder);
-		.margin-bottom(1.5);
+	// Name
+	.p-name {
+		.font-align(32px, 1, bold);
+		.margin-top(1.5);
+		.margin-bottom(0);
 	}
 	
 	// Role 
 	.p-role {
 		display: block;
 		text-transform: uppercase;
+		.font-align(14px, 1.4, bolder);
 	}
 	
 	// Locations
 	.p-adr {
-		display: block;
-		.font-align(16px, 1.4, normal);
+		.font-align(15px, 1.4, normal);
+		.margin-bottom(1);
 	}
 	
-	footer h2 {
-		.invisible();
+	// Text
+	p {
+		.font-align(14px, 1.25, normal);
 	}
 	
 	// Links
+	footer h2 {
+		.invisible();
+	}
 	footer > ul {
 		.reset-list();
+		.margin-top(1.5);
 		
 		li {
 			display: inline-block;
+			margin: 0 2px;
+		}
+		a {
+			display: block;
+			.image-replaced();
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background: darken(@color-personal-bg, 50%) url(/assets/graphics/icons-social.png) no-repeat 0 0;
+			
+			&:hover, &:focus {
+				background-color: darken(@color-personal-bg, 40%);
+			}
+			
+			@media (min-resolution: 192dpi) {
+				background-image: url(/assets/graphics/icons-social@2x.png);
+				background-size: 112px 28px;
+			}
+			
+			&[href^='//twitter.com'] {
+				background-position: (-28px * 1) 0;
+			}
+			&[href^='//youtube.com'] {
+				background-position: (-28px * 2) 0;
+			}
+			&[href^='//soundcloud.com'] {
+				background-position: (-28px * 3) 0;
+			}
 		}
 	}
 }
@@ -262,9 +311,11 @@ main.profile {
 */
 .projects {
 	h2 {
+		color: darken(@color-project-bg, 20%);
+		.font-align(20px, 1.5, bolder);
 		text-align: center;
-		color: darken(@color-project-bg, 25%);
-		text-shadow: 0 -1px 0 rgba(0,0,0,0.75),  0 1px 0 rgba(255,255,255,0.75);
+		text-shadow: 0 -1px 0 rgba(0,0,0,0.7),  0 1px 0 rgba(255,255,255,0.65);
+		text-transform: uppercase;
 	}
 	
 	* + h2 {
@@ -320,21 +371,73 @@ main.profile {
 		}
 		
 		p {
+			@size-arrow: (@grid-gutter / 4);
+			@color-shadow: fade(darken(#fff, 40%), 85%);
+			@color-background: fade(#f6f6f6, 85%);
+			
 			position: absolute;
 			.bottom(0.75);
-			.right((@grid-gutter / -2));
+			.right((@size-arrow * -1));
+			z-index: 5;
 			width: 200px;
 			margin: 0;
 			padding: (@grid-gutter / 2);
 			.padding-top(0.5);
 			.padding-bottom(0.5);
-			background: fade(#fff, 85%);
+			box-shadow: -2px 2px 1px fade(#000, 10%);
+			background: @color-background;
 			.font(14px, 1.4, normal);
-			// color: ;
+			
+			&:after {
+				position: absolute;
+				top: 100%;
+				right: 0;
+				z-index: -1;
+				display: block;
+				// height: 100%;
+				// background: @color;
+				border-left: @size-arrow solid @color-shadow;
+				border-bottom: @size-arrow solid transparent;
+				content: '';
+			}
+		}
+		
+		a:hover, a:focus {
+			figure.chrome {
+				background-position: 0 0;
+				
+				figcaption:after {
+					border-color: #e6e6e6;
+				}
+			}
+			
+			p {
+				background: fade(#444, 85%);
+				color: #eee;
+				
+				&:after {
+					border-left-color: fade(darken(#444, 20%), 85%);
+				}
+			}
 		}
 	}
 	
 	.personal {
 		text-align: center;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+			.margin-top(0.5);
+			.margin-bottom(1);
+			max-height: 50%;
+		}
+		
+		p {
+			max-width: (20em);
+			margin-left: auto;
+			margin-right: auto;
+			.font-align(15px, 1.4, normal);
+		}
 	}
 }
