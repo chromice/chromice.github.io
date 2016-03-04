@@ -713,7 +713,7 @@ body:before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 105%;
+  width: 100%;
   max-width: none;
 }
 #profile h1,
