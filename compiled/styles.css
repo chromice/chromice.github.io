@@ -398,6 +398,7 @@ main.profile footer > ul a {
 .ext-invisible,
 .w,
 main.profile footer h2,
+.projects h2,
 .projects h3 {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -414,6 +415,8 @@ main.profile footer h2,
 .w:focus,
 main.profile footer h2:active,
 main.profile footer h2:focus,
+.projects h2:active,
+.projects h2:focus,
 .projects h3:active,
 .projects h3:focus {
   position: static;
@@ -816,6 +819,20 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 0.93333333rem;
 }
+.projects .client p small {
+  display: block;
+  margin-top: 5.25px;
+  margin-top: 0.35rem;
+  margin-bottom: 5.25px;
+  margin-bottom: calc(0.35rem + 0.09333333rem);
+  position: relative;
+  top: 5.26px;
+  top: 0.35066667rem;
+  font: 700 10px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 0.66666667rem;
+  text-transform: uppercase;
+  text-align: right;
+}
 .projects .client p:after {
   position: absolute;
   top: 100%;
@@ -832,7 +849,7 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
 }
 .projects .client a:hover figure.chrome figcaption:after,
 .projects .client a:focus figure.chrome figcaption:after {
-  border-color: #e6e6e6;
+  border-color: #eee;
 }
 .projects .client a:hover p,
 .projects .client a:focus p {
@@ -841,7 +858,7 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
 }
 .projects .client a:hover p:after,
 .projects .client a:focus p:after {
-  border-left-color: rgba(17, 17, 17, 0.85);
+  border-left-color: rgba(30, 30, 30, 0.85);
 }
 .projects .personal {
   text-align: center;

@@ -311,6 +311,7 @@ main.profile {
 */
 .projects {
 	h2 {
+		.invisible();
 		color: darken(@color-project-bg, 20%);
 		.font-align(20px, 1.5, bolder);
 		text-align: center;
@@ -388,6 +389,15 @@ main.profile {
 			background: @color-background;
 			.font(14px, 1.4, normal);
 			
+			small {
+				display: block;
+				.margin-top(0.25);
+				.margin-bottom(0.25);
+				.font-align(10px, 1.4, bolder);
+				text-transform: uppercase;
+				text-align: right;
+			}
+			
 			&:after {
 				position: absolute;
 				top: 100%;
@@ -407,7 +417,7 @@ main.profile {
 				background-position: 0 0;
 				
 				figcaption:after {
-					border-color: #e6e6e6;
+					border-color: #eee;
 				}
 			}
 			
@@ -416,7 +426,7 @@ main.profile {
 				color: #eee;
 				
 				&:after {
-					border-left-color: fade(darken(#444, 20%), 85%);
+					border-left-color: fade(darken(#444, 15%), 85%);
 				}
 			}
 		}
