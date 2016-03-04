@@ -364,7 +364,7 @@ video {
   vertical-align: middle;
 }
 .ext-reset-list,
-.profile footer > ul,
+main.profile footer > ul,
 .projects ul {
   list-style: none;
   padding-left: 0;
@@ -396,8 +396,8 @@ video {
 }
 .ext-invisible,
 .w,
-.profile footer h2,
-.projects h4 {
+main.profile footer h2,
+.projects h3 {
   position: absolute;
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -411,10 +411,10 @@ video {
 .ext-invisible:focus,
 .w:active,
 .w:focus,
-.profile footer h2:active,
-.profile footer h2:focus,
-.projects h4:active,
-.projects h4:focus {
+main.profile footer h2:active,
+main.profile footer h2:focus,
+.projects h3:active,
+.projects h3:focus {
   position: static;
   clip: auto;
   overflow: visible;
@@ -423,7 +423,8 @@ video {
   width: auto;
 }
 .ext-border-box,
-main.profile {
+main.profile,
+aside.projects {
   box-sizing: border-box;
 }
 .ext-content-box {
@@ -491,18 +492,41 @@ main.profile {
   }
 }
 html {
+  font: 15px / 1.4 'Helvetica Neue', sans-serif;
   background: #d8d8d8;
   color: #444;
-  font: 18px / 1.4 'Helvetica Neue', sans-serif;
 }
 /*
 	Headings
 */
+h2 {
+  position: relative;
+  top: -1.794px;
+  top: -0.1196rem;
+  font: 700 36px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 2.4rem;
+  margin-top: 21px;
+  margin-top: 1.4rem;
+  margin-bottom: 21px;
+  margin-bottom: calc(1.4rem + -0.56rem);
+}
+h3 {
+  position: relative;
+  top: -9.846px;
+  top: -0.6564rem;
+  font: 700 24px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+  margin-top: 21px;
+  margin-top: 1.4rem;
+  margin-bottom: 0px;
+  margin-bottom: calc(0rem + -0.84rem);
+}
 /*
 	Figures
 */
 img {
   max-width: 100%;
+  height: auto;
 }
 figure {
   background: #f6f6f6;
@@ -523,7 +547,7 @@ figure.chrome figcaption {
   background: #fff;
   color: #666;
   font: 400 8px / 1 'Helvetica Neue', sans-serif;
-  font-size: 0.44444444rem;
+  font-size: 0.53333333rem;
 }
 figure.chrome figcaption:before {
   content: 'http://';
@@ -540,88 +564,149 @@ figure.chrome figcaption:after {
   content: '';
 }
 /*
+	Links
+*/
+a {
+  color: inherit;
+}
+/*
 	Misc
 */
-html,
-body {
+html {
   height: 100%;
+}
+body {
+  min-height: 100%;
 }
 /*
 	Landing page
 */
 body {
   position: relative;
-  padding-right: 80.12695313%;
-  padding-right: calc(75% + 22.5px + 30px);
+  padding-left: 20em;
+}
+body:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 20em;
+  display: block;
+  background: #282828;
+  content: '';
 }
 main.profile {
-  margin-right: -15px;
+  float: left;
+  width: 20em;
   padding: 15px;
-  background: #444;
-  color: #ddd;
-  min-height: 100%;
+  margin-left: -20em;
+  background: #282828;
+  color: #eee;
 }
-main.profile aside {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 74.26757813%;
-  width: calc(75% - 7.5px);
+aside.projects {
+  float: right;
+  padding: 30px;
+  padding-top: 21px;
+  padding-top: 1.4rem;
+  padding-bottom: 21px;
+  padding-bottom: 1.4rem;
+  background: #d8d8d8;
   color: #444;
 }
 /*
 	Profile
 */
-.profile header,
-.profile footer > ul {
+main.profile header,
+main.profile footer > ul {
   text-align: center;
 }
-.profile header > a {
+main.profile header > a {
   position: relative;
   overflow: hidden;
   display: block;
-  width: 200px;
+  width: 150px;
   max-width: 100%;
   margin: 0 auto;
+  margin-top: 21px;
+  margin-top: 1.4rem;
   border-radius: 50%;
 }
-.profile header > a:before {
+main.profile header > a:before {
   display: block;
   padding-top: 100%;
   content: '';
 }
-.profile header > a img {
+main.profile header > a img {
   position: absolute;
   top: 0;
   left: 0;
   width: 105%;
   max-width: none;
 }
-.profile .p-role {
+main.profile h1 {
+  margin-top: 21px;
+  margin-top: 1.4rem;
+  margin-bottom: 0;
+  position: relative;
+  top: -0.715px;
+  top: -0.04766667rem;
+  font: 500 35px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 2.33333333rem;
+}
+main.profile h2 {
+  margin: 0;
+  position: relative;
+  top: -2.014px;
+  top: -0.13426667rem;
+  font: 700 16px / 1.5 'Helvetica Neue', sans-serif;
+  font-size: 1.06666667rem;
+  margin-bottom: 31.5px;
+  margin-bottom: calc(2.1rem + -0.2rem);
+}
+main.profile .p-role {
   display: block;
   text-transform: uppercase;
 }
-.profile .p-adr {
+main.profile .p-adr {
   display: block;
+  position: relative;
+  top: -1.07px;
+  top: -0.07133333rem;
+  font: 400 16px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 1.06666667rem;
 }
-.profile footer > ul li {
+main.profile footer > ul li {
   display: inline-block;
 }
 /*
 	Projects
 */
+.projects h2 {
+  text-align: center;
+  color: #989898;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75), 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+.projects * + h2 {
+  margin-top: 42px;
+  margin-top: 2.8rem;
+}
 .projects a {
   color: inherit;
   text-decoration: none;
 }
+.projects ul {
+  margin-bottom: 21px;
+  margin-bottom: 1.4rem;
+}
 .projects li {
   position: relative;
   display: inline-block;
-  width: 30.72916666%;
+  width: 31.38020833%;
   width: calc(33.33333333% - 20px);
-  margin-left: 3.90625%;
+  margin-left: 2.9296875%;
   margin-left: calc(0% + 0px + 30px);
-  margin-bottom: 25.2px;
+  margin-bottom: 21px;
   margin-bottom: 1.4rem;
   vertical-align: top;
 }
@@ -634,29 +719,39 @@ main.profile aside {
 .projects .client li {
   display: block;
   float: right;
-  width: 39.38802084%;
+  width: 39.95768229%;
   width: calc(41.66666667% - 17.5px);
-  height: 302.4px;
+  height: 252px;
   height: 16.8rem;
+  margin-bottom: 42px;
+  margin-bottom: 2.8rem;
 }
 .projects .client li:first-child {
   float: left;
-  width: 56.70572916%;
+  width: 57.11263021%;
   width: calc(58.33333333% - 12.5px);
-  height: 630px;
-  height: 35rem;
+  height: 546px;
+  height: 36.4rem;
 }
 .projects .client p {
   position: absolute;
-  bottom: 18.9px;
+  bottom: 15.75px;
   bottom: 1.05rem;
   right: -1.46484375%;
   right: calc(0% + 0px + -15px);
   width: 200px;
   margin: 0;
   padding: 15px;
-  background: rgba(51, 51, 51, 0.85);
-  color: #eee;
+  padding-top: 10.5px;
+  padding-top: 0.7rem;
+  padding-bottom: 10.5px;
+  padding-bottom: 0.7rem;
+  background: rgba(255, 255, 255, 0.85);
+  font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 0.93333333rem;
+}
+.projects .personal {
+  text-align: center;
 }
 
 /*# sourceMappingURL=.//styles.css.map */
