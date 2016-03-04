@@ -177,6 +177,10 @@ body {
 	margin-left: (@sidebar-width * -1);
 	background: @color-personal-bg;
 	color: @color-personal-text;
+	
+	&.fixed {
+		position: fixed;
+	}
 }
 #projects {
 	float: right;
@@ -186,6 +190,52 @@ body {
 	.padding-bottom(1);
 	background: @color-project-bg;
 	color: @color-project-text;
+}
+
+@media screen and (max-width: 1023px) {
+	body {
+		padding-left: 0;
+	}
+	
+	#profile {
+		float: none;
+		width: auto;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		&.fixed {
+			position: static;
+		}
+		
+		> p {
+			float: left;
+			.width(1.5);
+			.margin-bottom(1.5);
+			
+			+ p {
+				float: right;
+			}
+		}
+		
+		footer {
+			clear: both;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#projects {
+		padding-left: (@grid-gutter / 3 * 2);
+		padding-right: (@grid-gutter / 3 * 2);
+	}
+	#profile > p {
+		&, + p {
+			float: none;
+			width: auto;
+			.margin-bottom(1);
+		}
+	}
 }
 
 
@@ -201,10 +251,6 @@ body {
 #profile {
 	// .show-baselines();
 	
-	&.fixed {
-		position: fixed;
-	}
-	
 	header, footer > ul {
 		text-align: center;
 	}
@@ -217,7 +263,7 @@ body {
 		width: @image-width;
 		max-width: 100%;
 		margin: 0 auto;
-		.margin-top(2);
+		.margin-top(1);
 		border-radius: 50%;
 		background: #333;
 		
@@ -392,6 +438,31 @@ body {
 			.height(26);
 		}
 		
+		@media screen and (max-width: (724px)) {
+			li {
+				.width(1.5);
+				.height(16);
+			}
+			li:first-child {
+				float: none;
+				.width(3);
+				.height(20);
+				
+				+ li {
+					float: left;
+					.margin-left(0);
+				}
+			}
+		}
+		
+		@media screen and (max-width: (600px)) {
+			li {
+				width: auto;
+				margin-left: 0;
+				.height(19);
+			}
+		}
+		
 		p {
 			@size-arrow: (@grid-gutter / 4);
 			@color-shadow: fade(darken(#fff, 40%), 85%);
@@ -471,6 +542,16 @@ body {
 			margin-left: auto;
 			margin-right: auto;
 			.font-align(14px, 1.4, normal);
+		}
+		
+		@media screen and (max-width: (600px)) {
+			li {
+				display: block;
+				width: auto;
+				margin-left: auto;
+				margin-right: auto;
+				.margin-bottom(2);
+			}
 		}
 	}
 }

@@ -620,6 +620,9 @@ body:before {
   background: #d8d8d8;
   color: #444;
 }
+#profile.fixed {
+  position: fixed;
+}
 #projects {
   float: right;
   padding: 30px;
@@ -630,12 +633,50 @@ body:before {
   background: #d8d8d8;
   color: #444;
 }
+@media screen and (max-width: 1023px) {
+  body {
+    padding-left: 0;
+  }
+  #profile {
+    float: none;
+    width: auto;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #profile.fixed {
+    position: static;
+  }
+  #profile > p {
+    float: left;
+    width: 48.53515625%;
+    width: calc(50% - 15px);
+    margin-bottom: 31.5px;
+    margin-bottom: 2.1rem;
+  }
+  #profile > p + p {
+    float: right;
+  }
+  #profile footer {
+    clear: both;
+  }
+}
+@media screen and (max-width: 600px) {
+  #projects {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #profile > p,
+  #profile > p + p {
+    float: none;
+    width: auto;
+    margin-bottom: 21px;
+    margin-bottom: 1.4rem;
+  }
+}
 /*
 	Profile
 */
-#profile.fixed {
-  position: fixed;
-}
 #profile header,
 #profile footer > ul {
   text-align: center;
@@ -647,8 +688,8 @@ body:before {
   width: 150px;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 42px;
-  margin-top: 2.8rem;
+  margin-top: 21px;
+  margin-top: 1.4rem;
   border-radius: 50%;
   background: #333;
 }
@@ -819,6 +860,33 @@ body:before {
   height: 546px;
   height: 36.4rem;
 }
+@media screen and (max-width: 724px) {
+  #projects .client li {
+    width: 48.53515625%;
+    width: calc(50% - 15px);
+    height: 336px;
+    height: 22.4rem;
+  }
+  #projects .client li:first-child {
+    float: none;
+    width: 100%;
+    width: calc(100% - 0px);
+    height: 420px;
+    height: 28rem;
+  }
+  #projects .client li:first-child + li {
+    float: left;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #projects .client li {
+    width: auto;
+    margin-left: 0;
+    height: 399px;
+    height: 26.6rem;
+  }
+}
 #projects .client p {
   position: absolute;
   bottom: 15.75px;
@@ -901,6 +969,16 @@ body:before {
   top: 0.07133333rem;
   font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 0.93333333rem;
+}
+@media screen and (max-width: 600px) {
+  #projects .personal li {
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 42px;
+    margin-bottom: 2.8rem;
+  }
 }
 
 /*# sourceMappingURL=.//styles.css.map */
