@@ -364,29 +364,29 @@ video {
   vertical-align: middle;
 }
 .ext-reset-list,
-main.profile footer > ul,
-.projects ul {
+#profile footer > ul,
+#projects ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 .ext-clearfix,
-.projects .client {
+#projects .client {
   *zoom: 1;
 }
 .ext-clearfix:before,
 .ext-clearfix:after,
-.projects .client:before,
-.projects .client:after {
+#projects .client:before,
+#projects .client:after {
   content: " ";
   display: table;
 }
 .ext-clearfix:after,
-.projects .client:after {
+#projects .client:after {
   clear: both;
 }
 .ext-image-replaced,
-main.profile footer > ul a {
+#profile footer > ul a {
   overflow: hidden;
   text-indent: -999em;
   white-space: nowrap;
@@ -397,9 +397,9 @@ main.profile footer > ul a {
 }
 .ext-invisible,
 .w,
-main.profile footer h2,
-.projects h2,
-.projects h3 {
+#profile footer h2,
+#projects h2,
+#projects h3 {
   position: absolute;
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -413,12 +413,12 @@ main.profile footer h2,
 .ext-invisible:focus,
 .w:active,
 .w:focus,
-main.profile footer h2:active,
-main.profile footer h2:focus,
-.projects h2:active,
-.projects h2:focus,
-.projects h3:active,
-.projects h3:focus {
+#profile footer h2:active,
+#profile footer h2:focus,
+#projects h2:active,
+#projects h2:focus,
+#projects h3:active,
+#projects h3:focus {
   position: static;
   clip: auto;
   overflow: visible;
@@ -427,8 +427,8 @@ main.profile footer h2:focus,
   width: auto;
 }
 .ext-border-box,
-main.profile,
-aside.projects {
+#profile,
+#projects {
   box-sizing: border-box;
 }
 .ext-content-box {
@@ -464,7 +464,7 @@ aside.projects {
   .ext-image-replaced a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after,
-  main.profile footer > ul a a:after {
+  #profile footer > ul a a:after {
     content: "";
   }
   pre,
@@ -590,7 +590,7 @@ html {
   height: 100%;
 }
 body {
-  min-height: 100%;
+  height: 100%;
 }
 /*
 	Landing page
@@ -610,17 +610,17 @@ body:before {
   background: #d8d8d8;
   content: '';
 }
-main.profile {
+#profile {
   float: left;
   width: 20em;
-  padding: 0 30px;
+  padding: 0 20px;
   padding-top: 21px;
   padding-top: 1.4rem;
   margin-left: -20em;
   background: #d8d8d8;
   color: #444;
 }
-aside.projects {
+#projects {
   float: right;
   padding: 30px;
   padding-top: 21px;
@@ -633,11 +633,14 @@ aside.projects {
 /*
 	Profile
 */
-main.profile header,
-main.profile footer > ul {
+#profile.fixed {
+  position: fixed;
+}
+#profile header,
+#profile footer > ul {
   text-align: center;
 }
-main.profile header > a {
+#profile header > a {
   position: relative;
   overflow: hidden;
   display: block;
@@ -647,50 +650,64 @@ main.profile header > a {
   margin-top: 42px;
   margin-top: 2.8rem;
   border-radius: 50%;
+  background: #333;
 }
-main.profile header > a:before {
+#profile header > a:before {
   display: block;
   padding-top: 100%;
   content: '';
 }
-main.profile header > a img {
+#profile header > a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border-radius: 50%;
+  box-shadow: inset -1px 2px 1px 0px rgba(0, 0, 0, 0.6);
+  content: '';
+}
+#profile header > a img {
   position: absolute;
   top: 0;
   left: 0;
   width: 105%;
   max-width: none;
 }
-main.profile h1,
-main.profile h2 {
+#profile h1,
+#profile h2 {
   display: inline;
   margin: 0;
 }
-main.profile .p-name,
-main.profile .p-role,
-main.profile .p-adr {
+#profile .p-name,
+#profile .p-role,
+#profile .p-adr {
   display: block;
 }
-main.profile .p-name {
+#profile .p-name {
+  color: #2b2b2b;
   position: relative;
-  top: -12.078px;
-  top: -0.8052rem;
-  font: 500 32px / 1 'Helvetica Neue', sans-serif;
-  font-size: 2.13333333rem;
+  top: -10.32px;
+  top: -0.688rem;
+  font: 500 30px / 1 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
   margin-top: 31.5px;
   margin-top: 2.1rem;
   margin-bottom: 0px;
-  margin-bottom: calc(0rem + -0.73333333rem);
+  margin-bottom: calc(0rem + -0.6rem);
 }
-main.profile .p-role {
+#profile .p-role {
+  color: #111111;
   display: block;
   text-transform: uppercase;
   position: relative;
-  top: 0.944px;
-  top: 0.06293333rem;
-  font: 700 14px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 0.93333333rem;
+  top: 1.698px;
+  top: 0.1132rem;
+  font: 700 13px / 1.45 'Helvetica Neue', sans-serif;
+  font-size: 0.86666667rem;
 }
-main.profile .p-adr {
+#profile .p-adr {
   position: relative;
   top: 0px;
   top: 0rem;
@@ -699,52 +716,52 @@ main.profile .p-adr {
   margin-bottom: 21px;
   margin-bottom: 1.4rem;
 }
-main.profile p {
+#profile p {
   position: relative;
   top: 2.12px;
   top: 0.14133333rem;
   font: 400 14px / 1.25 'Helvetica Neue', sans-serif;
   font-size: 0.93333333rem;
 }
-main.profile footer > ul {
+#profile footer > ul {
   margin-top: 31.5px;
   margin-top: 2.1rem;
 }
-main.profile footer > ul li {
+#profile footer > ul li {
   display: inline-block;
   margin: 0 2px;
 }
-main.profile footer > ul a {
+#profile footer > ul a {
   display: block;
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #595959 url(/assets/graphics/icons-social.png) no-repeat 0 0;
+  background: #3f3f3f url(/assets/graphics/icons-social.png) no-repeat 0 0;
 }
-main.profile footer > ul a:hover,
-main.profile footer > ul a:focus {
-  background-color: #727272;
+#profile footer > ul a:hover,
+#profile footer > ul a:focus {
+  background-color: #656565;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  main.profile footer > ul a {
+  #profile footer > ul a {
     background-image: url(/assets/graphics/icons-social@2x.png);
     background-size: 112px 28px;
   }
 }
-main.profile footer > ul a[href^='//twitter.com'] {
+#profile footer > ul a[href^='//twitter.com'] {
   background-position: -28px 0;
 }
-main.profile footer > ul a[href^='//youtube.com'] {
+#profile footer > ul a[href^='//youtube.com'] {
   background-position: -56px 0;
 }
-main.profile footer > ul a[href^='//soundcloud.com'] {
+#profile footer > ul a[href^='//soundcloud.com'] {
   background-position: -84px 0;
 }
 /*
 	Projects
 */
-.projects h2 {
-  color: #a5a5a5;
+#projects h2 {
+  color: #727272;
   position: relative;
   top: -6.53px;
   top: -0.43533333rem;
@@ -754,19 +771,21 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
 }
-.projects * + h2 {
-  margin-top: 42px;
-  margin-top: 2.8rem;
+#projects * + h2 {
+  margin-top: 21px;
+  margin-top: 1.4rem;
 }
-.projects a {
+#projects a {
   color: inherit;
   text-decoration: none;
 }
-.projects ul {
+#projects ul {
+  margin-top: 21px;
+  margin-top: 1.4rem;
   margin-bottom: 21px;
   margin-bottom: 1.4rem;
 }
-.projects li {
+#projects li {
   position: relative;
   display: inline-block;
   width: 31.38020833%;
@@ -777,13 +796,13 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   margin-bottom: 1.4rem;
   vertical-align: top;
 }
-.projects li:first-child {
+#projects li:first-child {
   margin-left: 0;
 }
-.projects figure {
+#projects figure {
   max-height: 100%;
 }
-.projects .client li {
+#projects .client li {
   display: block;
   float: right;
   width: 39.95768229%;
@@ -793,14 +812,14 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   margin-bottom: 42px;
   margin-bottom: 2.8rem;
 }
-.projects .client li:first-child {
+#projects .client li:first-child {
   float: left;
   width: 57.11263021%;
   width: calc(58.33333333% - 12.5px);
   height: 546px;
   height: 36.4rem;
 }
-.projects .client p {
+#projects .client p {
   position: absolute;
   bottom: 15.75px;
   bottom: 1.05rem;
@@ -815,11 +834,14 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   padding-bottom: 10.5px;
   padding-bottom: 0.7rem;
   box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
-  background: rgba(246, 246, 246, 0.85);
+  background: rgba(246, 246, 246, 0.9);
   font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 0.93333333rem;
+  text-shadow: -2px 2px 2px rgba(51, 51, 51, 0.125);
+  transition: background-color 80ms ease-out;
+  transition-property: background-color, text-shadow;
 }
-.projects .client p small {
+#projects .client p small {
   display: block;
   margin-top: 5.25px;
   margin-top: 0.35rem;
@@ -833,7 +855,7 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   text-transform: uppercase;
   text-align: right;
 }
-.projects .client p:after {
+#projects .client p:after {
   position: absolute;
   top: 100%;
   right: 0;
@@ -843,27 +865,25 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   border-bottom: 7.5px solid transparent;
   content: '';
 }
-.projects .client a:hover figure.chrome,
-.projects .client a:focus figure.chrome {
+#projects .client a:hover figure.chrome,
+#projects .client a:focus figure.chrome {
   background-position: 0 0;
 }
-.projects .client a:hover figure.chrome figcaption:after,
-.projects .client a:focus figure.chrome figcaption:after {
+#projects .client a:hover figure.chrome figcaption:after,
+#projects .client a:focus figure.chrome figcaption:after {
   border-color: #eee;
 }
-.projects .client a:hover p,
-.projects .client a:focus p {
+#projects .client a:hover p,
+#projects .client a:focus p {
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.25);
   background: rgba(68, 68, 68, 0.85);
   color: #eee;
 }
-.projects .client a:hover p:after,
-.projects .client a:focus p:after {
+#projects .client a:hover p:after,
+#projects .client a:focus p:after {
   border-left-color: rgba(30, 30, 30, 0.85);
 }
-.projects .personal {
-  text-align: center;
-}
-.projects .personal img {
+#projects .personal img {
   display: block;
   margin: 0 auto;
   margin-top: 10.5px;
@@ -872,15 +892,15 @@ main.profile footer > ul a[href^='//soundcloud.com'] {
   margin-bottom: 1.4rem;
   max-height: 50%;
 }
-.projects .personal p {
+#projects .personal p {
   max-width: 20em;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 0px;
-  top: 0rem;
-  font: 400 15px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 1rem;
+  top: 1.07px;
+  top: 0.07133333rem;
+  font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 0.93333333rem;
 }
 
 /*# sourceMappingURL=.//styles.css.map */

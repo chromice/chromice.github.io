@@ -14,6 +14,7 @@
 @color-project-bg: #d8d8d8;
 @color-project-text: #444;
 
+// @color-personal-bg: darken(@color-project-bg, 7.5%);
 @color-personal-bg: @color-project-bg;
 @color-personal-text: @color-project-text;
 
@@ -143,7 +144,7 @@ html {
 	height: 100%;
 }
 body {
-	min-height: 100%;
+	height: 100%;
 }
 
 /*
@@ -167,17 +168,17 @@ body {
 		content: '';
 	}
 }
-main.profile {
+#profile {
 	float: left;
 	.border-box();
 	width: @sidebar-width;
-	padding: 0 (@grid-gutter);
+	padding: 0 (@grid-gutter / 3 * 2);
 	.padding-top(1);
 	margin-left: (@sidebar-width * -1);
 	background: @color-personal-bg;
 	color: @color-personal-text;
 }
-aside.projects {
+#projects {
 	float: right;
 	.border-box();
 	padding: @grid-gutter;
@@ -197,8 +198,12 @@ aside.projects {
 */
 @image-width: 150px;
 
-main.profile {
+#profile {
 	// .show-baselines();
+	
+	&.fixed {
+		position: fixed;
+	}
 	
 	header, footer > ul {
 		text-align: center;
@@ -214,10 +219,23 @@ main.profile {
 		margin: 0 auto;
 		.margin-top(2);
 		border-radius: 50%;
+		background: #333;
 		
 		&:before {
 			display: block;
 			padding-top: 100%;
+			content: '';
+		}
+		
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			border-radius: 50%;
+			box-shadow: inset -1px 2px 1px 0px rgba(0,0,0,0.6);
 			content: '';
 		}
 		
@@ -241,16 +259,18 @@ main.profile {
 	
 	// Name
 	.p-name {
-		.font-align(32px, 1, bold);
+		color: darken(@color-personal-text, 10%);
+		.font-align(30px, 1, bold);
 		.margin-top(1.5);
 		.margin-bottom(0);
 	}
 	
 	// Role 
 	.p-role {
+		color: darken(@color-personal-text, 20%);
 		display: block;
 		text-transform: uppercase;
-		.font-align(14px, 1.4, bolder);
+		.font-align(13px, 1.45, bolder);
 	}
 	
 	// Locations
@@ -282,10 +302,10 @@ main.profile {
 			width: 28px;
 			height: 28px;
 			border-radius: 50%;
-			background: darken(@color-personal-bg, 50%) url(/assets/graphics/icons-social.png) no-repeat 0 0;
+			background: darken(@color-personal-bg, 60%) url(/assets/graphics/icons-social.png) no-repeat 0 0;
 			
 			&:hover, &:focus {
-				background-color: darken(@color-personal-bg, 40%);
+				background-color: darken(@color-personal-bg, 45%);
 			}
 			
 			@media (min-resolution: 192dpi) {
@@ -309,10 +329,10 @@ main.profile {
 /*
 	Projects
 */
-.projects {
+#projects {
 	h2 {
 		.invisible();
-		color: darken(@color-project-bg, 20%);
+		color: darken(@color-project-bg, 40%);
 		.font-align(20px, 1.5, bolder);
 		text-align: center;
 		text-shadow: 0 -1px 0 rgba(0,0,0,0.7),  0 1px 0 rgba(255,255,255,0.65);
@@ -320,7 +340,7 @@ main.profile {
 	}
 	
 	* + h2 {
-		.margin-top(2);
+		.margin-top(1);
 	}
 	
 	h3 {
@@ -334,6 +354,7 @@ main.profile {
 	
 	ul {
 		.reset-list();
+		.margin-top(1);
 		.margin-bottom(1);
 	}
 	
@@ -374,7 +395,7 @@ main.profile {
 		p {
 			@size-arrow: (@grid-gutter / 4);
 			@color-shadow: fade(darken(#fff, 40%), 85%);
-			@color-background: fade(#f6f6f6, 85%);
+			@color-background: fade(#f6f6f6, 90%);
 			
 			position: absolute;
 			.bottom(0.75);
@@ -388,6 +409,10 @@ main.profile {
 			box-shadow: -2px 2px 1px fade(#000, 10%);
 			background: @color-background;
 			.font(14px, 1.4, normal);
+			text-shadow: -2px 2px 2px fade(#333, 12.5%);
+			
+			transition: background-color 80ms ease-out;
+			transition-property: background-color, text-shadow;
 			
 			small {
 				display: block;
@@ -404,8 +429,6 @@ main.profile {
 				right: 0;
 				z-index: -1;
 				display: block;
-				// height: 100%;
-				// background: @color;
 				border-left: @size-arrow solid @color-shadow;
 				border-bottom: @size-arrow solid transparent;
 				content: '';
@@ -422,6 +445,7 @@ main.profile {
 			}
 			
 			p {
+				box-shadow: -2px 2px 2px fade(#000, 25%);
 				background: fade(#444, 85%);
 				color: #eee;
 				
@@ -433,7 +457,6 @@ main.profile {
 	}
 	
 	.personal {
-		text-align: center;
 		
 		img {
 			display: block;
@@ -447,7 +470,7 @@ main.profile {
 			max-width: (20em);
 			margin-left: auto;
 			margin-right: auto;
-			.font-align(15px, 1.4, normal);
+			.font-align(14px, 1.4, normal);
 		}
 	}
 }
