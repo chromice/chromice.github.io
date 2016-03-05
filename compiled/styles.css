@@ -497,34 +497,39 @@ video {
   }
 }
 html {
-  font: 16px / 1.25 'Gill Sans', Calibri, Trebuchet, sans-serif;
+  font: 16px / 1.3 'Gill Sans', Calibri, Trebuchet, sans-serif;
   background: #d8d8d8;
   color: #444;
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
 }
 /*
 	Headings
 */
 h2 {
   position: relative;
-  top: -3.34px;
-  top: -0.20875rem;
+  top: -2.14px;
+  top: -0.13375rem;
   font: 700 36px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 2.25rem;
-  margin-top: 20px;
-  margin-top: 1.25rem;
-  margin-bottom: 20px;
-  margin-bottom: calc(1.25rem + -0.65rem);
+  margin-top: 20.8px;
+  margin-top: 1.3rem;
+  margin-bottom: 20.8px;
+  margin-bottom: calc(1.3rem + -0.55rem);
 }
 h3 {
   position: relative;
-  top: -10.392px;
-  top: -0.6495rem;
+  top: -9.992px;
+  top: -0.6245rem;
   font: 700 24px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 1.5rem;
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 20.8px;
+  margin-top: 1.3rem;
   margin-bottom: 0px;
-  margin-bottom: calc(0rem + -0.85rem);
+  margin-bottom: calc(0rem + -0.8rem);
 }
 /*
 	Figures
@@ -583,8 +588,8 @@ a {
 */
 p {
   margin: 0;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20.8px;
+  margin-bottom: 1.3rem;
 }
 html {
   height: 100%;
@@ -614,8 +619,8 @@ body:before {
   float: left;
   width: 18.75em;
   padding: 0 20px;
-  padding-top: 20px;
-  padding-top: 1.25rem;
+  padding-top: 20.8px;
+  padding-top: 1.3rem;
   margin-left: -18.75em;
   background: #d8d8d8;
   color: #444;
@@ -626,10 +631,10 @@ body:before {
 #projects {
   float: right;
   padding: 30px;
-  padding-top: 20px;
-  padding-top: 1.25rem;
-  padding-bottom: 20px;
-  padding-bottom: 1.25rem;
+  padding-top: 20.8px;
+  padding-top: 1.3rem;
+  padding-bottom: 20.8px;
+  padding-bottom: 1.3rem;
   background: #d8d8d8;
   color: #444;
 }
@@ -651,8 +656,8 @@ body:before {
     float: left;
     width: 48.53515625%;
     width: calc(50% - 15px);
-    margin-bottom: 30px;
-    margin-bottom: 1.875rem;
+    margin-bottom: 31.2px;
+    margin-bottom: 1.95rem;
   }
   #profile > p + p {
     float: right;
@@ -670,8 +675,8 @@ body:before {
   #profile > p + p {
     float: none;
     width: auto;
-    margin-bottom: 20px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 20.8px;
+    margin-bottom: 1.3rem;
   }
 }
 /*
@@ -688,9 +693,10 @@ body:before {
   width: 150px;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 20.8px;
+  margin-top: 1.3rem;
   border-radius: 50%;
+  box-shadow: -1px 1px 1px rgba(255, 255, 255, 0.4);
   background: #333;
 }
 #profile header > a:before {
@@ -729,41 +735,41 @@ body:before {
 #profile .p-name {
   color: #111111;
   position: relative;
-  top: -14.597px;
-  top: -0.9123125rem;
+  top: -14.197px;
+  top: -0.8873125rem;
   font: 600 31px / 1.25 'Gill Sans', Calibri, Trebuchet, sans-serif;
   font-size: 1.9375rem;
-  margin-top: 30px;
-  margin-top: 1.875rem;
-  margin-bottom: 2.5px;
-  margin-bottom: calc(0.15625rem + -1.171875rem);
+  margin-top: 31.2px;
+  margin-top: 1.95rem;
+  margin-bottom: 2.6px;
+  margin-bottom: calc(0.1625rem + -1.121875rem);
 }
 #profile .p-role {
   color: #111111;
   display: block;
   text-transform: uppercase;
   position: relative;
-  top: 1.152px;
-  top: 0.072rem;
+  top: 1.552px;
+  top: 0.097rem;
   font: 700 13px / 1.45 'Helvetica Neue', sans-serif;
   font-size: 0.8125rem;
-  margin-bottom: 2.5px;
-  margin-bottom: calc(0.15625rem + 0.071875rem);
+  margin-bottom: 2.6px;
+  margin-bottom: calc(0.1625rem + 0.121875rem);
 }
 #profile .p-adr {
-  margin-top: 2.5px;
-  margin-top: 0.15625rem;
+  margin-top: 2.6px;
+  margin-top: 0.1625rem;
   position: relative;
-  top: -0.336px;
-  top: -0.021rem;
+  top: 0.064px;
+  top: 0.004rem;
   font: italic 400 16px / 1.3 'Gill Sans', Calibri, Trebuchet, sans-serif;
   font-size: 1rem;
-  margin-bottom: 20px;
-  margin-bottom: calc(1.25rem + -0.05rem);
+  margin-bottom: 20.8px;
+  margin-bottom: 1.3rem;
 }
 #profile footer > ul {
-  margin-top: 30px;
-  margin-top: 1.875rem;
+  margin-top: 31.2px;
+  margin-top: 1.95rem;
 }
 #profile footer > ul li {
   display: inline-block;
@@ -801,8 +807,8 @@ body:before {
 #projects h2 {
   color: #727272;
   position: relative;
-  top: -7.076px;
-  top: -0.44225rem;
+  top: -6.676px;
+  top: -0.41725rem;
   font: 700 20px / 1.5 'Helvetica Neue', sans-serif;
   font-size: 1.25rem;
   text-align: center;
@@ -810,18 +816,18 @@ body:before {
   text-transform: uppercase;
 }
 #projects * + h2 {
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 20.8px;
+  margin-top: 1.3rem;
 }
 #projects a {
   color: inherit;
   text-decoration: none;
 }
 #projects ul {
-  margin-top: 20px;
-  margin-top: 1.25rem;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
+  margin-top: 20.8px;
+  margin-top: 1.3rem;
+  margin-bottom: 20.8px;
+  margin-bottom: 1.3rem;
 }
 #projects li {
   position: relative;
@@ -830,8 +836,8 @@ body:before {
   width: calc(33.33333333% - 20px);
   margin-left: 2.9296875%;
   margin-left: calc(0% + 0px + 30px);
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20.8px;
+  margin-bottom: 1.3rem;
   vertical-align: top;
 }
 #projects li:first-child {
@@ -842,13 +848,13 @@ body:before {
 }
 #projects p {
   padding: 15px;
-  padding-top: 10px;
-  padding-top: 0.625rem;
-  padding-bottom: 10px;
-  padding-bottom: 0.625rem;
+  padding-top: 10.4px;
+  padding-top: 0.65rem;
+  padding-bottom: 10.4px;
+  padding-bottom: 0.65rem;
   box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
   background: rgba(246, 246, 246, 0.9);
-  font: 400 14px / 1.42 'Gill Sans', Calibri, Trebuchet, sans-serif;
+  font: 400 14px / 1.3 'Gill Sans', Calibri, Trebuchet, sans-serif;
   font-size: 0.875rem;
   text-shadow: -2px 2px 2px rgba(51, 51, 51, 0.125);
   transition: background-color 80ms ease-out;
@@ -868,31 +874,31 @@ body:before {
   float: right;
   width: 39.95768229%;
   width: calc(41.66666667% - 17.5px);
-  height: 260px;
-  height: 16.25rem;
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem;
+  height: 270.4px;
+  height: 16.9rem;
+  margin-bottom: 41.6px;
+  margin-bottom: 2.6rem;
 }
 #projects .client li:first-child {
   float: left;
   width: 57.11263021%;
   width: calc(58.33333333% - 12.5px);
-  height: 560px;
-  height: 35rem;
+  height: 582.4px;
+  height: 36.4rem;
 }
 @media screen and (max-width: 724px) {
   #projects .client li {
     width: 48.53515625%;
     width: calc(50% - 15px);
-    height: 360px;
-    height: 22.5rem;
+    height: 374.4px;
+    height: 23.4rem;
   }
   #projects .client li:first-child {
     float: none;
     width: 100%;
     width: calc(100% - 0px);
-    height: 440px;
-    height: 27.5rem;
+    height: 457.6px;
+    height: 28.6rem;
   }
   #projects .client li:first-child + li {
     float: left;
@@ -903,29 +909,29 @@ body:before {
   #projects .client li {
     width: auto;
     margin-left: 0;
-    height: 420px;
-    height: 26.25rem;
+    height: 436.8px;
+    height: 27.3rem;
   }
 }
 #projects .client p {
   position: absolute;
-  bottom: 15px;
-  bottom: 0.9375rem;
+  bottom: 15.6px;
+  bottom: 0.975rem;
   right: -0.73242187%;
   right: calc(0% + 0px + -7.5px);
   z-index: 5;
-  width: 200px;
+  width: 14em;
   margin: 0;
 }
 #projects .client p small {
   display: block;
-  margin-top: 5px;
-  margin-top: 0.3125rem;
-  margin-bottom: 5px;
-  margin-bottom: 0.3125rem;
+  margin-top: 5.2px;
+  margin-top: 0.325rem;
+  margin-bottom: 5.2px;
+  margin-bottom: 0.325rem;
   position: relative;
-  top: 4.714px;
-  top: 0.294625rem;
+  top: 5.114px;
+  top: 0.319625rem;
   font: 700 10px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 0.625rem;
   text-transform: uppercase;
@@ -956,10 +962,10 @@ body:before {
 #projects .personal img {
   display: block;
   margin: 0 auto;
-  margin-top: 10px;
-  margin-top: 0.625rem;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
+  margin-top: 10.4px;
+  margin-top: 0.65rem;
+  margin-bottom: 20.8px;
+  margin-bottom: 1.3rem;
   max-height: 50%;
 }
 #projects .personal p {
@@ -984,13 +990,13 @@ body:before {
 }
 #projects .personal p:after {
   display: block;
-  padding-top: 5px;
-  padding-top: 0.3125rem;
-  padding-bottom: 5px;
-  padding-bottom: 0.3125rem;
+  padding-top: 5.2px;
+  padding-top: 0.325rem;
+  padding-bottom: 5.2px;
+  padding-bottom: 0.325rem;
   position: relative;
-  top: 4.714px;
-  top: 0.294625rem;
+  top: 5.114px;
+  top: 0.319625rem;
   font: 700 10px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 0.625rem;
   text-transform: uppercase;
@@ -1007,8 +1013,8 @@ body:before {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 41.6px;
+    margin-bottom: 2.6rem;
   }
 }
 

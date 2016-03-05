@@ -43,12 +43,16 @@
 @bolder-font-variation: 700;
 @bolder-font-offset: 0.879;
 
-.use-baseline-grid(16px, 1.25, normal);
+.use-baseline-grid(16px, 1.3, normal);
 
 html {
 	.font-baseline();
 	background: @color-project-bg;
 	color: @color-project-text;
+	
+	@media screen and (min-width: 1280px) {
+		font-size: 18px;
+	}
 }
 
 /*
@@ -269,6 +273,7 @@ body {
 		margin: 0 auto;
 		.margin-top(1);
 		border-radius: 50%;
+		box-shadow: -1px 1px 1px rgba(255,255,255,0.4);
 		background: #333;
 		
 		&:before {
@@ -439,7 +444,7 @@ body {
 		.padding-bottom(0.5);
 		box-shadow: -2px 2px 1px fade(#000, 10%);
 		background: @color-background;
-		.font(14px, 1.42, normal);
+		.font(14px,  1.3, normal);
 		text-shadow: -2px 2px 2px fade(#333, 12.5%);
 		
 		transition: background-color 80ms ease-out;
@@ -505,7 +510,7 @@ body {
 			.bottom(0.75);
 			.right((@size-arrow * -1));
 			z-index: 5;
-			width: 200px;
+			width: 14em;
 			margin: 0;
 		
 			small {
