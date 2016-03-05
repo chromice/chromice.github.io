@@ -421,6 +421,37 @@ body {
 		max-height: 100%;
 	}
 	
+	@size-arrow: (@grid-gutter / 4);
+	@color-shadow: fade(darken(#fff, 40%), 85%);
+	@color-background: fade(#f6f6f6, 90%);
+	@color-hover-bg: fade(#444, 85%);
+	@color-hover-text: #eee;
+	
+	p {
+		padding: (@grid-gutter / 2);
+		.padding-top(0.5);
+		.padding-bottom(0.5);
+		box-shadow: -2px 2px 1px fade(#000, 10%);
+		background: @color-background;
+		.font(14px, 1.4, normal);
+		text-shadow: -2px 2px 2px fade(#333, 12.5%);
+		
+		transition: background-color 80ms ease-out;
+		transition-property: background-color, text-shadow;
+		
+		&:before {
+			transition: border-color 80ms ease-out;
+		}
+	}
+	
+	a:hover, a:focus {
+		p {
+			box-shadow: -2px 2px 2px fade(#000, 25%);
+			background: @color-hover-bg;
+			color: @color-hover-text;
+		}
+	}
+	
 	.client {
 		.clearfix();
 		
@@ -464,27 +495,13 @@ body {
 		}
 		
 		p {
-			@size-arrow: (@grid-gutter / 4);
-			@color-shadow: fade(darken(#fff, 40%), 85%);
-			@color-background: fade(#f6f6f6, 90%);
-			
 			position: absolute;
 			.bottom(0.75);
 			.right((@size-arrow * -1));
 			z-index: 5;
 			width: 200px;
 			margin: 0;
-			padding: (@grid-gutter / 2);
-			.padding-top(0.5);
-			.padding-bottom(0.5);
-			box-shadow: -2px 2px 1px fade(#000, 10%);
-			background: @color-background;
-			.font(14px, 1.4, normal);
-			text-shadow: -2px 2px 2px fade(#333, 12.5%);
-			
-			transition: background-color 80ms ease-out;
-			transition-property: background-color, text-shadow;
-			
+		
 			small {
 				display: block;
 				.margin-top(0.25);
@@ -493,8 +510,8 @@ body {
 				text-transform: uppercase;
 				text-align: right;
 			}
-			
-			&:after {
+		
+			&:before {
 				position: absolute;
 				top: 100%;
 				right: 0;
@@ -516,11 +533,7 @@ body {
 			}
 			
 			p {
-				box-shadow: -2px 2px 2px fade(#000, 25%);
-				background: fade(#444, 85%);
-				color: #eee;
-				
-				&:after {
+				&:before {
 					border-left-color: fade(darken(#444, 15%), 85%);
 				}
 			}
@@ -538,13 +551,46 @@ body {
 		}
 		
 		p {
+			position: relative;
 			max-width: (20em);
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 0;
+			box-shadow: 0px 1px 1px 1px fade(#000, 10%);
 			.font-align(14px, 1.4, normal);
+			text-shadow: 0px 2px 1px fade(#333, 7.5%);
+			
+			&:before {
+				@size-arrow: (@grid-gutter / 3 * 1);
+				position: absolute;
+				top: (@size-arrow * -1);
+				left: 50%;
+				display: block;
+				margin-left: (@size-arrow / -1);
+				border-left: @size-arrow solid transparent;
+				border-right: @size-arrow solid transparent;
+				border-bottom: @size-arrow solid @color-background;
+				content: '';
+			}
+			
+			&:after {
+				display: block;
+				.padding-top(0.25);
+				.padding-bottom(0.25);
+				.font-align(10px, 1.4, bolder);
+				text-transform: uppercase;
+				text-align: center;
+				content: 'View on GitHub \2192';
+			}
 		}
 		
-		@media screen and (max-width: (600px)) {
+		a:hover, a:focus {
+			p:before {
+				border-bottom-color: @color-hover-bg;
+			}
+		}
+		
+		@media screen and (max-width: (724px)) {
 			li {
 				display: block;
 				width: auto;

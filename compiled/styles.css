@@ -843,6 +843,29 @@ body:before {
 #projects figure {
   max-height: 100%;
 }
+#projects p {
+  padding: 15px;
+  padding-top: 10.5px;
+  padding-top: 0.7rem;
+  padding-bottom: 10.5px;
+  padding-bottom: 0.7rem;
+  box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
+  background: rgba(246, 246, 246, 0.9);
+  font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 0.93333333rem;
+  text-shadow: -2px 2px 2px rgba(51, 51, 51, 0.125);
+  transition: background-color 80ms ease-out;
+  transition-property: background-color, text-shadow;
+}
+#projects p:before {
+  transition: border-color 80ms ease-out;
+}
+#projects a:hover p,
+#projects a:focus p {
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.25);
+  background: rgba(68, 68, 68, 0.85);
+  color: #eee;
+}
 #projects .client li {
   display: block;
   float: right;
@@ -896,25 +919,13 @@ body:before {
   z-index: 5;
   width: 200px;
   margin: 0;
-  padding: 15px;
-  padding-top: 10.5px;
-  padding-top: 0.7rem;
-  padding-bottom: 10.5px;
-  padding-bottom: 0.7rem;
-  box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
-  background: rgba(246, 246, 246, 0.9);
-  font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 0.93333333rem;
-  text-shadow: -2px 2px 2px rgba(51, 51, 51, 0.125);
-  transition: background-color 80ms ease-out;
-  transition-property: background-color, text-shadow;
 }
 #projects .client p small {
   display: block;
   margin-top: 5.25px;
   margin-top: 0.35rem;
   margin-bottom: 5.25px;
-  margin-bottom: calc(0.35rem + 0.09333333rem);
+  margin-bottom: 0.35rem;
   position: relative;
   top: 5.26px;
   top: 0.35066667rem;
@@ -923,7 +934,7 @@ body:before {
   text-transform: uppercase;
   text-align: right;
 }
-#projects .client p:after {
+#projects .client p:before {
   position: absolute;
   top: 100%;
   right: 0;
@@ -941,14 +952,8 @@ body:before {
 #projects .client a:focus figure.chrome figcaption:after {
   border-color: #eee;
 }
-#projects .client a:hover p,
-#projects .client a:focus p {
-  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.25);
-  background: rgba(68, 68, 68, 0.85);
-  color: #eee;
-}
-#projects .client a:hover p:after,
-#projects .client a:focus p:after {
+#projects .client a:hover p:before,
+#projects .client a:focus p:before {
   border-left-color: rgba(30, 30, 30, 0.85);
 }
 #projects .personal img {
@@ -964,13 +969,46 @@ body:before {
   max-width: 20em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
   position: relative;
   top: 1.07px;
   top: 0.07133333rem;
   font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
   font-size: 0.93333333rem;
+  text-shadow: 0px 2px 1px rgba(51, 51, 51, 0.075);
 }
-@media screen and (max-width: 600px) {
+#projects .personal p:before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  display: block;
+  margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(246, 246, 246, 0.9);
+  content: '';
+}
+#projects .personal p:after {
+  display: block;
+  padding-top: 5.25px;
+  padding-top: 0.35rem;
+  padding-bottom: 5.25px;
+  padding-bottom: 0.35rem;
+  position: relative;
+  top: 5.26px;
+  top: 0.35066667rem;
+  font: 700 10px / 1.4 'Helvetica Neue', sans-serif;
+  font-size: 0.66666667rem;
+  text-transform: uppercase;
+  text-align: center;
+  content: 'View on GitHub \2192';
+}
+#projects .personal a:hover p:before,
+#projects .personal a:focus p:before {
+  border-bottom-color: rgba(68, 68, 68, 0.85);
+}
+@media screen and (max-width: 724px) {
   #projects .personal li {
     display: block;
     width: auto;
