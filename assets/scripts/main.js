@@ -1,5 +1,8 @@
 (function (w, d, c) {
 	
+	/*
+		Position profile info
+	*/
 	var profile = d.getElementById('profile');
 	
 	function position_profile (argument) {
@@ -23,6 +26,40 @@
 		resizeTimer = setTimeout(position_profile, 50);
 	});
 	
+	/*
+		Track outbound clicks
+	*/
+	function trackOutBoundClicks(event) {
+		var href = event.target.href;
+		
+		if (!ga) return;
+		
+		if (href.substr(0, 7) === 'mailto:') {
+			ga('send', 'event', {
+				eventCategory: 'Email link',
+				eventAction: 'click',
+				eventLabel: event.target.href
+			});
+		} else {
+			ga('send', 'event', {
+				eventCategory: 'Outbound Link',
+				eventAction: 'click',
+				eventLabel: event.target.href,
+				transport: 'beacon'
+			});
+		}
+	}
+	
+	var as = d.getElementsByTagName('a');
+	
+	for (var i = 0; i < as.length; i++) {
+		as[i].addEventListener('click', trackOutBoundClicks);
+	}
+
+	
+	/*
+		Say hi to hackers
+	*/
 	if (!c || !c.log) return;
 	
 	c.log('look at you, hacker');
