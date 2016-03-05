@@ -497,7 +497,7 @@ video {
   }
 }
 html {
-  font: 15px / 1.4 'Helvetica Neue', sans-serif;
+  font: 16px / 1.25 'Gill Sans', Calibri, Trebuchet, sans-serif;
   background: #d8d8d8;
   color: #444;
 }
@@ -506,25 +506,25 @@ html {
 */
 h2 {
   position: relative;
-  top: -1.794px;
-  top: -0.1196rem;
+  top: -3.34px;
+  top: -0.20875rem;
   font: 700 36px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 2.4rem;
-  margin-top: 21px;
-  margin-top: 1.4rem;
-  margin-bottom: 21px;
-  margin-bottom: calc(1.4rem + -0.56rem);
+  font-size: 2.25rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 20px;
+  margin-bottom: calc(1.25rem + -0.65rem);
 }
 h3 {
   position: relative;
-  top: -9.846px;
-  top: -0.6564rem;
+  top: -10.392px;
+  top: -0.6495rem;
   font: 700 24px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 1.6rem;
-  margin-top: 21px;
-  margin-top: 1.4rem;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
   margin-bottom: 0px;
-  margin-bottom: calc(0rem + -0.84rem);
+  margin-bottom: calc(0rem + -0.85rem);
 }
 /*
 	Figures
@@ -555,8 +555,8 @@ figure.chrome figcaption {
   border-bottom: 1px solid #d1d1d1;
   background: #fff;
   color: #666;
-  font: 400 8px / 1 'Helvetica Neue', sans-serif;
-  font-size: 0.53333333rem;
+  font: 400 8px / 1 'Gill Sans', Calibri, Trebuchet, sans-serif;
+  font-size: 0.5rem;
 }
 figure.chrome figcaption:before {
   content: 'http://';
@@ -583,8 +583,8 @@ a {
 */
 p {
   margin: 0;
-  margin-bottom: 21px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 html {
   height: 100%;
@@ -597,7 +597,7 @@ body {
 */
 body {
   position: relative;
-  padding-left: 20em;
+  padding-left: 18.75em;
 }
 body:before {
   position: absolute;
@@ -605,18 +605,18 @@ body:before {
   left: 0;
   bottom: 0;
   z-index: -1;
-  width: 20em;
+  width: 18.75em;
   display: block;
   background: #d8d8d8;
   content: '';
 }
 #profile {
   float: left;
-  width: 20em;
+  width: 18.75em;
   padding: 0 20px;
-  padding-top: 21px;
-  padding-top: 1.4rem;
-  margin-left: -20em;
+  padding-top: 20px;
+  padding-top: 1.25rem;
+  margin-left: -18.75em;
   background: #d8d8d8;
   color: #444;
 }
@@ -626,10 +626,10 @@ body:before {
 #projects {
   float: right;
   padding: 30px;
-  padding-top: 21px;
-  padding-top: 1.4rem;
-  padding-bottom: 21px;
-  padding-bottom: 1.4rem;
+  padding-top: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   background: #d8d8d8;
   color: #444;
 }
@@ -651,8 +651,8 @@ body:before {
     float: left;
     width: 48.53515625%;
     width: calc(50% - 15px);
-    margin-bottom: 31.5px;
-    margin-bottom: 2.1rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
   #profile > p + p {
     float: right;
@@ -670,8 +670,8 @@ body:before {
   #profile > p + p {
     float: none;
     width: auto;
-    margin-bottom: 21px;
-    margin-bottom: 1.4rem;
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 }
 /*
@@ -688,8 +688,8 @@ body:before {
   width: 150px;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 21px;
-  margin-top: 1.4rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
   border-radius: 50%;
   background: #333;
 }
@@ -727,46 +727,43 @@ body:before {
   display: block;
 }
 #profile .p-name {
-  color: #2b2b2b;
+  color: #111111;
   position: relative;
-  top: -10.32px;
-  top: -0.688rem;
-  font: 500 30px / 1 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
-  margin-top: 31.5px;
-  margin-top: 2.1rem;
-  margin-bottom: 0px;
-  margin-bottom: calc(0rem + -0.6rem);
+  top: -14.597px;
+  top: -0.9123125rem;
+  font: 600 31px / 1.25 'Gill Sans', Calibri, Trebuchet, sans-serif;
+  font-size: 1.9375rem;
+  margin-top: 30px;
+  margin-top: 1.875rem;
+  margin-bottom: 2.5px;
+  margin-bottom: calc(0.15625rem + -1.171875rem);
 }
 #profile .p-role {
   color: #111111;
   display: block;
   text-transform: uppercase;
   position: relative;
-  top: 1.698px;
-  top: 0.1132rem;
+  top: 1.152px;
+  top: 0.072rem;
   font: 700 13px / 1.45 'Helvetica Neue', sans-serif;
-  font-size: 0.86666667rem;
+  font-size: 0.8125rem;
+  margin-bottom: 2.5px;
+  margin-bottom: calc(0.15625rem + 0.071875rem);
 }
 #profile .p-adr {
+  margin-top: 2.5px;
+  margin-top: 0.15625rem;
   position: relative;
-  top: 0px;
-  top: 0rem;
-  font: 400 15px / 1.4 'Helvetica Neue', sans-serif;
+  top: -0.336px;
+  top: -0.021rem;
+  font: italic 400 16px / 1.3 'Gill Sans', Calibri, Trebuchet, sans-serif;
   font-size: 1rem;
-  margin-bottom: 21px;
-  margin-bottom: 1.4rem;
-}
-#profile p {
-  position: relative;
-  top: 2.12px;
-  top: 0.14133333rem;
-  font: 400 14px / 1.25 'Helvetica Neue', sans-serif;
-  font-size: 0.93333333rem;
+  margin-bottom: 20px;
+  margin-bottom: calc(1.25rem + -0.05rem);
 }
 #profile footer > ul {
-  margin-top: 31.5px;
-  margin-top: 2.1rem;
+  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 #profile footer > ul li {
   display: inline-block;
@@ -804,27 +801,27 @@ body:before {
 #projects h2 {
   color: #727272;
   position: relative;
-  top: -6.53px;
-  top: -0.43533333rem;
+  top: -7.076px;
+  top: -0.44225rem;
   font: 700 20px / 1.5 'Helvetica Neue', sans-serif;
-  font-size: 1.33333333rem;
+  font-size: 1.25rem;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
 }
 #projects * + h2 {
-  margin-top: 21px;
-  margin-top: 1.4rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 #projects a {
   color: inherit;
   text-decoration: none;
 }
 #projects ul {
-  margin-top: 21px;
-  margin-top: 1.4rem;
-  margin-bottom: 21px;
-  margin-bottom: 1.4rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 #projects li {
   position: relative;
@@ -833,8 +830,8 @@ body:before {
   width: calc(33.33333333% - 20px);
   margin-left: 2.9296875%;
   margin-left: calc(0% + 0px + 30px);
-  margin-bottom: 21px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   vertical-align: top;
 }
 #projects li:first-child {
@@ -845,14 +842,14 @@ body:before {
 }
 #projects p {
   padding: 15px;
-  padding-top: 10.5px;
-  padding-top: 0.7rem;
-  padding-bottom: 10.5px;
-  padding-bottom: 0.7rem;
+  padding-top: 10px;
+  padding-top: 0.625rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
   background: rgba(246, 246, 246, 0.9);
-  font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 0.93333333rem;
+  font: 400 14px / 1.42 'Gill Sans', Calibri, Trebuchet, sans-serif;
+  font-size: 0.875rem;
   text-shadow: -2px 2px 2px rgba(51, 51, 51, 0.125);
   transition: background-color 80ms ease-out;
   transition-property: background-color, text-shadow;
@@ -871,31 +868,31 @@ body:before {
   float: right;
   width: 39.95768229%;
   width: calc(41.66666667% - 17.5px);
-  height: 252px;
-  height: 16.8rem;
-  margin-bottom: 42px;
-  margin-bottom: 2.8rem;
+  height: 260px;
+  height: 16.25rem;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 #projects .client li:first-child {
   float: left;
   width: 57.11263021%;
   width: calc(58.33333333% - 12.5px);
-  height: 546px;
-  height: 36.4rem;
+  height: 560px;
+  height: 35rem;
 }
 @media screen and (max-width: 724px) {
   #projects .client li {
     width: 48.53515625%;
     width: calc(50% - 15px);
-    height: 336px;
-    height: 22.4rem;
+    height: 360px;
+    height: 22.5rem;
   }
   #projects .client li:first-child {
     float: none;
     width: 100%;
     width: calc(100% - 0px);
-    height: 420px;
-    height: 28rem;
+    height: 440px;
+    height: 27.5rem;
   }
   #projects .client li:first-child + li {
     float: left;
@@ -906,14 +903,14 @@ body:before {
   #projects .client li {
     width: auto;
     margin-left: 0;
-    height: 399px;
-    height: 26.6rem;
+    height: 420px;
+    height: 26.25rem;
   }
 }
 #projects .client p {
   position: absolute;
-  bottom: 15.75px;
-  bottom: 1.05rem;
+  bottom: 15px;
+  bottom: 0.9375rem;
   right: -0.73242187%;
   right: calc(0% + 0px + -7.5px);
   z-index: 5;
@@ -922,15 +919,15 @@ body:before {
 }
 #projects .client p small {
   display: block;
-  margin-top: 5.25px;
-  margin-top: 0.35rem;
-  margin-bottom: 5.25px;
-  margin-bottom: 0.35rem;
+  margin-top: 5px;
+  margin-top: 0.3125rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   position: relative;
-  top: 5.26px;
-  top: 0.35066667rem;
+  top: 4.714px;
+  top: 0.294625rem;
   font: 700 10px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 0.66666667rem;
+  font-size: 0.625rem;
   text-transform: uppercase;
   text-align: right;
 }
@@ -959,23 +956,19 @@ body:before {
 #projects .personal img {
   display: block;
   margin: 0 auto;
-  margin-top: 10.5px;
-  margin-top: 0.7rem;
-  margin-bottom: 21px;
-  margin-bottom: 1.4rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   max-height: 50%;
 }
 #projects .personal p {
+  position: relative;
   max-width: 20em;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
   box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: 1.07px;
-  top: 0.07133333rem;
-  font: 400 14px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 0.93333333rem;
   text-shadow: 0px 2px 1px rgba(51, 51, 51, 0.075);
 }
 #projects .personal p:before {
@@ -991,15 +984,15 @@ body:before {
 }
 #projects .personal p:after {
   display: block;
-  padding-top: 5.25px;
-  padding-top: 0.35rem;
-  padding-bottom: 5.25px;
-  padding-bottom: 0.35rem;
+  padding-top: 5px;
+  padding-top: 0.3125rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
   position: relative;
-  top: 5.26px;
-  top: 0.35066667rem;
+  top: 4.714px;
+  top: 0.294625rem;
   font: 700 10px / 1.4 'Helvetica Neue', sans-serif;
-  font-size: 0.66666667rem;
+  font-size: 0.625rem;
   text-transform: uppercase;
   text-align: center;
   content: 'View on GitHub \2192';
@@ -1014,8 +1007,8 @@ body:before {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 42px;
-    margin-bottom: 2.8rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 }
 

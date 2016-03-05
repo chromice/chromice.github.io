@@ -27,19 +27,23 @@
 @light-font-variation: 300;
 @light-font-offset: 0.877;
 
-@normal-font-family: 'Helvetica Neue', sans-serif;
+@normal-font-family: 'Gill Sans', Calibri, Trebuchet, sans-serif;
 @normal-font-variation: 400;
-@normal-font-offset: 0.870;
+@normal-font-offset: 0.844;
 
-@bold-font-family: 'Helvetica Neue', sans-serif;
-@bold-font-variation: 500;
-@bold-font-offset: 0.879;
+@italic-font-family: 'Gill Sans', Calibri, Trebuchet, sans-serif;
+@italic-font-variation: italic 400;
+@italic-font-offset: 0.840;
+
+@bold-font-family: 'Gill Sans', Calibri, Trebuchet, sans-serif;
+@bold-font-variation: 600;
+@bold-font-offset: 0.846;
 
 @bolder-font-family: 'Helvetica Neue', sans-serif;
 @bolder-font-variation: 700;
 @bolder-font-offset: 0.879;
 
-.use-baseline-grid(15px, 1.4, normal);
+.use-baseline-grid(16px, 1.25, normal);
 
 html {
 	.font-baseline();
@@ -305,10 +309,10 @@ body {
 	
 	// Name
 	.p-name {
-		color: darken(@color-personal-text, 10%);
-		.font-align(30px, 1, bold);
+		color: darken(@color-personal-text, 20%);
+		.font-align(31px, 1.25, bold);
 		.margin-top(1.5);
-		.margin-bottom(0);
+		.margin-bottom(0.125);
 	}
 	
 	// Role 
@@ -317,17 +321,19 @@ body {
 		display: block;
 		text-transform: uppercase;
 		.font-align(13px, 1.45, bolder);
+		.margin-bottom(0.125);
 	}
 	
 	// Locations
 	.p-adr {
-		.font-align(15px, 1.4, normal);
+		.margin-top(0.125);
+		.font-align(16px, 1.30, italic);
 		.margin-bottom(1);
 	}
 	
 	// Text
 	p {
-		.font-align(14px, 1.25, normal);
+		// .font-align(14px, 1.25, normal);
 	}
 	
 	// Links
@@ -433,7 +439,7 @@ body {
 		.padding-bottom(0.5);
 		box-shadow: -2px 2px 1px fade(#000, 10%);
 		background: @color-background;
-		.font(14px, 1.4, normal);
+		.font(14px, 1.42, normal);
 		text-shadow: -2px 2px 2px fade(#333, 12.5%);
 		
 		transition: background-color 80ms ease-out;
@@ -459,25 +465,25 @@ body {
 			display: block;
 			float: right;
 			.width(1.25);
-			.height(12);
+			.height(13);
 			.margin-bottom(2);
 		}
 		
 		li:first-child {
 			float: left;
 			.width(1.75);
-			.height(26);
+			.height(28);
 		}
 		
 		@media screen and (max-width: (724px)) {
 			li {
 				.width(1.5);
-				.height(16);
+				.height(18);
 			}
 			li:first-child {
 				float: none;
 				.width(3);
-				.height(20);
+				.height(22);
 				
 				+ li {
 					float: left;
@@ -490,7 +496,7 @@ body {
 			li {
 				width: auto;
 				margin-left: 0;
-				.height(19);
+				.height(21);
 			}
 		}
 		
@@ -557,7 +563,6 @@ body {
 			margin-right: auto;
 			margin-bottom: 0;
 			box-shadow: 0px 1px 1px 1px fade(#000, 10%);
-			.font-align(14px, 1.4, normal);
 			text-shadow: 0px 2px 1px fade(#333, 7.5%);
 			
 			&:before {
