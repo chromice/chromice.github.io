@@ -90,6 +90,8 @@ figure {
 		background: #fff url(/assets/graphics/chrome.png) no-repeat 0 -11px;
 		background-size: 2048px 22px;
 		
+		transition: box-shadow 150ms ease-out;
+		
 		img {
 			max-width: none;
 			width: 100%;
@@ -535,6 +537,7 @@ body {
 		
 		a:hover, a:focus {
 			figure.chrome {
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.4);
 				background-position: 0 0;
 				
 				figcaption:after {
@@ -597,7 +600,7 @@ body {
 		
 		a:hover, a:focus {
 			p {
-				box-shadow: 2px 2px 1px fade(#000, 15%);
+				box-shadow: 2px 2px 1px fade(#000, 25%);
 			}
 			p:before {
 				border-bottom-color: @color-hover-bg;
