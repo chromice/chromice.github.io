@@ -852,7 +852,7 @@ body:before {
   padding-top: 0.65rem;
   padding-bottom: 10.4px;
   padding-bottom: 0.65rem;
-  background: rgba(246, 246, 246, 0.9);
+  background: rgba(246, 246, 246, 0.95);
   font: 400 14px / 1.3 'Gill Sans', Calibri, Trebuchet, sans-serif;
   font-size: 0.875rem;
   transition: background-color 80ms ease-out;
@@ -863,7 +863,7 @@ body:before {
 }
 #projects a:hover p,
 #projects a:focus p {
-  background: rgba(68, 68, 68, 0.85);
+  background: rgba(68, 68, 68, 0.925);
   color: #eee;
 }
 #projects .client li {
@@ -988,7 +988,7 @@ body:before {
   margin-left: -10px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid rgba(246, 246, 246, 0.9);
+  border-bottom: 10px solid rgba(246, 246, 246, 0.95);
   content: '';
 }
 #projects .personal p:after {
@@ -1012,7 +1012,7 @@ body:before {
 }
 #projects .personal a:hover p:before,
 #projects .personal a:focus p:before {
-  border-bottom-color: rgba(68, 68, 68, 0.85);
+  border-bottom-color: rgba(68, 68, 68, 0.925);
 }
 @media screen and (max-width: 724px) {
   #projects .personal li {
