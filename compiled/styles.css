@@ -639,6 +639,12 @@ body:before {
   background: #d8d8d8;
   color: #444;
 }
+@media screen and (min-width: 1280px) {
+  #profile {
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+}
 @media screen and (max-width: 1023px) {
   body {
     padding-left: 0;
@@ -883,6 +889,26 @@ body:before {
   width: calc(58.33333333% - 12.5px);
   height: 582.4px;
   height: 36.4rem;
+}
+@media screen and (min-width: 1394px) {
+  #projects .client li {
+    height: 332.8px;
+    height: 20.8rem;
+  }
+  #projects .client li:first-child {
+    height: 707.2px;
+    height: 44.2rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  #projects .client li {
+    height: 395.2px;
+    height: 24.7rem;
+  }
+  #projects .client li:first-child {
+    height: 832px;
+    height: 52rem;
+  }
 }
 @media screen and (max-width: 724px) {
   #projects .client li {

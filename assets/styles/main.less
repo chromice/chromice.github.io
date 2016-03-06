@@ -202,6 +202,13 @@ body {
 	color: @color-project-text;
 }
 
+@media screen and (min-width: 1280px) {
+	#profile {
+		padding-left: (@grid-gutter);
+		padding-right: (@grid-gutter / 3);
+	}
+}
+
 @media screen and (max-width: 1023px) {
 	body {
 		padding-left: 0;
@@ -477,6 +484,25 @@ body {
 			float: left;
 			.width(1.75);
 			.height(28);
+		}
+		
+		@media screen and (min-width: 1394px) {
+			li {
+				.height(16);
+			}
+			
+			li:first-child {
+				.height(34);
+			}
+		}
+		@media screen and (min-width: 2000px) {
+			li {
+				.height(19);
+			}
+			
+			li:first-child {
+				.height(40);
+			}
 		}
 		
 		@media screen and (max-width: (724px)) {
