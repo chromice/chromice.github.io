@@ -619,7 +619,8 @@ body:before {
 #profile {
   float: left;
   width: 18.75em;
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 10px;
   padding-top: 20.8px;
   padding-top: 1.3rem;
   margin-left: -18.75em;
@@ -631,11 +632,11 @@ body:before {
 }
 #projects {
   float: right;
-  padding: 30px;
-  padding-top: 20.8px;
-  padding-top: 1.3rem;
-  padding-bottom: 20.8px;
-  padding-bottom: 1.3rem;
+  padding: 20px;
+  padding-top: 10.4px;
+  padding-top: 0.65rem;
+  padding-bottom: 10.4px;
+  padding-bottom: 0.65rem;
   background: #d8d8d8;
   color: #444;
 }
@@ -643,6 +644,13 @@ body:before {
   #profile {
     padding-left: 30px;
     padding-right: 10px;
+  }
+  #projects {
+    padding: 30px;
+    padding-top: 20.8px;
+    padding-top: 1.3rem;
+    padding-bottom: 20.8px;
+    padding-bottom: 1.3rem;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -671,6 +679,8 @@ body:before {
   }
   #profile footer {
     clear: both;
+    margin-bottom: 20.8px;
+    margin-bottom: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -771,8 +781,8 @@ body:before {
   top: 0.004rem;
   font: italic 400 16px / 1.3 'Gill Sans', Calibri, Trebuchet, sans-serif;
   font-size: 1rem;
-  margin-bottom: 20.8px;
-  margin-bottom: 1.3rem;
+  margin-bottom: 31.2px;
+  margin-bottom: 1.95rem;
 }
 #profile footer > ul {
   margin-top: 31.2px;
