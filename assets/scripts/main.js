@@ -30,7 +30,7 @@
 		Track outbound clicks
 	*/
 	function trackOutBoundClicks(event) {
-		var href = event.target.href;
+		var href = this.href;
 		
 		if (!ga) return;
 		
@@ -38,13 +38,13 @@
 			ga('send', 'event', {
 				eventCategory: 'Email link',
 				eventAction: 'click',
-				eventLabel: event.target.href
+				eventLabel: href
 			});
 		} else {
 			ga('send', 'event', {
 				eventCategory: 'Outbound Link',
 				eventAction: 'click',
-				eventLabel: event.target.href,
+				eventLabel: href,
 				transport: 'beacon'
 			});
 		}
@@ -53,7 +53,7 @@
 	var as = d.getElementsByTagName('a');
 	
 	for (var i = 0; i < as.length; i++) {
-		as[i].addEventListener('click', trackOutBoundClicks);
+		as[i].addEventListener('click', trackOutBoundClicks, true);
 	}
 
 	
