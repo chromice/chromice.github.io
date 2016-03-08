@@ -406,11 +406,34 @@ body {
 #projects {
 	h2 {
 		.invisible();
-		color: darken(@color-project-bg, 40%);
-		.font-align(20px, 1.5, bolder);
+		@color-header: darken(@color-project-bg, 40%);
+		position: relative;
+		.font-align(18px, 1.5, bold);
+		.margin-top(0);
+		.margin-bottom(0);
+		color: @color-header;
 		text-align: center;
-		text-shadow: 0 -1px 0 rgba(0,0,0,0.7),  0 1px 0 rgba(255,255,255,0.65);
-		text-transform: uppercase;
+		// text-transform: uppercase;
+		
+		&:before {
+			position: absolute;
+			.top(0.75, 1px);
+			left: 0;
+			right: 0;
+			z-index: 1;
+			display: block;
+			border-top: 1px solid @color-header;
+			content: '';
+		}
+		
+		span {
+			// display: block;
+			position: relative;
+			z-index: 2;
+			padding-left: (@grid-gutter / 2);
+			padding-right: (@grid-gutter / 2);
+			background: @color-project-bg;
+		}
 	}
 	
 	* + h2 {

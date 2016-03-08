@@ -823,15 +823,34 @@ body:before {
 	Projects
 */
 #projects h2 {
-  color: #727272;
   position: relative;
-  top: -6.676px;
-  top: -0.41725rem;
-  font: 700 20px / 1.5 'Helvetica Neue', sans-serif;
-  font-size: 1.25rem;
+  top: -3.824px;
+  top: -0.239rem;
+  font: 600 18px / 1.5 'Gill Sans', Calibri, Trebuchet, sans-serif;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-bottom: calc(0rem + -0.3875rem);
+  color: #727272;
   text-align: center;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.65);
-  text-transform: uppercase;
+}
+#projects h2:before {
+  position: absolute;
+  top: 15.6px;
+  top: calc(0.975rem + 1px + -0.239rem);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  border-top: 1px solid #727272;
+  content: '';
+}
+#projects h2 span {
+  position: relative;
+  z-index: 2;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #d8d8d8;
 }
 #projects * + h2 {
   margin-top: 20.8px;
