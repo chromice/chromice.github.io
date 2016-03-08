@@ -1036,7 +1036,7 @@ body:before {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   text-shadow: 2px 2px 2px rgba(51, 51, 51, 0.1);
 }
 #projects .personal p:before {
@@ -1067,7 +1067,7 @@ body:before {
 }
 #projects .personal a:hover p,
 #projects .personal a:focus p {
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 #projects .personal a:hover p:before,
 #projects .personal a:focus p:before {
