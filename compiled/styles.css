@@ -708,7 +708,7 @@ body:before {
   position: relative;
   overflow: hidden;
   display: block;
-  width: 150px;
+  width: 135px;
   max-width: 100%;
   margin: 0 auto;
   margin-top: 20.8px;
@@ -716,6 +716,11 @@ body:before {
   border-radius: 50%;
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
   background: #333;
+}
+@media screen and (min-width: 1280px) {
+  #profile header > a {
+    width: 150px;
+  }
 }
 #profile header > a:before {
   display: block;

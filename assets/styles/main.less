@@ -271,8 +271,6 @@ body {
 /*
 	Profile
 */
-@image-width: 150px;
-
 #profile {
 	// .show-baselines();
 	
@@ -285,13 +283,17 @@ body {
 		position: relative;
 		overflow: hidden;
 		display: block;
-		width: @image-width;
+		width: 135px;
 		max-width: 100%;
 		margin: 0 auto;
 		.margin-top(1);
 		border-radius: 50%;
 		box-shadow: 1px 1px 1px rgba(255,255,255,0.4);
 		background: #333;
+		
+		@media screen and (min-width: 1280px) {
+			width: 150px;
+		}
 		
 		&:before {
 			display: block;
