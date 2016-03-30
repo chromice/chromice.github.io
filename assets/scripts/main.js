@@ -34,7 +34,14 @@
 		
 		if (!ga) return;
 		
-		if (href.substr(0, 7) === 'mailto:') {
+		if (href.substr(-4, 4) === '.pdf') {
+			ga('send', 'event', {
+				eventCategory: 'Resume Link',
+				eventAction: 'click',
+				eventLabel: href,
+				transport: 'beacon'
+			});
+		} else if (href.substr(0, 7) === 'mailto:') {
 			ga('send', 'event', {
 				eventCategory: 'Email link',
 				eventAction: 'click',
