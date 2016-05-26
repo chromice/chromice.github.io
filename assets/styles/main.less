@@ -520,6 +520,10 @@ body {
 			.width(1.75);
 			.height(28);
 		}
+		li:first-child + li {
+			height: auto;
+			margin-bottom: @grid-gutter;
+		}
 		
 		@media screen and (min-width: 1394px) {
 			li {

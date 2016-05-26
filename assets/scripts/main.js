@@ -3,9 +3,10 @@
 	/*
 		Position profile info
 	*/
-	var profile = d.getElementById('profile');
+	var profile = d.getElementById('profile'),
+		clients = document.querySelectorAll('#projects .client > li');
 	
-	function position_profile (argument) {
+	function position_profile() {
 		var top = (window.innerHeight - profile.offsetHeight) / 3;
 		
 		if (top < 0) {
@@ -16,14 +17,30 @@
 		}
 	}
 	
-	position_profile();
+	function position_clients() {
+		if (window.innerWidth <= 724) {
+			clients[2].style.height = (clients[1].offsetHeight - 11) + 'px';
+		} else {
+			clients[2].style.height = (clients[0].offsetHeight - clients[1].offsetHeight - 30) + 'px';
+		}
+	}
+	
+	function position_staff() {
+		c.log('Positioning...');
+		position_clients();
+		position_profile();
+	}
+	
+	window.addEventListener('load', position_staff);
+	
+	position_staff();
 	
 	var resizeTimer = null;
 	
 	w.addEventListener('resize', function () {
 		if (resizeTimer) clearTimeout(resizeTimer);
 		
-		resizeTimer = setTimeout(position_profile, 50);
+		resizeTimer = setTimeout(position_staff, 50);
 	});
 	
 	/*

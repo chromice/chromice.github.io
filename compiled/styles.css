@@ -931,6 +931,10 @@ body:before {
   height: 582.4px;
   height: 36.4rem;
 }
+#projects .client li:first-child + li {
+  height: auto;
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 1394px) {
   #projects .client li {
     height: 332.8px;
