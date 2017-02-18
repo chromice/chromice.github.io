@@ -4,6 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Raleway:400,400i|Alice');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -388,7 +389,8 @@ video {
   display: none !important;
   visibility: hidden;
 }
-.ext-invisible {
+.ext-invisible,
+.w {
   position: absolute;
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -399,7 +401,9 @@ video {
   padding: 0;
 }
 .ext-invisible:active,
-.ext-invisible:focus {
+.ext-invisible:focus,
+.w:active,
+.w:focus {
   position: static;
   clip: auto;
   overflow: visible;
@@ -473,6 +477,125 @@ video {
   h3 {
     page-break-after: avoid;
   }
+}
+html {
+  font: 20px / 1.45 'Raleway', sans-serif;
+}
+body {
+  margin: 0 auto;
+  max-width: 35em;
+  padding: 1.45em;
+}
+/*
+	Headings
+*/
+h2 {
+  position: relative;
+  top: -22.994px;
+  top: -1.1497rem;
+  font: 500 42px / 1.25 'Oswald', sans-serif;
+  font-size: 2.1rem;
+  margin-top: 58px;
+  margin-top: 2.9rem;
+  margin-bottom: 29px;
+  margin-bottom: calc(1.45rem + -1.175rem);
+}
+h3 {
+  position: relative;
+  top: -12.618px;
+  top: -0.6309rem;
+  font: 400 29px / 1.5 'Oswald', sans-serif;
+  font-size: 1.45rem;
+  margin-top: 0;
+  margin-bottom: 29px;
+  margin-bottom: calc(1.45rem + -0.725rem);
+}
+/*
+	Copy
+*/
+p,
+ul,
+ol,
+figure {
+  margin-top: 0;
+  margin-bottom: 29px;
+  margin-bottom: 1.45rem;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  margin-bottom: 9.57px;
+  margin-bottom: 0.4785rem;
+}
+ul li:before {
+  position: absolute;
+  top: 0.413em;
+  left: -25px;
+  content: "*";
+  font-family: 'Alice', sans-serif;
+  font-size: 1.25em;
+  line-height: 0.8;
+  opacity: 0.33;
+}
+/*
+	Misc
+*/
+.amp {
+  font-family: 'Alice', sans-serif;
+  font-size: 1.5em;
+  line-height: 0.2;
+  vertical-align: -41.3%;
+  opacity: 0.33;
+}
+/*
+	Profile
+*/
+#profile header {
+  text-align: center;
+}
+#profile h1 {
+  position: relative;
+  top: -9.036px;
+  top: -0.4518rem;
+  font: 700 88px / 1.125 'Oswald', sans-serif;
+  font-size: 4.4rem;
+  margin-top: 29px;
+  margin-top: 1.45rem;
+  margin-bottom: 29px;
+  margin-bottom: calc(1.45rem + -0.6rem);
+}
+#profile .role,
+#profile .adr {
+  display: block;
+}
+#profile .role {
+  position: relative;
+  top: -22.994px;
+  top: -1.1497rem;
+  font: 500 42px / 1.25 'Oswald', sans-serif;
+  font-size: 2.1rem;
+  margin-bottom: 21.75px;
+  margin-bottom: calc(1.0875rem + -1.175rem);
+  text-transform: capitalize;
+}
+#profile .adr {
+  position: relative;
+  top: -8.993px;
+  top: -0.44965rem;
+  font: 400 29px / 1.25 'Oswald', sans-serif;
+  font-size: 1.45rem;
+  margin-bottom: 36.25px;
+  margin-bottom: calc(1.8125rem + -0.3625rem);
+}
+#profile footer {
+  position: relative;
+  top: 0px;
+  top: 0rem;
+  font: italic 400 20px / 1.45 'Raleway', sans-serif;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=.//styles.css.map */

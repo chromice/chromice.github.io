@@ -11,17 +11,145 @@
 // = Shared variables, styles, and mixins =
 // ========================================
 
-
-
 // =======================
-// = Typography / Layout =
+// = Typography & Layout =
 // =======================
 
+// FIXME: We don't really need to embed all the glyphs only the amperand!
+
+// @amperand-font-family: 'Alex Brush';
+// @amperand-font-family: 'Rozha One';
+// @amperand-font-family: 'Lobster Two';
+// @amperand-font-family: 'Niconne';
+// @amperand-font-family: 'Prata';
+@amperand-font-family: 'Alice';
+
+@body-font-family: 'Raleway', sans-serif;
+@body-font-variation: 400;
+@body-font-offset: 0.887;
+
+@highlight-font-family: @body-font-family;
+@highlight-font-variation: italic 400;
+@highlight-font-offset: 0.887;
+
+@title-font-family: 'Oswald', sans-serif;
+@title-font-variation: 700;
+@title-font-offset: 0.952;
+
+@heading-font-family: @title-font-family;
+@heading-font-variation: 500;
+@heading-font-offset: @title-font-offset;
+
+@subheading-font-family: @title-font-family;
+@subheading-font-variation: 400;
+@subheading-font-offset: @title-font-offset;
+
+
+.use-custom-scale(20px, 10px 14px 20px 29px 42px 61px 88px 128px);
+.use-baseline-grid(0, 1.45, body);
+.use-column-grid(700px, 20px, 6);
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Raleway:400,400i|@{amperand-font-family}');
+
+html {
+	.font-baseline();
+}
+body {
+	// .show-baselines();
+	margin: 0 auto;
+	max-width: 35em;
+	padding: 1.45em;
+}
+
+/*
+	Headings
+*/
+h2 {
+	.font-align(2, 1.25, heading);
+	.margin-top(2);
+	.margin-bottom(1);
+}
+h3 {
+	.font-align(1, 1.5, subheading);
+	.margin-top(0);
+	.margin-bottom(1);
+}
+
+/*
+	Copy
+*/
+p, ul, ol, figure {
+	.margin-top(0);
+	.margin-bottom(1);
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+	
+	li {
+		position: relative;
+		.margin-bottom(0.33);
+		
+		&:before {
+			position: absolute;
+			top: 0.413em;
+			left: (@grid-gutter * -1.25);
+			
+			content: "*";
+			font-family: @amperand-font-family, sans-serif;
+			font-size: 1.25em;
+			line-height: (1 / 1.25);
+			
+			opacity: 0.33;
+		}
+	}
+}
+	
+/*
+	Misc
+*/
+.w {
+	.invisible();
+}
+.amp {
+	font-family: @amperand-font-family, sans-serif;
+	font-size: 1.5em;
+	line-height: 0.2;
+	vertical-align: -41.3%;
+	opacity: 0.33;
+}
 
 
 // ==============
 // = Components =
 // ==============
 
-
-
+/*
+	Profile
+*/
+#profile {
+	header {
+		text-align: center;
+	}
+	h1 {
+		.font-align(4, 1.125, title);
+		.margin-top(1);
+		.margin-bottom(1);
+	}
+	.role, .adr {
+		display: block;
+	}
+	.role {
+		.font-align(2, 1.25, heading);
+		.margin-bottom(0.75);
+		text-transform: capitalize;
+	}
+	.adr {
+		.font-align(1, 1.25, subheading);
+		.margin-bottom(1.25);
+	}
+	footer {
+		.font-align(0, 1.45, highlight);
+		// text-align: center;
+	}
+}
