@@ -4,7 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Raleway:400,400i|Alice');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Raleway:400,400i|Alice');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -491,9 +491,9 @@ body {
 */
 h2 {
   position: relative;
-  top: -22.994px;
-  top: -1.1497rem;
-  font: 500 42px / 1.25 'Oswald', sans-serif;
+  top: -21.65px;
+  top: -1.0825rem;
+  font: 400 42px / 1.25 'Sansita', serif;
   font-size: 2.1rem;
   margin-top: 58px;
   margin-top: 2.9rem;
@@ -502,13 +502,13 @@ h2 {
 }
 h3 {
   position: relative;
-  top: -12.618px;
-  top: -0.6309rem;
-  font: 400 29px / 1.5 'Oswald', sans-serif;
+  top: -8.993px;
+  top: -0.44965rem;
+  font: 400 29px / 1.25 'Oswald', sans-serif;
   font-size: 1.45rem;
   margin-top: 0;
   margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -0.725rem);
+  margin-bottom: calc(1.45rem + -0.3625rem);
 }
 /*
 	Copy
@@ -554,18 +554,22 @@ ul li:before {
 	Profile
 */
 #profile header {
+  padding-top: 29px;
+  padding-top: 1.45rem;
+  padding-bottom: 29px;
+  padding-bottom: 1.45rem;
   text-align: center;
 }
 #profile h1 {
   position: relative;
-  top: -9.036px;
-  top: -0.4518rem;
-  font: 700 88px / 1.125 'Oswald', sans-serif;
+  top: -0.72px;
+  top: -0.036rem;
+  font: 700 88px / 1 'Sansita', serif;
   font-size: 4.4rem;
   margin-top: 29px;
   margin-top: 1.45rem;
   margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -0.6rem);
+  margin-bottom: calc(1.45rem + -0.05rem);
 }
 #profile .role,
 #profile .adr {
@@ -575,17 +579,16 @@ ul li:before {
   position: relative;
   top: -22.994px;
   top: -1.1497rem;
-  font: 500 42px / 1.25 'Oswald', sans-serif;
+  font: 400 42px / 1.25 'Oswald', sans-serif;
   font-size: 2.1rem;
   margin-bottom: 21.75px;
   margin-bottom: calc(1.0875rem + -1.175rem);
-  text-transform: capitalize;
 }
 #profile .adr {
   position: relative;
-  top: -8.993px;
-  top: -0.44965rem;
-  font: 400 29px / 1.25 'Oswald', sans-serif;
+  top: -8.065px;
+  top: -0.40325rem;
+  font: 400 29px / 1.25 'Sansita', serif;
   font-size: 1.45rem;
   margin-bottom: 36.25px;
   margin-bottom: calc(1.8125rem + -0.3625rem);

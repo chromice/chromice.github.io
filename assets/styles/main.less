@@ -17,39 +17,35 @@
 
 // FIXME: We don't really need to embed all the glyphs only the amperand!
 
-// @amperand-font-family: 'Alex Brush';
-// @amperand-font-family: 'Rozha One';
-// @amperand-font-family: 'Lobster Two';
-// @amperand-font-family: 'Niconne';
-// @amperand-font-family: 'Prata';
-@amperand-font-family: 'Alice';
+@regular-font-family: 'Raleway', sans-serif;
+@regular-font-variation: 400;
+@regular-font-offset: 0.887;
 
-@body-font-family: 'Raleway', sans-serif;
-@body-font-variation: 400;
-@body-font-offset: 0.887;
-
-@highlight-font-family: @body-font-family;
+@highlight-font-family: @regular-font-family;
 @highlight-font-variation: italic 400;
 @highlight-font-offset: 0.887;
 
-@title-font-family: 'Oswald', sans-serif;
+@title-font-family: 'Sansita', serif;
 @title-font-variation: 700;
-@title-font-offset: 0.952;
+@title-font-offset: 0.920;
+
+@subtitle-font-family: 'Oswald', sans-serif;
+@subtitle-font-variation: 400;
+@subtitle-font-offset: 0.952;
 
 @heading-font-family: @title-font-family;
-@heading-font-variation: 500;
+@heading-font-variation: 400;
 @heading-font-offset: @title-font-offset;
 
-@subheading-font-family: @title-font-family;
-@subheading-font-variation: 400;
-@subheading-font-offset: @title-font-offset;
-
+@accent-font-family: 'Alice';
+@accent-font-variation: 400;
+@accent-font-offset: 0.836;
 
 .use-custom-scale(20px, 10px 14px 20px 29px 42px 61px 88px 128px);
-.use-baseline-grid(0, 1.45, body);
+.use-baseline-grid(0, 1.45, regular);
 .use-column-grid(700px, 20px, 6);
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Raleway:400,400i|@{amperand-font-family}');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Raleway:400,400i|@{accent-font-family}');
 
 html {
 	.font-baseline();
@@ -70,7 +66,7 @@ h2 {
 	.margin-bottom(1);
 }
 h3 {
-	.font-align(1, 1.5, subheading);
+	.font-align(1, 1.25, subtitle);
 	.margin-top(0);
 	.margin-bottom(1);
 }
@@ -96,7 +92,7 @@ ul {
 			left: (@grid-gutter * -1.25);
 			
 			content: "*";
-			font-family: @amperand-font-family, sans-serif;
+			font-family: @accent-font-family, sans-serif;
 			font-size: 1.25em;
 			line-height: (1 / 1.25);
 			
@@ -112,7 +108,7 @@ ul {
 	.invisible();
 }
 .amp {
-	font-family: @amperand-font-family, sans-serif;
+	font-family: @accent-font-family, sans-serif;
 	font-size: 1.5em;
 	line-height: 0.2;
 	vertical-align: -41.3%;
@@ -129,10 +125,12 @@ ul {
 */
 #profile {
 	header {
+		.padding-top(1);
+		.padding-bottom(1);
 		text-align: center;
 	}
 	h1 {
-		.font-align(4, 1.125, title);
+		.font-align(4, 1, title);
 		.margin-top(1);
 		.margin-bottom(1);
 	}
@@ -140,13 +138,16 @@ ul {
 		display: block;
 	}
 	.role {
-		.font-align(2, 1.25, heading);
+		.font-align(2, 1.25, subtitle);
 		.margin-bottom(0.75);
-		text-transform: capitalize;
+		// text-transform: capitalize;
 	}
 	.adr {
-		.font-align(1, 1.25, subheading);
+		.font-align(1, 1.25, heading);
 		.margin-bottom(1.25);
+	}
+	.intro > p {
+		// .font-align(1, 1.45, regular);
 	}
 	footer {
 		.font-align(0, 1.45, highlight);
