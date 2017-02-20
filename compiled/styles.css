@@ -4,7 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Raleway:400,400i|Alice');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|Alice');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -479,7 +479,7 @@ video {
   }
 }
 html {
-  font: 20px / 1.45 'Raleway', sans-serif;
+  font: 20px / 1.45 'Lato', sans-serif;
 }
 body {
   margin: 0 auto;
@@ -491,9 +491,9 @@ body {
 */
 h2 {
   position: relative;
-  top: -21.65px;
-  top: -1.0825rem;
-  font: 400 42px / 1.25 'Sansita', serif;
+  top: -22.994px;
+  top: -1.1497rem;
+  font: 400 42px / 1.25 'Oswald', sans-serif;
   font-size: 2.1rem;
   margin-top: 58px;
   margin-top: 2.9rem;
@@ -502,9 +502,9 @@ h2 {
 }
 h3 {
   position: relative;
-  top: -8.993px;
-  top: -0.44965rem;
-  font: 400 29px / 1.25 'Oswald', sans-serif;
+  top: -8.065px;
+  top: -0.40325rem;
+  font: 400 29px / 1.25 'Sansita', serif;
   font-size: 1.45rem;
   margin-top: 0;
   margin-bottom: 29px;
@@ -562,14 +562,14 @@ ul li:before {
 }
 #profile h1 {
   position: relative;
-  top: -0.72px;
-  top: -0.036rem;
-  font: 700 88px / 1 'Sansita', serif;
-  font-size: 4.4rem;
-  margin-top: 29px;
-  margin-top: 1.45rem;
-  margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -0.05rem);
+  top: -4.88px;
+  top: -0.244rem;
+  font: 700 61px / 1 'Sansita', serif;
+  font-size: 3.05rem;
+  margin-top: 14.5px;
+  margin-top: 0.725rem;
+  margin-bottom: 14.5px;
+  margin-bottom: calc(0.725rem + -0.15rem);
 }
 #profile .role,
 #profile .adr {
@@ -577,27 +577,27 @@ ul li:before {
 }
 #profile .role {
   position: relative;
-  top: -22.994px;
-  top: -1.1497rem;
-  font: 400 42px / 1.25 'Oswald', sans-serif;
-  font-size: 2.1rem;
-  margin-bottom: 21.75px;
-  margin-bottom: calc(1.0875rem + -1.175rem);
+  top: -8.993px;
+  top: -0.44965rem;
+  font: 400 29px / 1.25 'Oswald', sans-serif;
+  font-size: 1.45rem;
+  margin-bottom: 7.25px;
+  margin-bottom: calc(0.3625rem + -0.3625rem);
 }
 #profile .adr {
   position: relative;
-  top: -8.065px;
-  top: -0.40325rem;
-  font: 400 29px / 1.25 'Sansita', serif;
-  font-size: 1.45rem;
-  margin-bottom: 36.25px;
-  margin-bottom: calc(1.8125rem + -0.3625rem);
+  top: 1.34px;
+  top: 0.067rem;
+  font: 400 20px / 1.25 'Sansita', serif;
+  font-size: 1rem;
+  margin-bottom: 7.25px;
+  margin-bottom: calc(0.3625rem + 0.2rem);
 }
 #profile footer {
   position: relative;
   top: 0px;
   top: 0rem;
-  font: italic 400 20px / 1.45 'Raleway', sans-serif;
+  font: italic 400 20px / 1.45 'Lato', sans-serif;
   font-size: 1rem;
 }
 

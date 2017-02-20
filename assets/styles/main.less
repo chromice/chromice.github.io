@@ -17,7 +17,7 @@
 
 // FIXME: We don't really need to embed all the glyphs only the amperand!
 
-@regular-font-family: 'Raleway', sans-serif;
+@regular-font-family: 'Lato', sans-serif;
 @regular-font-variation: 400;
 @regular-font-offset: 0.887;
 
@@ -45,7 +45,7 @@
 .use-baseline-grid(0, 1.45, regular);
 .use-column-grid(700px, 20px, 6);
 
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Raleway:400,400i|@{accent-font-family}');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|@{accent-font-family}');
 
 html {
 	.font-baseline();
@@ -61,12 +61,12 @@ body {
 	Headings
 */
 h2 {
-	.font-align(2, 1.25, heading);
+	.font-align(2, 1.25, subtitle);
 	.margin-top(2);
 	.margin-bottom(1);
 }
 h3 {
-	.font-align(1, 1.25, subtitle);
+	.font-align(1, 1.25, heading);
 	.margin-top(0);
 	.margin-bottom(1);
 }
@@ -130,21 +130,21 @@ ul {
 		text-align: center;
 	}
 	h1 {
-		.font-align(4, 1, title);
-		.margin-top(1);
-		.margin-bottom(1);
+		.font-align(3, 1, title);
+		.margin-top(0.5);
+		.margin-bottom(0.5);
 	}
 	.role, .adr {
 		display: block;
 	}
 	.role {
-		.font-align(2, 1.25, subtitle);
-		.margin-bottom(0.75);
+		.font-align(1, 1.25, subtitle);
+		.margin-bottom(0.25);
 		// text-transform: capitalize;
 	}
 	.adr {
-		.font-align(1, 1.25, heading);
-		.margin-bottom(1.25);
+		.font-align(0, 1.25, heading);
+		.margin-bottom(0.25);
 	}
 	.intro > p {
 		// .font-align(1, 1.45, regular);
