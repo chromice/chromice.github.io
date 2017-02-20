@@ -105,6 +105,7 @@ ul {
 	Figure
 */
 figure {
+	clear: both;
 	margin: 0;
 	.margin-top(0);
 	.margin-bottom(1);
@@ -121,7 +122,14 @@ figure {
 			0 1px 2px 2px rgba(0,0,0,0.025);
 	}
 	
+	&.mini {
+		float: right;
+		width: 300px;
+	}
+	
 	&.screenshot {
+		.margin-top(2);
+		.margin-bottom(2);
 		position: relative;
 		z-index: 10;
 		
@@ -144,6 +152,8 @@ figure {
 			left: 0;
 			right: 0;
 			z-index: 2;
+			border: 1px solid #333;
+			margin: -1px;
 		}
 		
 		&.ipad {
@@ -171,7 +181,8 @@ figure {
 				left: percentage((-@-left / @width));
 				width: percentage((@-width / @width));
 				height: percentage((@-height / @height));
-				background: no-repeat url(../assets/graphics/iPad.png) 0/100%;
+				background: no-repeat url(../assets/graphics/iPad.png) 0 0;
+				background-size: 100%;
 			}
 		}
 		
@@ -186,7 +197,7 @@ figure {
 			@-width: 379px;
 			@-height: 795px;
 			
-			max-width: (@width / 1.309811834);
+			max-width: @width;
 			
 			&:before {
 				margin-top: percentage((@-top / @width));
@@ -199,12 +210,13 @@ figure {
 				left: percentage((-@-left / @width));
 				width: percentage((@-width / @width));
 				height: percentage((@-height / @height));
-				background: no-repeat url(../assets/graphics/iPhone.png) 0/100%;
+				background: no-repeat url(../assets/graphics/iPhone.png) 0 0;
+				background-size: 100%;
 			}
 		}
 	}
 }
-	
+
 /*
 	Misc
 */
@@ -257,4 +269,43 @@ figure {
 		.font-align(0, 1.45, highlight);
 		// text-align: center;
 	}
+}
+
+/*
+	Case studies
+*/
+.rightmost {
+	float: right;
+	.width(2);
+	.margin-left((@grid-gutter * 2));
+	
+	.prototype {
+		margin: -9%;
+	}
+}
+.leftmost {
+	float: left;
+	.width(2);
+	.margin-right((@grid-gutter * 2));
+}
+.combined {
+	position: relative;
+	
+	.screenshot.iphone {
+		position: absolute;
+		left: -2%;
+		bottom: -8%;
+		width: 25%;
+		
+		&.right {
+			left: auto;
+			right: -2%;
+		}
+		
+		&:before {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+	
 }

@@ -543,6 +543,7 @@ ul li:before {
 	Figure
 */
 figure {
+  clear: both;
   margin: 0;
   margin-top: 0;
   margin-bottom: 29px;
@@ -557,7 +558,15 @@ figure.concept {
   border-radius: 5px;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1), 0 1px 2px 2px rgba(0, 0, 0, 0.025);
 }
+figure.mini {
+  float: right;
+  width: 300px;
+}
 figure.screenshot {
+  margin-top: 58px;
+  margin-top: 2.9rem;
+  margin-bottom: 58px;
+  margin-bottom: 2.9rem;
   position: relative;
   z-index: 10;
 }
@@ -578,6 +587,8 @@ figure.screenshot img {
   left: 0;
   right: 0;
   z-index: 2;
+  border: 1px solid #333;
+  margin: -1px;
 }
 figure.screenshot.ipad {
   max-width: 1024px;
@@ -592,10 +603,11 @@ figure.screenshot.ipad:after {
   left: -12.109375%;
   width: 124.21875%;
   height: 110.9375%;
-  background: no-repeat url(../assets/graphics/iPad.png) 0/100%;
+  background: no-repeat url(../assets/graphics/iPad.png) 0 0;
+  background-size: 100%;
 }
 figure.screenshot.iphone {
-  max-width: 244.30990139px;
+  max-width: 320px;
 }
 figure.screenshot.iphone:before {
   margin-top: 36.5625%;
@@ -607,7 +619,8 @@ figure.screenshot.iphone:after {
   left: -9.6875%;
   width: 118.4375%;
   height: 139.96478873%;
-  background: no-repeat url(../assets/graphics/iPhone.png) 0/100%;
+  background: no-repeat url(../assets/graphics/iPhone.png) 0 0;
+  background-size: 100%;
 }
 /*
 	Misc
@@ -668,6 +681,43 @@ figure.screenshot.iphone:after {
   top: 0rem;
   font: italic 400 20px / 1.45 'Lato', sans-serif;
   font-size: 1rem;
+}
+/*
+	Case studies
+*/
+.rightmost {
+  float: right;
+  width: 31.42857143%;
+  width: calc(33.33333333% - 13.33333333px);
+  margin-left: 5.71428571%;
+  margin-left: calc(0% + 0px + 40px);
+}
+.rightmost .prototype {
+  margin: -9%;
+}
+.leftmost {
+  float: left;
+  width: 31.42857143%;
+  width: calc(33.33333333% - 13.33333333px);
+  margin-right: 5.71428571%;
+  margin-right: calc(0% + 0px + 40px);
+}
+.combined {
+  position: relative;
+}
+.combined .screenshot.iphone {
+  position: absolute;
+  left: -2%;
+  bottom: -8%;
+  width: 25%;
+}
+.combined .screenshot.iphone.right {
+  left: auto;
+  right: -2%;
+}
+.combined .screenshot.iphone:before {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=.//styles.css.map */
