@@ -390,7 +390,8 @@ video {
   visibility: hidden;
 }
 .ext-invisible,
-.w {
+.w,
+#open-source-libraries h3 {
   position: absolute;
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -403,7 +404,9 @@ video {
 .ext-invisible:active,
 .ext-invisible:focus,
 .w:active,
-.w:focus {
+.w:focus,
+#open-source-libraries h3:active,
+#open-source-libraries h3:focus {
   position: static;
   clip: auto;
   overflow: visible;
@@ -480,11 +483,26 @@ video {
 }
 html {
   font: 20px / 1.45 'Lato', sans-serif;
+  background: #fafafa;
 }
 body {
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.2) 1px, transparent 1px, transparent);
+  background-size: 2px 29px;
+  background-position: 0 -9px;
   margin: 0 auto;
   max-width: 35em;
-  padding: 1.45em;
+  padding: 0 1.45em;
+  padding-top: 29px;
+  padding-top: 1.45rem;
+  padding-bottom: 29px;
+  padding-bottom: 1.45rem;
+}
+section,
+article {
+  padding-top: 29px;
+  padding-top: 1.45rem;
+  padding-bottom: 29px;
+  padding-bottom: 1.45rem;
 }
 /*
 	Headings
@@ -495,20 +513,32 @@ h2 {
   top: -1.1497rem;
   font: 400 42px / 1.25 'Oswald', sans-serif;
   font-size: 2.1rem;
-  margin-top: 58px;
-  margin-top: 2.9rem;
-  margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -1.175rem);
+  margin-top: 29px;
+  margin-top: 1.45rem;
+  margin-bottom: 58px;
+  margin-bottom: calc(2.9rem + -1.175rem);
+}
+section > h2:first-child {
+  text-align: center;
+}
+section > h2:first-child:before,
+section > h2:first-child:after {
+  font-family: 'Alice', sans-serif;
+  font-size: 1.5em;
+  line-height: 0.2;
+  vertical-align: -20%;
+  opacity: 0.33;
+  content: " ~ ";
 }
 h3 {
   position: relative;
-  top: -8.065px;
-  top: -0.40325rem;
-  font: 400 29px / 1.25 'Sansita', serif;
+  top: -4.44px;
+  top: -0.222rem;
+  font: 400 29px / 1 'Sansita', serif;
   font-size: 1.45rem;
   margin-top: 0;
   margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -0.3625rem);
+  margin-bottom: 1.45rem;
 }
 /*
 	Body copy
@@ -556,7 +586,7 @@ figure img {
 figure.concept {
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1), 0 1px 2px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25), 0 1px 2px 2px rgba(0, 0, 0, 0.05);
 }
 figure.mini {
   float: right;
@@ -622,6 +652,11 @@ figure.screenshot.iphone:after {
   background: no-repeat url(../assets/graphics/iPhone.png) 0 0;
   background-size: 100%;
 }
+img.logo {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
 /*
 	Misc
 */
@@ -635,11 +670,12 @@ figure.screenshot.iphone:after {
 /*
 	Profile
 */
+#profile {
+  /*
+		Expertise
+	*/
+}
 #profile header {
-  padding-top: 29px;
-  padding-top: 1.45rem;
-  padding-bottom: 29px;
-  padding-bottom: 1.45rem;
   text-align: center;
 }
 #profile h1 {
@@ -648,10 +684,12 @@ figure.screenshot.iphone:after {
   top: -0.244rem;
   font: 700 61px / 1 'Sansita', serif;
   font-size: 3.05rem;
-  margin-top: 14.5px;
-  margin-top: 0.725rem;
-  margin-bottom: 14.5px;
-  margin-bottom: calc(0.725rem + -0.15rem);
+  margin-top: 0;
+  margin-bottom: 7.25px;
+  margin-bottom: calc(0.3625rem + -0.15rem);
+}
+#profile .note {
+  margin-bottom: 0;
 }
 #profile .role,
 #profile .adr {
@@ -663,8 +701,8 @@ figure.screenshot.iphone:after {
   top: -0.44965rem;
   font: 400 29px / 1.25 'Oswald', sans-serif;
   font-size: 1.45rem;
-  margin-bottom: 7.25px;
-  margin-bottom: calc(0.3625rem + -0.3625rem);
+  margin-bottom: 0px;
+  margin-bottom: calc(0rem + -0.3625rem);
 }
 #profile .adr {
   position: relative;
@@ -672,8 +710,8 @@ figure.screenshot.iphone:after {
   top: 0.067rem;
   font: 400 20px / 1.25 'Sansita', serif;
   font-size: 1rem;
-  margin-bottom: 7.25px;
-  margin-bottom: calc(0.3625rem + 0.2rem);
+  margin-bottom: 21.75px;
+  margin-bottom: calc(1.0875rem + 0.2rem);
 }
 #profile footer {
   position: relative;
@@ -681,6 +719,16 @@ figure.screenshot.iphone:after {
   top: 0rem;
   font: italic 400 20px / 1.45 'Lato', sans-serif;
   font-size: 1rem;
+}
+#profile aside h2 {
+  position: relative;
+  top: -8.993px;
+  top: -0.44965rem;
+  font: 400 29px / 1.25 'Oswald', sans-serif;
+  font-size: 1.45rem;
+  margin-top: 0;
+  margin-bottom: 14.5px;
+  margin-bottom: calc(0.725rem + -0.3625rem);
 }
 /*
 	Case studies
@@ -708,8 +756,8 @@ figure.screenshot.iphone:after {
 .combined .screenshot.iphone {
   position: absolute;
   left: -2%;
-  bottom: -8%;
-  width: 25%;
+  bottom: -6%;
+  width: 30%;
 }
 .combined .screenshot.iphone.right {
   left: auto;
@@ -718,6 +766,51 @@ figure.screenshot.iphone:after {
 .combined .screenshot.iphone:before {
   margin-top: 0;
   margin-bottom: 0;
+}
+/*
+	Employment history
+*/
+#employment-history > div {
+  margin-bottom: 43.5px;
+  margin-bottom: 2.175rem;
+}
+#employment-history h3 {
+  margin-bottom: 0;
+}
+#employment-history .role,
+#employment-history .employer {
+  display: block;
+}
+#employment-history .role {
+  position: relative;
+  top: -4.44px;
+  top: -0.222rem;
+  font: 400 29px / 1 'Sansita', serif;
+  font-size: 1.45rem;
+  margin-bottom: 0;
+}
+#employment-history .employer {
+  position: relative;
+  top: -1.8px;
+  top: -0.09rem;
+  font: 400 20px / 1.5 'Oswald', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 14.5px;
+  margin-bottom: calc(0.725rem + -0.05rem);
+  opacity: 0.33;
+}
+/*
+	Open-source libraries
+*/
+#open-source-libraries div {
+  float: left;
+  margin-right: 2.85714286%;
+  margin-right: calc(0% + 0px + 20px);
+  width: 48.57142857%;
+  width: calc(50% - 10px);
+}
+#open-source-libraries div + div {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=.//styles.css.map */
