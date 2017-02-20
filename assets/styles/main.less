@@ -72,9 +72,9 @@ h3 {
 }
 
 /*
-	Copy
+	Body copy
 */
-p, ul, ol, figure {
+p, ul, ol {
 	.margin-top(0);
 	.margin-bottom(1);
 }
@@ -88,7 +88,7 @@ ul {
 		
 		&:before {
 			position: absolute;
-			top: 0.413em;
+			top: 0.48em;
 			left: (@grid-gutter * -1.25);
 			
 			content: "*";
@@ -97,6 +97,110 @@ ul {
 			line-height: (1 / 1.25);
 			
 			opacity: 0.33;
+		}
+	}
+}
+
+/*
+	Figure
+*/
+figure {
+	margin: 0;
+	.margin-top(0);
+	.margin-bottom(1);
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	&.concept {
+		overflow: hidden;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px 1px rgba(0,0,0,0.1),
+			0 1px 2px 2px rgba(0,0,0,0.025);
+	}
+	
+	&.screenshot {
+		position: relative;
+		z-index: 10;
+		
+		&:before {
+			display: block;
+			width: 100%;
+			content: '';
+		}
+		
+		&:after {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			content: '';
+		}
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+		}
+		
+		&.ipad {
+			@width: 1024px;
+			@height: 768px;
+			
+			
+			@-top: 42px;
+			@-bottom: @-top;
+			@-left: 124px;
+			@-right: @-left;
+			@-width: 1272px;
+			@-height: 852px;
+			
+			max-width: @width;
+			
+			&:before {
+				padding-top: percentage((@height / @width));
+				margin-top: percentage((@-top / @width));
+				margin-bottom: percentage((@-bottom / @width));
+			}
+			
+			&:after {
+				top: percentage((-@-top / @height));
+				left: percentage((-@-left / @width));
+				width: percentage((@-width / @width));
+				height: percentage((@-height / @height));
+				background: no-repeat url(../assets/graphics/iPad.png) 0/100%;
+			}
+		}
+		
+		&.iphone {
+			@width: 320px;
+			@height: 568px;
+			
+			@-top: 117px;
+			@-bottom: 110px;
+			@-left: 31px;
+			@-right: 28px;
+			@-width: 379px;
+			@-height: 795px;
+			
+			max-width: (@width / 1.309811834);
+			
+			&:before {
+				margin-top: percentage((@-top / @width));
+				margin-bottom: percentage((@-bottom / @width));
+				padding-top: percentage((@height / @width));
+			}
+			
+			&:after {
+				top: percentage((-@-top / @height));
+				left: percentage((-@-left / @width));
+				width: percentage((@-width / @width));
+				height: percentage((@-height / @height));
+				background: no-repeat url(../assets/graphics/iPhone.png) 0/100%;
+			}
 		}
 	}
 }

@@ -511,12 +511,11 @@ h3 {
   margin-bottom: calc(1.45rem + -0.3625rem);
 }
 /*
-	Copy
+	Body copy
 */
 p,
 ul,
-ol,
-figure {
+ol {
   margin-top: 0;
   margin-bottom: 29px;
   margin-bottom: 1.45rem;
@@ -532,13 +531,83 @@ ul li {
 }
 ul li:before {
   position: absolute;
-  top: 0.413em;
+  top: 0.48em;
   left: -25px;
   content: "*";
   font-family: 'Alice', sans-serif;
   font-size: 1.25em;
   line-height: 0.8;
   opacity: 0.33;
+}
+/*
+	Figure
+*/
+figure {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 29px;
+  margin-bottom: 1.45rem;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+figure.concept {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1), 0 1px 2px 2px rgba(0, 0, 0, 0.025);
+}
+figure.screenshot {
+  position: relative;
+  z-index: 10;
+}
+figure.screenshot:before {
+  display: block;
+  width: 100%;
+  content: '';
+}
+figure.screenshot:after {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  content: '';
+}
+figure.screenshot img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+figure.screenshot.ipad {
+  max-width: 1024px;
+}
+figure.screenshot.ipad:before {
+  padding-top: 75%;
+  margin-top: 4.1015625%;
+  margin-bottom: 4.1015625%;
+}
+figure.screenshot.ipad:after {
+  top: -5.46875%;
+  left: -12.109375%;
+  width: 124.21875%;
+  height: 110.9375%;
+  background: no-repeat url(../assets/graphics/iPad.png) 0/100%;
+}
+figure.screenshot.iphone {
+  max-width: 244.30990139px;
+}
+figure.screenshot.iphone:before {
+  margin-top: 36.5625%;
+  margin-bottom: 34.375%;
+  padding-top: 177.5%;
+}
+figure.screenshot.iphone:after {
+  top: -20.59859155%;
+  left: -9.6875%;
+  width: 118.4375%;
+  height: 139.96478873%;
+  background: no-repeat url(../assets/graphics/iPhone.png) 0/100%;
 }
 /*
 	Misc
