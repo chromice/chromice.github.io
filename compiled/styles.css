@@ -369,19 +369,15 @@ video {
   padding-left: 0;
   margin: 0;
 }
-.ext-clearfix,
-#open-source-libraries {
+.ext-clearfix {
   *zoom: 1;
 }
 .ext-clearfix:before,
-.ext-clearfix:after,
-#open-source-libraries:before,
-#open-source-libraries:after {
+.ext-clearfix:after {
   content: " ";
   display: table;
 }
-.ext-clearfix:after,
-#open-source-libraries:after {
+.ext-clearfix:after {
   clear: both;
 }
 .ext-image-replaced {
@@ -495,7 +491,11 @@ html {
     font-size: 16px;
   }
 }
+.wrapper {
+  overflow: hidden;
+}
 section {
+  position: relative;
   margin: 0 auto;
   padding: 6.25%;
   max-width: 940px;
@@ -504,10 +504,19 @@ section {
   padding-bottom: 58px;
   padding-bottom: 2.9rem;
 }
-@media screen and (max-width: 1072px) {
-  section {
-    overflow: hidden;
-  }
+section + section:before {
+  display: block;
+  position: absolute;
+  top: -29px;
+  top: -1.45rem;
+  left: 0;
+  right: 0;
+  color: rgba(51, 51, 51, 0.33);
+  text-align: center;
+  font-family: 'Alice', sans-serif;
+  font-size: 2em;
+  line-height: 0.8;
+  content: "* * *";
 }
 article + article {
   margin-top: 116px;
@@ -553,28 +562,12 @@ ol {
   margin-bottom: 1.45rem;
 }
 ul {
-  list-style: none;
   padding-left: 0;
 }
 ul li {
   position: relative;
   margin-bottom: 9.57px;
   margin-bottom: 0.4785rem;
-}
-ul li:before {
-  position: absolute;
-  top: 0.48em;
-  left: -25px;
-  content: "*";
-  font-family: 'Alice', sans-serif;
-  font-size: 1.25em;
-  line-height: 0.8;
-  color: rgba(51, 51, 51, 0.33);
-}
-@media screen and (max-width: 568px) {
-  ul li:before {
-    left: -15px;
-  }
 }
 /*
 	Figure
@@ -596,7 +589,7 @@ figure.concept {
   max-width: 1024px;
   margin-left: -4.5%;
   margin-right: -4.5%;
-  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25), 0 1px 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.25);
 }
 figure.mini {
   float: right;
@@ -764,15 +757,6 @@ img.logo {
 #profile aside ul li {
   margin-bottom: 7.25px;
   margin-bottom: 0.3625rem;
-}
-#profile aside ul li:before {
-  top: 0.45em;
-  left: -20px;
-}
-@media screen and (max-width: 568px) {
-  #profile aside ul li:before {
-    left: -13px;
-  }
 }
 @media screen and (max-width: 740px) {
   #profile .content {
