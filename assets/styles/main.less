@@ -12,6 +12,8 @@
 // ========================================
 
 @color-text: #333;
+@color-primary: fade(@color-text, 50%);
+@color-highlight: fade(@color-text, 75%);
 @color-light: fade(@color-text, 33%);
 @color-body: #fafafa;
 
@@ -39,13 +41,9 @@
 @subtitle-font-variation: 400;
 @subtitle-font-offset: 0.952;
 
-@heading-font-family: @subtitle-font-family;
-@heading-font-variation: 700;
-@heading-font-offset: @subtitle-font-offset;
-
-@subheading-font-family: @title-font-family;
-@subheading-font-variation: 400;
-@subheading-font-offset: @title-font-offset;
+@heading-font-family: @title-font-family;
+@heading-font-variation: 400;
+@heading-font-offset: @title-font-offset;
 
 @accent-font-family: 'Alice';
 @accent-font-variation: 400;
@@ -55,7 +53,7 @@
 .use-baseline-grid(0, 1.45, regular);
 .use-column-grid(940px, 40px, 6);
 
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400,700|Lato:400,400i|@{accent-font-family}');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|@{accent-font-family}');
 
 html {
 	.font-baseline();
@@ -93,6 +91,19 @@ section {
 		line-height: (1 / 1.25);
 		content: "* * *";
 	}
+	+ footer {
+		clear: both;
+		text-align: center;
+		
+		p {
+			.font-align(-1, 1.45);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
 }
 article + article {
 	.margin-top(4);
@@ -102,9 +113,9 @@ article + article {
 	Headings
 */
 h2 {
-	.font-align(1, 1.25, heading);
+	.font-align(2, 1.25, subtitle);
 	.margin-top(0);
-	.margin-bottom(1.5);
+	.margin-bottom(2);
 	
 	section > &:first-child {
 		position: relative;
@@ -114,7 +125,7 @@ h2 {
 	
 }
 h3 {
-	.font-align(1, 1, subheading);
+	.font-align(1, 1, heading);
 	.margin-top(0);
 	.margin-bottom(1);
 }
@@ -264,6 +275,49 @@ img {
 }
 
 /*
+	Links
+*/
+a {
+	color: @color-primary;
+	
+	&:hover, &:focus {
+		color: @color-highlight;
+	}
+}
+
+.links {
+	max-width: none;
+	.margin-top(1);
+	.margin-bottom(1);
+	text-align: center;
+	
+	a, em {
+		margin-left: (@grid-gutter / 2);
+		margin-right: (@grid-gutter / 2);
+		.font-align(1, 1.45, subtitle);
+		text-decoration: none;
+		white-space: nowrap;
+		
+		&:before, &:after {
+			color: @color-text;
+		}
+		
+		&:before {
+			content: '{\00a0';
+		}
+		&:after {
+			content: '\00a0}';
+		}
+	}
+	
+	em {
+		&, &:before, &:after {
+			color: @color-light;
+		}
+	}
+}
+
+/*
 	Misc
 */
 .w {
@@ -271,7 +325,7 @@ img {
 }
 .amp {
 	font-family: @accent-font-family, sans-serif;
-	font-size: 1.5em;
+	font-size: 1.45em;
 	line-height: 0.2;
 	vertical-align: -41.3%;
 	color: @color-light;
@@ -308,7 +362,7 @@ img {
 		.margin-bottom(0);
 	}
 	.adr {
-		.font-align(0, 1.25, subheading);
+		.font-align(0, 1.25, heading);
 		.margin-bottom(1.25);
 	}
 	.contact {
@@ -453,7 +507,7 @@ img {
 		display: block;
 	}
 	.role {
-		.font-align(1, 1, subheading);
+		.font-align(1, 1, heading);
 		.margin-bottom(0);
 	}
 	.employer {

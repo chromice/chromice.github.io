@@ -4,7 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400,700|Lato:400,400i|Alice');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|Alice');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -518,6 +518,22 @@ section + section:before {
   line-height: 0.8;
   content: "* * *";
 }
+section + footer {
+  clear: both;
+  text-align: center;
+}
+section + footer p {
+  position: relative;
+  top: 6.672px;
+  top: 0.3336rem;
+  font: 400 14px / 1.45 'Lato', sans-serif;
+  font-size: 0.7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+section + footer a {
+  text-decoration: none;
+}
 article + article {
   margin-top: 116px;
   margin-top: 5.8rem;
@@ -527,13 +543,13 @@ article + article {
 */
 h2 {
   position: relative;
-  top: -8.993px;
-  top: -0.44965rem;
-  font: 700 29px / 1.25 'Oswald', sans-serif;
-  font-size: 1.45rem;
+  top: -22.994px;
+  top: -1.1497rem;
+  font: 400 42px / 1.25 'Oswald', sans-serif;
+  font-size: 2.1rem;
   margin-top: 0;
-  margin-bottom: 43.5px;
-  margin-bottom: calc(2.175rem + -0.3625rem);
+  margin-bottom: 58px;
+  margin-bottom: calc(2.9rem + -1.175rem);
 }
 section > h2:first-child {
   position: relative;
@@ -662,11 +678,60 @@ img.logo {
   height: auto;
 }
 /*
+	Links
+*/
+a {
+  color: rgba(51, 51, 51, 0.5);
+}
+a:hover,
+a:focus {
+  color: rgba(51, 51, 51, 0.75);
+}
+.links {
+  max-width: none;
+  margin-top: 29px;
+  margin-top: 1.45rem;
+  margin-bottom: 29px;
+  margin-bottom: 1.45rem;
+  text-align: center;
+}
+.links a,
+.links em {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: -11.893px;
+  top: -0.59465rem;
+  font: 400 29px / 1.45 'Oswald', sans-serif;
+  font-size: 1.45rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.links a:before,
+.links em:before,
+.links a:after,
+.links em:after {
+  color: #333;
+}
+.links a:before,
+.links em:before {
+  content: '{\00a0';
+}
+.links a:after,
+.links em:after {
+  content: '\00a0}';
+}
+.links em,
+.links em:before,
+.links em:after {
+  color: rgba(51, 51, 51, 0.33);
+}
+/*
 	Misc
 */
 .amp {
   font-family: 'Alice', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.45em;
   line-height: 0.2;
   vertical-align: -41.3%;
   color: rgba(51, 51, 51, 0.33);
