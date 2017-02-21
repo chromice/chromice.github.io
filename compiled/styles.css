@@ -4,7 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|Alice');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400,700|Lato:400,400i|Alice');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -484,25 +484,28 @@ video {
 html {
   font: 20px / 1.45 'Lato', sans-serif;
   background: #fafafa;
+  color: #333;
+}
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 16px;
+  }
 }
 body {
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.2) 1px, transparent 1px, transparent);
-  background-size: 2px 29px;
-  background-position: 0 -9px;
-  margin: 0 auto;
-  max-width: 35em;
-  padding: 0 1.45em;
-  padding-top: 29px;
-  padding-top: 1.45rem;
-  padding-bottom: 29px;
-  padding-bottom: 1.45rem;
+  overflow-x: hidden;
 }
-section,
-article {
-  padding-top: 29px;
-  padding-top: 1.45rem;
-  padding-bottom: 29px;
-  padding-bottom: 1.45rem;
+section {
+  margin: 0 auto;
+  padding: 6.25%;
+  max-width: 1024px;
+  padding-top: 58px;
+  padding-top: 2.9rem;
+  padding-bottom: 58px;
+  padding-bottom: 2.9rem;
+}
+article + article {
+  margin-top: 116px;
+  margin-top: 5.8rem;
 }
 /*
 	Headings
@@ -511,24 +514,15 @@ h2 {
   position: relative;
   top: -22.994px;
   top: -1.1497rem;
-  font: 400 42px / 1.25 'Oswald', sans-serif;
+  font: 700 42px / 1.25 'Oswald', sans-serif;
   font-size: 2.1rem;
-  margin-top: 29px;
-  margin-top: 1.45rem;
-  margin-bottom: 58px;
-  margin-bottom: calc(2.9rem + -1.175rem);
+  margin-top: 0;
+  margin-bottom: 43.5px;
+  margin-bottom: calc(2.175rem + -1.175rem);
 }
 section > h2:first-child {
+  text-transform: uppercase;
   text-align: center;
-}
-section > h2:first-child:before,
-section > h2:first-child:after {
-  font-family: 'Alice', sans-serif;
-  font-size: 1.5em;
-  line-height: 0.2;
-  vertical-align: -20%;
-  opacity: 0.33;
-  content: " ~ ";
 }
 h3 {
   position: relative;
@@ -546,6 +540,7 @@ h3 {
 p,
 ul,
 ol {
+  max-width: 30em;
   margin-top: 0;
   margin-bottom: 29px;
   margin-bottom: 1.45rem;
@@ -567,7 +562,12 @@ ul li:before {
   font-family: 'Alice', sans-serif;
   font-size: 1.25em;
   line-height: 0.8;
-  opacity: 0.33;
+  color: rgba(51, 51, 51, 0.33);
+}
+@media screen and (max-width: 568px) {
+  ul li:before {
+    left: -15px;
+  }
 }
 /*
 	Figure
@@ -586,6 +586,7 @@ figure img {
 figure.concept {
   overflow: hidden;
   border-radius: 5px;
+  max-width: 1024px;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25), 0 1px 2px 2px rgba(0, 0, 0, 0.05);
 }
 figure.mini {
@@ -617,8 +618,9 @@ figure.screenshot img {
   left: 0;
   right: 0;
   z-index: 2;
-  border: 1px solid #333;
-  margin: -1px;
+  border-radius: 1px;
+  border: 2px solid #333;
+  margin: -2px;
 }
 figure.screenshot.ipad {
   max-width: 1024px;
@@ -665,7 +667,7 @@ img.logo {
   font-size: 1.5em;
   line-height: 0.2;
   vertical-align: -41.3%;
-  opacity: 0.33;
+  color: rgba(51, 51, 51, 0.33);
 }
 /*
 	Profile
@@ -677,18 +679,22 @@ img.logo {
 }
 #profile header {
   text-align: center;
+  margin-left: -5%;
+  margin-right: -5%;
 }
 #profile h1 {
   position: relative;
-  top: -4.88px;
-  top: -0.244rem;
-  font: 700 61px / 1 'Sansita', serif;
+  top: -27.78px;
+  top: -1.389rem;
+  font: 700 61px / 0.8 'Sansita', serif;
   font-size: 3.05rem;
-  margin-top: 0;
+  margin-top: 29px;
+  margin-top: 1.45rem;
   margin-bottom: 7.25px;
-  margin-bottom: calc(0.3625rem + -0.15rem);
+  margin-bottom: calc(0.3625rem + -0.99rem);
 }
 #profile .note {
+  max-width: none;
   margin-bottom: 0;
 }
 #profile .role,
@@ -710,34 +716,75 @@ img.logo {
   top: 0.067rem;
   font: 400 20px / 1.25 'Sansita', serif;
   font-size: 1rem;
-  margin-bottom: 21.75px;
-  margin-bottom: calc(1.0875rem + 0.2rem);
+  margin-bottom: 36.25px;
+  margin-bottom: calc(1.8125rem + 0.2rem);
 }
-#profile footer {
+#profile .contact {
   position: relative;
   top: 0px;
   top: 0rem;
   font: italic 400 20px / 1.45 'Lato', sans-serif;
   font-size: 1rem;
 }
+#profile .content {
+  position: relative;
+  padding-right: 34.63541666%;
+  padding-right: calc(33.33333333% + 13.33333333px);
+}
+#profile aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30.72916666%;
+  width: calc(33.33333333% - 26.66666667px);
+}
 #profile aside h2 {
   position: relative;
-  top: -8.993px;
-  top: -0.44965rem;
-  font: 400 29px / 1.25 'Oswald', sans-serif;
-  font-size: 1.45rem;
+  top: 0.7px;
+  top: 0.035rem;
+  font: 400 20px / 1.25 'Oswald', sans-serif;
+  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 14.5px;
-  margin-bottom: calc(0.725rem + -0.3625rem);
+  margin-bottom: calc(0.725rem + 0.2rem);
+}
+#profile aside h2 > span {
+  border-bottom: 2px solid #333;
+}
+#profile aside ul {
+  font-size: 14px;
+  font-size: 0.7rem;
+}
+#profile aside ul li {
+  margin-bottom: 7.25px;
+  margin-bottom: 0.3625rem;
+}
+#profile aside ul li:before {
+  top: 0.45em;
+  left: -20px;
+}
+@media screen and (max-width: 568px) {
+  #profile aside ul li:before {
+    left: -13px;
+  }
+}
+@media screen and (max-width: 740px) {
+  #profile .content {
+    padding-right: 0;
+  }
+  #profile aside {
+    position: static;
+    width: auto;
+  }
 }
 /*
 	Case studies
 */
 .rightmost {
   float: right;
-  width: 31.42857143%;
-  width: calc(33.33333333% - 13.33333333px);
-  margin-left: 5.71428571%;
+  width: 30.72916666%;
+  width: calc(33.33333333% - 26.66666667px);
+  margin-left: 3.90625%;
   margin-left: calc(0% + 0px + 40px);
 }
 .rightmost .prototype {
@@ -745,9 +792,9 @@ img.logo {
 }
 .leftmost {
   float: left;
-  width: 31.42857143%;
-  width: calc(33.33333333% - 13.33333333px);
-  margin-right: 5.71428571%;
+  width: 30.72916666%;
+  width: calc(33.33333333% - 26.66666667px);
+  margin-right: 3.90625%;
   margin-right: calc(0% + 0px + 40px);
 }
 .combined {
@@ -771,6 +818,8 @@ img.logo {
 	Employment history
 */
 #employment-history > div {
+  margin: 0 auto;
+  max-width: 30em;
   margin-bottom: 43.5px;
   margin-bottom: 2.175rem;
 }
@@ -791,26 +840,38 @@ img.logo {
 }
 #employment-history .employer {
   position: relative;
-  top: -1.8px;
-  top: -0.09rem;
-  font: 400 20px / 1.5 'Oswald', sans-serif;
+  top: -1.3px;
+  top: -0.065rem;
+  font: 400 20px / 1.45 'Oswald', sans-serif;
   font-size: 1rem;
-  margin-bottom: 14.5px;
-  margin-bottom: calc(0.725rem + -0.05rem);
-  opacity: 0.33;
+  margin-bottom: 0;
+  color: rgba(51, 51, 51, 0.33);
 }
 /*
 	Open-source libraries
 */
+#open-source-libraries img {
+  display: block;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-bottom: 29px;
+  margin-bottom: 1.45rem;
+}
 #open-source-libraries div {
   float: left;
-  margin-right: 2.85714286%;
-  margin-right: calc(0% + 0px + 20px);
-  width: 48.57142857%;
-  width: calc(50% - 10px);
+  width: 48.046875%;
+  width: calc(50% - 20px);
+  margin-right: 3.90625%;
+  margin-right: calc(0% + 0px + 40px);
 }
 #open-source-libraries div + div {
   margin-right: 0;
+}
+@media screen and (max-width: 740px) {
+  #open-source-libraries div {
+    width: auto;
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=.//styles.css.map */

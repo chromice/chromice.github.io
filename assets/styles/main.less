@@ -11,6 +11,13 @@
 // = Shared variables, styles, and mixins =
 // ========================================
 
+@color-text: #333;
+@color-light: fade(@color-text, 33%);
+@color-body: #fafafa;
+
+@bp-small-copy: 568px;
+@bp-compact-layout: 740px;
+
 // =======================
 // = Typography & Layout =
 // =======================
@@ -33,9 +40,13 @@
 @subtitle-font-variation: 400;
 @subtitle-font-offset: 0.952;
 
-@heading-font-family: @title-font-family;
-@heading-font-variation: 400;
-@heading-font-offset: @title-font-offset;
+@heading-font-family: @subtitle-font-family;
+@heading-font-variation: 700;
+@heading-font-offset: @subtitle-font-offset;
+
+@subheading-font-family: @title-font-family;
+@subheading-font-variation: 400;
+@subheading-font-offset: @title-font-offset;
 
 @accent-font-family: 'Alice';
 @accent-font-variation: 400;
@@ -43,51 +54,51 @@
 
 .use-custom-scale(20px, 10px 14px 20px 29px 42px 61px 88px 128px);
 .use-baseline-grid(0, 1.45, regular);
-.use-column-grid(700px, 20px, 6);
+.use-column-grid(1024px, 40px, 6);
 
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|@{accent-font-family}');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400,700|Lato:400,400i|@{accent-font-family}');
 
 html {
 	.font-baseline();
-	background: #fafafa;
+	background: @color-body;
+	color: @color-text;
+	
+	@media screen and (max-width: @bp-small-copy) {
+		font-size: 16px;
+	}
 }
 body {
-	.show-baselines();
-	margin: 0 auto;
-	max-width: 35em;
-	padding: 0 1.45em;
-	.padding-top(1);
-	.padding-bottom(1);
+	// .show-baselines();
+	overflow-x: hidden;
 }
-section, article {
-	.padding-top(1);
-	.padding-bottom(1);
+section {
+	// overflow: hidden;
+	margin: 0 auto;
+	padding: 6.25%;
+	max-width: @grid-width;
+	.padding-top(2);
+	.padding-bottom(2);
+}
+article + article {
+	.margin-top(4);
 }
 	
 /*
 	Headings
 */
 h2 {
-	.font-align(2, 1.25, subtitle);
-	.margin-top(1);
-	.margin-bottom(2);
+	.font-align(2, 1.25, heading);
+	.margin-top(0);
+	.margin-bottom(1.5);
 	
 	section > &:first-child {
+		text-transform: uppercase;
 		text-align: center;
-		
-		&:before, &:after {
-			font-family: @accent-font-family, sans-serif;
-			font-size: 1.5em;
-			line-height: 0.2;
-			vertical-align: -20%;
-			opacity: 0.33;
-			content: " ~ ";
-		}
 	}
 	
 }
 h3 {
-	.font-align(1, 1, heading);
+	.font-align(1, 1, subheading);
 	.margin-top(0);
 	.margin-bottom(1);
 }
@@ -96,6 +107,7 @@ h3 {
 	Body copy
 */
 p, ul, ol {
+	max-width: 30em;
 	.margin-top(0);
 	.margin-bottom(1);
 }
@@ -110,14 +122,18 @@ ul {
 		&:before {
 			position: absolute;
 			top: 0.48em;
-			left: (@grid-gutter * -1.25);
+			left: (@grid-gutter / 2 * -1.25);
+			
+			@media screen and (max-width: @bp-small-copy) {
+				left: (@grid-gutter / 2 * -0.75);
+			}
 			
 			content: "*";
 			font-family: @accent-font-family, sans-serif;
 			font-size: 1.25em;
 			line-height: (1 / 1.25);
 			
-			opacity: 0.33;
+			color: @color-light;
 		}
 	}
 }
@@ -139,6 +155,7 @@ figure {
 	&.concept {
 		overflow: hidden;
 		border-radius: 5px;
+		max-width: 1024px;
 		box-shadow: 0 1px 2px 1px rgba(0,0,0, 0.25),
 			0 1px 2px 2px rgba(0,0,0,0.05);
 	}
@@ -173,8 +190,9 @@ figure {
 			left: 0;
 			right: 0;
 			z-index: 2;
-			border: 1px solid #333;
-			margin: -1px;
+			border-radius: 1px;
+			border: 2px solid #333;
+			margin: -2px;
 		}
 		
 		&.ipad {
@@ -256,7 +274,7 @@ img {
 	font-size: 1.5em;
 	line-height: 0.2;
 	vertical-align: -41.3%;
-	opacity: 0.33;
+	color: @color-light;
 }
 
 
@@ -270,13 +288,16 @@ img {
 #profile {
 	header {
 		text-align: center;
+		margin-left: -5%;
+		margin-right: -5%;
 	}
 	h1 {
-		.font-align(3, 1, title);
-		.margin-top(0);
+		.font-align(3, 0.8, title);
+		.margin-top(1);
 		.margin-bottom(0.25);
 	}
 	.note {
+		max-width: none;
 		.margin-bottom(0);
 	}
 	.role, .adr {
@@ -287,26 +308,63 @@ img {
 		.margin-bottom(0);
 	}
 	.adr {
-		.font-align(0, 1.25, heading);
-		.margin-bottom(0.75);
+		.font-align(0, 1.25, subheading);
+		.margin-bottom(1.25);
 	}
-	.intro > p {
-		// .font-align(1, 1.45, regular);
-	}
-	footer {
+	.contact {
 		.font-align(0, 1.45, highlight);
-		// text-align: center;
 	}
 	
 	/*
 		Expertise
 	*/
+	
+	.content {
+		position: relative;
+		.padding-right(2);
+	}
+	
 	aside {
+		position: absolute;
+		.top(0);
+		.right(0);
+		.width(2);
 		
 		h2 {
-			.font-align(1, 1.25, subtitle);
+			.font-align(0, 1.25, subtitle);
 			.margin-top(0);
 			.margin-bottom(0.5);
+			
+			> span {
+				border-bottom: 2px solid @color-text;
+			}
+		}
+		
+		ul {
+			.font-size(-1);
+			
+			li {
+				.margin-bottom(0.25);
+				
+				&:before {
+					top: 0.45em;
+					left: (@grid-gutter / 2 * -1);
+			
+					@media screen and (max-width: @bp-small-copy) {
+						left: (@grid-gutter / 2 * -0.65);
+					}
+				}
+			}
+		}
+	}
+	
+	@media screen and (max-width: 740px) {
+		.content {
+			padding-right: 0;
+		}
+		aside {
+			position: static;
+			width: auto;
 		}
 	}
 }
@@ -317,7 +375,7 @@ img {
 .rightmost {
 	float: right;
 	.width(2);
-	.margin-left((@grid-gutter * 2));
+	.margin-left(@grid-gutter);
 	
 	.prototype {
 		margin: -9%;
@@ -326,7 +384,7 @@ img {
 .leftmost {
 	float: left;
 	.width(2);
-	.margin-right((@grid-gutter * 2));
+	.margin-right(@grid-gutter);
 }
 .combined {
 	position: relative;
@@ -354,6 +412,8 @@ img {
 */
 #employment-history {
 	> div {
+		margin: 0 auto;
+		max-width: 30em;
 		.margin-bottom(1.5);
 	}
 	h3 {
@@ -363,13 +423,13 @@ img {
 		display: block;
 	}
 	.role {
-		.font-align(1, 1, heading);
+		.font-align(1, 1, subheading);
 		.margin-bottom(0);
 	}
 	.employer {
-		.font-align(0, 1.5, subtitle);
-		.margin-bottom(0.5);
-		opacity: 0.33;
+		.font-align(0, 1.45, subtitle);
+		.margin-bottom(0);
+		color: @color-light;
 	}
 }
 
@@ -380,13 +440,25 @@ img {
 	h3 {
 		.invisible();
 	}
+	img {
+		display: block;
+		max-width: 320px;
+		margin: 0 auto;
+		.margin-bottom(1);
+	}
 	div {
 		float: left;
-		.margin-right(@grid-gutter);
 		.width(3);
+		.margin-right(@grid-gutter);
 		
 		+ div {
 			margin-right: 0;
 		}
+		
+		@media screen and (max-width: 740px) {
+			width: auto;
+			margin-right: 0;
+		}
 	}
+	
 }
