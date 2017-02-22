@@ -20,6 +20,7 @@
 @bp-small-copy: 568px;
 @bp-compact-layout: 740px;
 @bp-hide-overflow: 1072px;
+@bp-hide-ipad: 414px;
 
 // =======================
 // = Typography & Layout =
@@ -219,6 +220,8 @@ figure {
 			@-height: 852px;
 			
 			max-width: @width;
+			margin-left: -4.5%;
+			margin-right: -4.5%;
 			
 			&:before {
 				padding-top: percentage((@height / @width));
@@ -367,6 +370,10 @@ a {
 	}
 	.contact {
 		.font-align(0, 1.45, highlight);
+		
+		a {
+			text-decoration: none;
+		}
 	}
 	
 	.content > p {
@@ -453,43 +460,60 @@ a {
 		.font-align(1, 1.125, accent);
 		.margin-bottom(1);
 	}
+	
+	/*
+		Position screenshots
+	*/
+	.aside {
+		float: right;
+		width: 33%;
+		max-width: 160px;
+		margin-left: 5%;
+		
+		@media screen and (min-width: 960px) {
+			margin-right: 6%;
+		}
+	}
+	.combined {
+		position: relative;
+	
+		.screenshot.iphone {
+			position: absolute;
+			top: 13.5%;
+			left: -3%;
+			width: 33%;
+		
+			&.right {
+				left: auto;
+				right: -3%;
+			}
+		
+			&:before {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+		+ p {
+			.margin-top(2.5);
+		}
+		
+		@media screen and (max-width: @bp-hide-ipad) {
+			.screenshot.ipad {
+				display: none;
+			}
+			.screenshot.iphone {
+				position: relative;
+				top: auto;
+				left: auto;
+				right: auto;
+				width: 66%;
+				margin: 30% auto 30%;
+			}
+		}
+	}
 }
 
 
-.rightmost {
-	float: right;
-	.width(2);
-	.margin-left(@grid-gutter);
-	
-	.prototype {
-		margin: -9%;
-	}
-}
-.leftmost {
-	float: left;
-	.width(2);
-	.margin-right(@grid-gutter);
-}
-.combined {
-	position: relative;
-	
-	.screenshot.iphone {
-		position: absolute;
-		left: -2%;
-		bottom: -6%;
-		width: 30%;
-		
-		&.right {
-			left: auto;
-			right: -2%;
-		}
-		
-		&:before {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-}
 
 /*
 	Employment history
