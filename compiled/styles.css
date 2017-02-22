@@ -637,7 +637,7 @@ figure.screenshot img {
   right: 0;
   z-index: 2;
   border-radius: 1px;
-  border: 2px solid #333;
+  border: 2px solid #444;
   margin: -2px;
 }
 figure.screenshot.ipad {
@@ -647,14 +647,14 @@ figure.screenshot.ipad {
 }
 figure.screenshot.ipad:before {
   padding-top: 75%;
-  margin-top: 4.1015625%;
-  margin-bottom: 4.1015625%;
+  margin-top: 6.0546875%;
+  margin-bottom: 6.0546875%;
 }
 figure.screenshot.ipad:after {
-  top: -5.46875%;
-  left: -12.109375%;
-  width: 124.21875%;
-  height: 110.9375%;
+  top: -8.07291667%;
+  left: -14.0625%;
+  width: 128.125%;
+  height: 116.14583333%;
   background: no-repeat url(../assets/graphics/iPad.png) 0 0;
   background-size: 100%;
 }
@@ -662,15 +662,15 @@ figure.screenshot.iphone {
   max-width: 320px;
 }
 figure.screenshot.iphone:before {
-  margin-top: 36.5625%;
-  margin-bottom: 34.375%;
+  margin-top: 42.8125%;
+  margin-bottom: 40.625%;
   padding-top: 177.5%;
 }
 figure.screenshot.iphone:after {
-  top: -20.59859155%;
-  left: -9.6875%;
-  width: 118.4375%;
-  height: 139.96478873%;
+  top: -24.11971831%;
+  left: -15.9375%;
+  width: 130.9375%;
+  height: 147.00704225%;
   background: no-repeat url(../assets/graphics/iPhone.png) 0 0;
   background-size: 100%;
 }
