@@ -280,7 +280,13 @@ img {
 /*
 	Links
 */
-a {
+button {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+a, button {
 	color: @color-primary;
 	
 	&:hover, &:focus {
@@ -294,7 +300,7 @@ a {
 	.margin-bottom(1);
 	text-align: center;
 	
-	a, em {
+	a, em, button {
 		margin-left: (@grid-gutter / 2);
 		margin-right: (@grid-gutter / 2);
 		.font-align(1, 1.45, subtitle);
@@ -462,6 +468,34 @@ a {
 	}
 	
 	/*
+		Article body snatcher
+	*/
+	
+	.body {
+		transition: opacity 500ms 300ms;
+	}
+	
+	.compact {
+		> .body {
+			display: none;
+		}
+		> header {
+			.margin-bottom(3);
+		}
+		> footer {
+			.margin-top(3);
+		}
+	}
+	.hidden {
+		> .body {
+			height: 0;
+			overflow: hidden;
+			opacity: 0;
+		}
+	}
+	
+	
+	/*
 		Position screenshots
 	*/
 	.aside {
@@ -493,7 +527,7 @@ a {
 				margin-bottom: 0;
 			}
 		}
-		+ p {
+		+ .body > p:first-child {
 			.margin-top(2.5);
 		}
 		

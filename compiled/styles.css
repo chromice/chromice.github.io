@@ -682,11 +682,20 @@ img.logo {
 /*
 	Links
 */
-a {
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+a,
+button {
   color: rgba(51, 51, 51, 0.5);
 }
 a:hover,
-a:focus {
+button:hover,
+a:focus,
+button:focus {
   color: rgba(51, 51, 51, 0.75);
 }
 .links {
@@ -698,7 +707,8 @@ a:focus {
   text-align: center;
 }
 .links a,
-.links em {
+.links em,
+.links button {
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
@@ -711,16 +721,20 @@ a:focus {
 }
 .links a:before,
 .links em:before,
+.links button:before,
 .links a:after,
-.links em:after {
+.links em:after,
+.links button:after {
   color: #333;
 }
 .links a:before,
-.links em:before {
+.links em:before,
+.links button:before {
   content: '{\00a0';
 }
 .links a:after,
-.links em:after {
+.links em:after,
+.links button:after {
   content: '\00a0}';
 }
 .links em,
@@ -842,6 +856,9 @@ a:focus {
 */
 #recent-projects {
   /*
+		Article body snatcher
+	*/
+  /*
 		Position screenshots
 	*/
 }
@@ -890,6 +907,25 @@ a:focus {
   margin-bottom: 29px;
   margin-bottom: calc(1.45rem + -0.18125rem);
 }
+#recent-projects .body {
+  transition: opacity 500ms 300ms;
+}
+#recent-projects .compact > .body {
+  display: none;
+}
+#recent-projects .compact > header {
+  margin-bottom: 87px;
+  margin-bottom: 4.35rem;
+}
+#recent-projects .compact > footer {
+  margin-top: 87px;
+  margin-top: 4.35rem;
+}
+#recent-projects .hidden > .body {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
 #recent-projects .aside {
   float: right;
   width: 33%;
@@ -918,7 +954,7 @@ a:focus {
   margin-top: 0;
   margin-bottom: 0;
 }
-#recent-projects .combined + p {
+#recent-projects .combined + .body > p:first-child {
   margin-top: 72.5px;
   margin-top: 3.625rem;
 }
