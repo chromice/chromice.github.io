@@ -74,7 +74,6 @@
 	/*
 		ScrollTo
 	*/
-	
 	function scrollTo(element, to, duration) {
 		var start = element.scrollTop,
 			change = to - start,
