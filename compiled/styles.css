@@ -511,7 +511,7 @@ section + section:before {
   top: -1.45rem;
   left: 0;
   right: 0;
-  color: rgba(51, 51, 51, 0.33);
+  color: #b3b3b3;
   text-align: center;
   font-family: 'Alice', sans-serif;
   font-size: 2em;
@@ -690,13 +690,13 @@ button {
 }
 a,
 button {
-  color: rgba(51, 51, 51, 0.5);
+  color: #999999;
 }
 a:hover,
 button:hover,
 a:focus,
 button:focus {
-  color: rgba(51, 51, 51, 0.75);
+  color: #737373;
 }
 .links {
   max-width: none;
@@ -740,7 +740,7 @@ button:focus {
 .links em,
 .links em:before,
 .links em:after {
-  color: rgba(51, 51, 51, 0.33);
+  color: #b3b3b3;
 }
 /*
 	Misc
@@ -750,7 +750,7 @@ button:focus {
   font-size: 1.45em;
   line-height: 0.2;
   vertical-align: -41.3%;
-  color: rgba(51, 51, 51, 0.33);
+  color: #b3b3b3;
 }
 /*
 	Profile
@@ -1003,7 +1003,7 @@ button:focus {
   font-size: 1rem;
   margin-bottom: 14.5px;
   margin-bottom: 0.725rem;
-  color: rgba(51, 51, 51, 0.33);
+  color: #b3b3b3;
 }
 /*
 	Open-source libraries
