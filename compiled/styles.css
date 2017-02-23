@@ -799,8 +799,8 @@ button:focus {
   top: 0.067rem;
   font: 400 20px / 1.25 'Sansita', serif;
   font-size: 1rem;
-  margin-bottom: 36.25px;
-  margin-bottom: calc(1.8125rem + 0.2rem);
+  margin-bottom: 50.75px;
+  margin-bottom: calc(2.5375rem + 0.2rem);
 }
 #profile .contact {
   position: relative;
