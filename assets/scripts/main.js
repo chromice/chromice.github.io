@@ -68,6 +68,15 @@
 				var rect = article.getBoundingClientRect();
 				scrollTo(d.body, rect.top + d.body.scrollTop - 29, 500);
 			}, 100);
+			
+			if (!ga) return;
+			
+			ga('send', 'event', {
+				eventCategory: 'Inbound Link',
+				eventAction: 'click',
+				eventLabel: '#' + article.getAttribute('id'),
+				transport: 'beacon'
+			});
 		}, true);
 	});
 	
