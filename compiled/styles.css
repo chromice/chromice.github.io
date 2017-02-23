@@ -893,10 +893,10 @@ button:focus {
   padding-top: 1.45rem;
   padding-bottom: 29px;
   padding-bottom: 1.45rem;
-  margin-top: 29px;
-  margin-top: 1.45rem;
-  margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -1.175rem);
+  margin-top: 14.5px;
+  margin-top: 0.725rem;
+  margin-bottom: 14.5px;
+  margin-bottom: calc(0.725rem + -1.175rem);
 }
 #recent-projects header > p {
   position: relative;
