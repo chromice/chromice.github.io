@@ -499,10 +499,10 @@ section {
   margin: 0 auto;
   padding: 6.25%;
   max-width: 940px;
-  padding-top: 58px;
-  padding-top: 2.9rem;
-  padding-bottom: 58px;
-  padding-bottom: 2.9rem;
+  padding-top: 87px;
+  padding-top: 4.35rem;
+  padding-bottom: 87px;
+  padding-bottom: 4.35rem;
 }
 section + section:before {
   display: block;
@@ -761,6 +761,8 @@ button:focus {
 	*/
 }
 #profile header {
+  padding-top: 29px;
+  padding-top: 1.45rem;
   text-align: center;
   margin-left: -5%;
   margin-right: -5%;
@@ -932,6 +934,10 @@ button:focus {
   max-width: 160px;
   margin-left: 5%;
 }
+#recent-projects .aside img {
+  border-width: 1px;
+  margin: -1px;
+}
 @media screen and (min-width: 960px) {
   #recent-projects .aside {
     margin-right: 6%;
@@ -977,8 +983,10 @@ button:focus {
 #employment-history > div {
   margin: 0 auto;
   max-width: 30em;
-  margin-bottom: 58px;
-  margin-bottom: 2.9rem;
+}
+#employment-history > div + div {
+  margin-top: 58px;
+  margin-top: 2.9rem;
 }
 #employment-history h3 {
   margin-bottom: 0;
