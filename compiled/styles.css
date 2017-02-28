@@ -985,8 +985,8 @@ button:focus {
   max-width: 30em;
 }
 #employment-history > div + div {
-  margin-top: 58px;
-  margin-top: 2.9rem;
+  margin-top: 50.75px;
+  margin-top: 2.5375rem;
 }
 #employment-history h3 {
   margin-bottom: 0;
@@ -1009,8 +1009,8 @@ button:focus {
   top: -0.065rem;
   font: 400 20px / 1.45 'Oswald', sans-serif;
   font-size: 1rem;
-  margin-bottom: 14.5px;
-  margin-bottom: 0.725rem;
+  margin-bottom: 7.25px;
+  margin-bottom: 0.3625rem;
   color: #b3b3b3;
 }
 /*
