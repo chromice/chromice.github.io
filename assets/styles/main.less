@@ -158,7 +158,7 @@ figure {
 	.margin-top(0);
 	.margin-bottom(1);
 	
-	img {
+	img, video {
 		max-width: 100%;
 		height: auto;
 	}
@@ -177,7 +177,7 @@ figure {
 		width: 300px;
 	}
 	
-	&.screenshot {
+	&.screen {
 		.margin-top(2);
 		.margin-bottom(2);
 		position: relative;
@@ -196,7 +196,7 @@ figure {
 			content: '';
 		}
 		
-		img {
+		img, video {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -273,6 +273,36 @@ img {
 		max-width: 100%;
 		width: auto;
 		height: auto;
+	}
+}
+
+video + span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: -35px 0 0 -35px;
+	background: fade(@color-highlight, 70%);
+	z-index: 3;
+	pointer-events: none;
+	
+	&:before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-left: 30px solid @color-body;
+		border-top: 16px solid transparent;
+		border-bottom: 16px solid transparent;
+		margin: -16px 0 0 -12px;
+		content: '';
+	}
+	
+	&.playing {
+		display: none;
 	}
 }
 
@@ -434,9 +464,13 @@ a, button {
 	Case studies
 */
 #recent-projects {
+	header {
+		position: relative;
+	}
 	.icon {
-		float: left;
-		margin-right: (@grid-gutter / 2);
+		position: absolute;
+		top: 0;
+		left: 0;
 		display: block;
 		overflow: hidden;
 		width: 76px;
@@ -452,15 +486,19 @@ a, button {
 		@media screen and (max-width: @bp-small-copy) {
 			width: 60px;
 			height: 60px;
-			margin-right: (@grid-gutter / 4)
 		}
 	}
 	h3 {
+		padding-left: (@grid-gutter / 2 + 76px);
 		.font-align(2, 1.25, title);
 		.padding-top(1);
 		.padding-bottom(1);
 		.margin-top(0.5);
 		.margin-bottom(0.5);
+		
+		@media screen and (max-width: @bp-small-copy) {
+			padding-left: (@grid-gutter / 2 + 60px);
+		}
 	}
 	header > p {
 		.font-align(1, 1.125, accent);
@@ -496,7 +534,7 @@ a, button {
 	
 	
 	/*
-		Position screenshots
+		Position screens
 	*/
 	.aside {
 		float: right;
@@ -516,7 +554,7 @@ a, button {
 	.combined {
 		position: relative;
 	
-		.screenshot.iphone {
+		.screen.iphone {
 			position: absolute;
 			top: 13.5%;
 			left: -3%;
@@ -537,10 +575,10 @@ a, button {
 		}
 		
 		@media screen and (max-width: @bp-hide-ipad) {
-			.screenshot.ipad {
+			.screen.ipad {
 				display: none;
 			}
-			.screenshot.iphone {
+			.screen.iphone {
 				position: relative;
 				top: auto;
 				left: auto;
@@ -550,7 +588,13 @@ a, button {
 			}
 		}
 	}
+	.standalone {
+		+ * {
+			.margin-top(2.5);
+		}
+	}
 }
+
 
 
 

@@ -44,12 +44,41 @@
 	}
 	
 	/*
+		Video player
+	*/
+	var videos = d.getElementsByTagName('video');
+	Array.prototype.forEach.call(videos, function(v, i) {
+		var play = d.createElement('span');
+		play.className = 'status paused';
+		
+		v.parentNode.appendChild(play);
+		
+		v.addEventListener('click', function (e) {
+			if (ga) {
+				ga('send', 'event', {
+					eventCategory: 'Video',
+					eventAction: v.paused ? 'play' : 'pause',
+					eventLabel: v.title,
+					transport: 'beacon'
+				});
+			}
+			if (v.paused) {
+				play.className = 'status playing';
+				v.play();
+			} else {
+				play.className = 'status paused';
+				v.pause();
+			}
+		});
+	});
+	
+	/*
 		Hide case study body
 	*/
 	if (!d.querySelectorAll) return;
 	
-	// Find case study screenshots...
-	var links = d.querySelectorAll('#recent-projects article .links');
+	// Find case study screens...
+	var links = d.querySelectorAll('#recent-projects article.expandable .links');
 	Array.prototype.forEach.call(links, function(el, i) {
 		var article = el.parentNode.parentNode;
 		var more = d.createElement('button');

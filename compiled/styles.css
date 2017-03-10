@@ -595,7 +595,8 @@ figure {
   margin-bottom: 29px;
   margin-bottom: 1.45rem;
 }
-figure img {
+figure img,
+figure video {
   max-width: 100%;
   height: auto;
 }
@@ -611,7 +612,7 @@ figure.mini {
   float: right;
   width: 300px;
 }
-figure.screenshot {
+figure.screen {
   margin-top: 58px;
   margin-top: 2.9rem;
   margin-bottom: 58px;
@@ -619,18 +620,19 @@ figure.screenshot {
   position: relative;
   z-index: 10;
 }
-figure.screenshot:before {
+figure.screen:before {
   display: block;
   width: 100%;
   content: '';
 }
-figure.screenshot:after {
+figure.screen:after {
   display: block;
   position: absolute;
   z-index: 1;
   content: '';
 }
-figure.screenshot img {
+figure.screen img,
+figure.screen video {
   position: absolute;
   top: 0;
   left: 0;
@@ -640,17 +642,17 @@ figure.screenshot img {
   border: 2px solid #444;
   margin: -2px;
 }
-figure.screenshot.ipad {
+figure.screen.ipad {
   max-width: 1024px;
   margin-left: -4.5%;
   margin-right: -4.5%;
 }
-figure.screenshot.ipad:before {
+figure.screen.ipad:before {
   padding-top: 75%;
   margin-top: 6.0546875%;
   margin-bottom: 6.0546875%;
 }
-figure.screenshot.ipad:after {
+figure.screen.ipad:after {
   top: -8.07291667%;
   left: -14.0625%;
   width: 128.125%;
@@ -658,15 +660,15 @@ figure.screenshot.ipad:after {
   background: no-repeat url(../assets/graphics/iPad.png) 0 0;
   background-size: 100%;
 }
-figure.screenshot.iphone {
+figure.screen.iphone {
   max-width: 320px;
 }
-figure.screenshot.iphone:before {
+figure.screen.iphone:before {
   margin-top: 42.8125%;
   margin-bottom: 40.625%;
   padding-top: 177.5%;
 }
-figure.screenshot.iphone:after {
+figure.screen.iphone:after {
   top: -24.11971831%;
   left: -15.9375%;
   width: 130.9375%;
@@ -678,6 +680,33 @@ img.logo {
   max-width: 100%;
   width: auto;
   height: auto;
+}
+video + span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: -35px 0 0 -35px;
+  background: rgba(115, 115, 115, 0.7);
+  z-index: 3;
+  pointer-events: none;
+}
+video + span:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-left: 30px solid #fafafa;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  margin: -16px 0 0 -12px;
+  content: '';
+}
+video + span.playing {
+  display: none;
 }
 /*
 	Links
@@ -861,12 +890,16 @@ button:focus {
 		Article body snatcher
 	*/
   /*
-		Position screenshots
+		Position screens
 	*/
 }
+#recent-projects header {
+  position: relative;
+}
 #recent-projects .icon {
-  float: left;
-  margin-right: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   overflow: hidden;
   width: 76px;
@@ -882,10 +915,10 @@ button:focus {
   #recent-projects .icon {
     width: 60px;
     height: 60px;
-    margin-right: 10px;
   }
 }
 #recent-projects h3 {
+  padding-left: 96px;
   position: relative;
   top: -21.65px;
   top: -1.0825rem;
@@ -899,6 +932,11 @@ button:focus {
   margin-top: 0.725rem;
   margin-bottom: 14.5px;
   margin-bottom: calc(0.725rem + -1.175rem);
+}
+@media screen and (max-width: 568px) {
+  #recent-projects h3 {
+    padding-left: 80px;
+  }
 }
 #recent-projects header > p {
   position: relative;
@@ -946,17 +984,17 @@ button:focus {
 #recent-projects .combined {
   position: relative;
 }
-#recent-projects .combined .screenshot.iphone {
+#recent-projects .combined .screen.iphone {
   position: absolute;
   top: 13.5%;
   left: -3%;
   width: 33%;
 }
-#recent-projects .combined .screenshot.iphone.right {
+#recent-projects .combined .screen.iphone.right {
   left: auto;
   right: -3%;
 }
-#recent-projects .combined .screenshot.iphone:before {
+#recent-projects .combined .screen.iphone:before {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -965,10 +1003,10 @@ button:focus {
   margin-top: 3.625rem;
 }
 @media screen and (max-width: 414px) {
-  #recent-projects .combined .screenshot.ipad {
+  #recent-projects .combined .screen.ipad {
     display: none;
   }
-  #recent-projects .combined .screenshot.iphone {
+  #recent-projects .combined .screen.iphone {
     position: relative;
     top: auto;
     left: auto;
@@ -976,6 +1014,10 @@ button:focus {
     width: 66%;
     margin: 30% auto 30%;
   }
+}
+#recent-projects .standalone + * {
+  margin-top: 72.5px;
+  margin-top: 3.625rem;
 }
 /*
 	Employment history
