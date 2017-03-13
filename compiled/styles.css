@@ -1036,6 +1036,11 @@ button:focus {
   transition-delay: 300ms, 0ms;
   opacity: 0;
 }
+#recent-projects .playing .screen.iphone.static.right {
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+}
 /*
 	Employment history
 */
