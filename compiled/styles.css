@@ -600,6 +600,9 @@ figure video {
   max-width: 100%;
   height: auto;
 }
+figure video {
+  cursor: pointer;
+}
 figure.concept {
   overflow: hidden;
   border-radius: 5px;
@@ -690,7 +693,7 @@ video + span {
   height: 70px;
   border-radius: 50%;
   margin: -35px 0 0 -35px;
-  background: rgba(115, 115, 115, 0.7);
+  background: rgba(51, 51, 51, 0.85);
   z-index: 3;
   pointer-events: none;
 }
@@ -700,12 +703,12 @@ video + span:before {
   top: 50%;
   left: 50%;
   border-left: 30px solid #fafafa;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
-  margin: -16px 0 0 -12px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin: -15px 0 0 -12px;
   content: '';
 }
-video + span.playing {
+.playing video + span {
   display: none;
 }
 /*
@@ -892,6 +895,9 @@ button:focus {
   /*
 		Position screens
 	*/
+  /*
+		Show/hide screens
+	*/
 }
 #recent-projects header {
   position: relative;
@@ -1015,9 +1021,20 @@ button:focus {
     margin: 30% auto 30%;
   }
 }
-#recent-projects .standalone + * {
-  margin-top: 72.5px;
-  margin-top: 3.625rem;
+#recent-projects .combined + footer {
+  margin-top: 87px;
+  margin-top: 4.35rem;
+}
+#recent-projects .screen {
+  transition: opacity 100ms, -webkit-transform 500ms;
+  transition: opacity 100ms, transform 500ms;
+}
+#recent-projects .playing .screen.iphone.static {
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+  transition-delay: 300ms, 0ms;
+  opacity: 0;
 }
 /*
 	Employment history

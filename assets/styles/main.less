@@ -163,6 +163,10 @@ figure {
 		height: auto;
 	}
 	
+	video {
+		cursor: pointer;
+	}
+	
 	&.concept {
 		overflow: hidden;
 		border-radius: 5px;
@@ -285,7 +289,7 @@ video + span {
 	height: 70px;
 	border-radius: 50%;
 	margin: -35px 0 0 -35px;
-	background: fade(@color-highlight, 70%);
+	background: fade(#333, 85%);
 	z-index: 3;
 	pointer-events: none;
 	
@@ -295,13 +299,13 @@ video + span {
 		top: 50%;
 		left: 50%;
 		border-left: 30px solid @color-body;
-		border-top: 16px solid transparent;
-		border-bottom: 16px solid transparent;
-		margin: -16px 0 0 -12px;
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		margin: -15px 0 0 -12px;
 		content: '';
 	}
 	
-	&.playing {
+	.playing & {
 		display: none;
 	}
 }
@@ -587,10 +591,23 @@ a, button {
 				margin: 30% auto 30%;
 			}
 		}
+		
+		+ footer {
+			.margin-top(3);
+		}
 	}
-	.standalone {
-		+ * {
-			.margin-top(2.5);
+	
+	/*
+		Show/hide screens
+	*/
+	.screen {
+		transition: opacity 100ms, transform 500ms;
+	}
+	.playing {
+		.screen.iphone.static {
+			transform: translateX(-200%);
+			transition-delay: 300ms, 0ms;
+			opacity: 0;
 		}
 	}
 }

@@ -43,39 +43,57 @@
 		as[i].addEventListener('click', trackOutBoundClicks, true);
 	}
 	
+	// Quit execution
+	if (!d.querySelectorAll) return;
+	
 	/*
 		Video player
 	*/
 	var videos = d.getElementsByTagName('video');
 	Array.prototype.forEach.call(videos, function(v, i) {
-		var play = d.createElement('span');
-		play.className = 'status paused';
-		
-		v.parentNode.appendChild(play);
+		var container = v.parentNode.parentNode;
+		var button = d.createElement('span');
+		button.className = 'status';
+		v.parentNode.appendChild(button);
 		
 		v.addEventListener('click', function (e) {
+			if (v.paused) {
+				v.play();
+			} else {
+				v.pause();
+				v.currentTime = 0;
+			}
+		});
+		v.addEventListener('play', function () {
+			addClass(container, 'playing');
+			
 			if (ga) {
 				ga('send', 'event', {
 					eventCategory: 'Video',
-					eventAction: v.paused ? 'play' : 'pause',
+					eventAction: 'play',
 					eventLabel: v.title,
 					transport: 'beacon'
 				});
 			}
-			if (v.paused) {
-				play.className = 'status playing';
-				v.play();
-			} else {
-				play.className = 'status paused';
-				v.pause();
+		});
+		v.addEventListener('pause', function () {
+			removeClass(container, 'playing');
+			
+			if (ga) {
+				ga('send', 'event', {
+					eventCategory: 'Video',
+					eventAction: 'pause',
+					eventLabel: v.title,
+					transport: 'beacon'
+				});
 			}
+			
 		});
 	});
 	
 	/*
 		Hide case study body
 	*/
-	if (!d.querySelectorAll) return;
 	
 	// Find case study screens...
 	var links = d.querySelectorAll('#recent-projects article.expandable .links');
@@ -83,7 +101,7 @@
 		var article = el.parentNode.parentNode;
 		var more = d.createElement('button');
 		
-		more.innerHTML = 'Read case study';
+		more.innerHTML = 'Read the case study';
 		el.appendChild(more);
 		
 		article.className = 'compact hidden';
@@ -145,4 +163,21 @@
 		// IE Fallback, you can even fallback to onscroll
 		function(callback){ window.setTimeout(callback, 1000/60); };
 
+	/*
+		DOM functions
+	*/
+	function addClass(el, className) {
+		if (el.classList) {
+			el.classList.add(className);
+		} else {
+			el.className += ' ' + className;
+		}
+	}
+	function removeClass(el, className) {
+		if (el.classList) {
+			el.classList.remove(className);
+		} else {
+			el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+		}
+	}
 })(window, document, console);
