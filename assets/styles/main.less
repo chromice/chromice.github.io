@@ -171,8 +171,8 @@ figure {
 		overflow: hidden;
 		border-radius: 5px;
 		max-width: 1024px;
-		margin-left: -4.5%;
-		margin-right: -4.5%;
+		margin-left: -2.25%;
+		margin-right: -2.25%;
 		box-shadow: 0 1px 2px 0px rgba(0,0,0,0.25);
 	}
 	
@@ -223,8 +223,8 @@ figure {
 			@-height: 892px;
 			
 			max-width: @width;
-			margin-left: -4.5%;
-			margin-right: -4.5%;
+			margin-left: -2.25%;
+			margin-right: -2.25%;
 			
 			&:before {
 				padding-top: percentage((@height / @width));
@@ -280,35 +280,42 @@ img {
 	}
 }
 
-video + span {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	display: block;
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	margin: -35px 0 0 -35px;
-	background: fade(#333, 85%);
-	z-index: 3;
-	pointer-events: none;
-	
-	&:before {
-		display: block;
+/*
+	Video
+*/
+video {
+	& + span {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		border-left: 30px solid @color-body;
-		border-top: 15px solid transparent;
-		border-bottom: 15px solid transparent;
-		margin: -15px 0 0 -12px;
-		content: '';
+		display: block;
+		width: 70px;
+		height: 70px;
+		border: 2px solid #f8f8f8;
+		border-radius: 50%;
+		box-shadow: 0 0px 2px rgba(0,0,0,0.3),
+			0 1px 10px rgba(0,0,0,0.1);
+		margin: -35px 0 0 -35px;
+		background: fade(#333, 75%) url(../assets/graphics/play.png) no-repeat 50% 50%;
+		background-size: 100%;
+		z-index: 3;
+		pointer-events: none;
+		
+		transition: all 200ms @ease-out-sine;
+	
+		.playing & {
+			opacity: 0;
+			transform: scale(1.4);
+		}
 	}
 	
-	.playing & {
-		display: none;
+	&:hover, &:focus {
+		& + span {
+			background-color: fade(#333, 85%);
+		}
 	}
 }
+
 
 /*
 	Links
@@ -560,7 +567,7 @@ a, button {
 	
 		.screen.iphone {
 			position: absolute;
-			top: 13.5%;
+			top: 10.5%;
 			left: -3%;
 			width: 33%;
 		
@@ -596,21 +603,47 @@ a, button {
 			.margin-top(3);
 		}
 	}
+	.double {
+		.clearfix();
+		max-width: 1024px;
+		margin-left: -2.25%;
+		margin-right: -2.25%;
+		
+		> .concept {
+			clear: none;
+			max-width: none;
+			margin-left: 0;
+			margin-right: 0;
+			
+			float: left;
+			.width(3);
+			
+			+ .concept {
+				float: right;
+				// .margin-left(@grid-gutter);
+			}
+			
+			@media screen and (max-width: @bp-compact-layout) {
+				float: none;
+				width: auto;
+			}
+		}
+	}
 	
 	/*
 		Show/hide screens
 	*/
 	.screen {
-		transition: opacity 100ms, transform 500ms;
+		transition: opacity 100ms 100ms, transform 500ms @ease-in-out-back;
 	}
 	.playing {
 		.screen.iphone.static {
-			transform: translateX(-200%);
+			transform: translateX(-150%);
 			transition-delay: 300ms, 0ms;
 			opacity: 0;
 		}
 		.screen.iphone.static.right {
-			transform: translateX(200%);
+			transform: translateX(150%);
 		}
 	}
 }
