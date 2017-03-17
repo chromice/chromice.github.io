@@ -19,8 +19,8 @@
 
 @bp-small-copy: 568px;
 @bp-compact-layout: 740px;
-@bp-hide-overflow: 1072px;
 @bp-hide-ipad: 414px;
+@bp-compact-screens: 1024px;
 
 // =======================
 // = Typography & Layout =
@@ -171,9 +171,14 @@ figure {
 		overflow: hidden;
 		border-radius: 5px;
 		max-width: 1024px;
-		margin-left: -2.25%;
-		margin-right: -2.25%;
+		margin-left: -4.5%;
+		margin-right: -4.5%;
 		box-shadow: 0 1px 2px 0px rgba(0,0,0,0.25);
+		
+		@media screen and (max-width: @bp-compact-screens) {
+			margin-left: -2.25%;
+			margin-right: -2.25%;
+		}
 	}
 	
 	&.mini {
@@ -223,8 +228,8 @@ figure {
 			@-height: 892px;
 			
 			max-width: @width;
-			margin-left: -2.25%;
-			margin-right: -2.25%;
+			margin-left: -4.5%;
+			margin-right: -4.5%;
 			
 			&:before {
 				padding-top: percentage((@height / @width));
@@ -239,6 +244,11 @@ figure {
 				height: percentage((@-height / @height));
 				background: no-repeat url(../assets/graphics/iPad.png) 0 0;
 				background-size: 100%;
+			}
+			
+			@media screen and (max-width: @bp-compact-screens) {
+				margin-left: -2.25%;
+				margin-right: -2.25%;
 			}
 		}
 		
@@ -311,7 +321,7 @@ video {
 	
 	&:hover, &:focus {
 		& + span {
-			background-color: fade(#333, 85%);
+			background-color: fade(#333, 90%);
 		}
 	}
 }
@@ -567,7 +577,7 @@ a, button {
 	
 		.screen.iphone {
 			position: absolute;
-			top: 10.5%;
+			top: 14.5%;
 			left: -3%;
 			width: 33%;
 		
@@ -579,6 +589,10 @@ a, button {
 			&:before {
 				margin-top: 0;
 				margin-bottom: 0;
+			}
+			
+			@media screen and (max-width: @bp-compact-screens) {
+				top: 10.5%;
 			}
 		}
 		+ .body > p:first-child {
@@ -606,8 +620,8 @@ a, button {
 	.double {
 		.clearfix();
 		max-width: 1024px;
-		margin-left: -2.25%;
-		margin-right: -2.25%;
+		margin-left: -4.5%;
+		margin-right: -4.5%;
 		
 		> .concept {
 			clear: none;
@@ -627,6 +641,11 @@ a, button {
 				float: none;
 				width: auto;
 			}
+		}
+		
+		@media screen and (max-width: @bp-compact-screens) {
+			margin-left: -2.25%;
+			margin-right: -2.25%;
 		}
 	}
 	
