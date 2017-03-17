@@ -535,9 +535,10 @@ a, button {
 	*/
 	
 	.body {
-		transition: opacity 500ms 300ms;
+		max-height: 150em;
+		transition: opacity 500ms 300ms @ease-out-sine,
+			max-height 500ms @ease-in-quad;
 	}
-	
 	.compact {
 		> .body {
 			display: none;
@@ -551,7 +552,7 @@ a, button {
 	}
 	.hidden {
 		> .body {
-			height: 0;
+			max-height: 0;
 			overflow: hidden;
 			opacity: 0;
 		}
@@ -578,7 +579,7 @@ a, button {
 	}
 	.combined {
 		position: relative;
-	
+		
 		.screen.iphone {
 			position: absolute;
 			top: 14.5%;

@@ -973,7 +973,8 @@ button:focus {
   margin-bottom: calc(1.45rem + -0.18125rem);
 }
 #recent-projects .body {
-  transition: opacity 500ms 300ms;
+  max-height: 150em;
+  transition: opacity 500ms 300ms cubic-bezier(0.39, 0.575, 0.565, 1), max-height 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 #recent-projects .compact > .body {
   display: none;
@@ -987,7 +988,7 @@ button:focus {
   margin-top: 4.35rem;
 }
 #recent-projects .hidden > .body {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   opacity: 0;
 }
