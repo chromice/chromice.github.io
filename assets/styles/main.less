@@ -42,6 +42,10 @@
 @subtitle-font-variation: 400;
 @subtitle-font-offset: 0.952;
 
+@section-font-family: @subtitle-font-family;
+@section-font-variation: 500;
+@section-font-offset: @subtitle-font-offset;
+
 @heading-font-family: @title-font-family;
 @heading-font-variation: 400;
 @heading-font-offset: @title-font-offset;
@@ -54,7 +58,7 @@
 .use-baseline-grid(0, 1.45, regular);
 .use-column-grid(940px, 40px, 6);
 
-@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400|Lato:400,400i|@{accent-font-family}');
+@import url('https://fonts.googleapis.com/css?family=Sansita:400,700|Oswald:400,500|Lato:400,400i|@{accent-font-family}');
 
 html {
 	.font-baseline();
@@ -114,13 +118,13 @@ article + article {
 	Headings
 */
 h2 {
-	.font-align(2, 1.25, subtitle);
+	.font-align(2, 1.25, section);
 	.margin-top(0);
 	.margin-bottom(2);
 	
 	section > &:first-child {
 		position: relative;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		text-align: center;
 	}
 	
@@ -452,7 +456,7 @@ a, button {
 		.width(2);
 		
 		h2 {
-			.font-align(0, 1.25, subtitle);
+			.font-align(0, 1.25, section);
 			.margin-top(0);
 			.margin-bottom(0.25);
 			
