@@ -37,10 +37,29 @@
 		}
 	}
 	
+	function scrollRelativeLinks(event) {
+		var href = this.href;
+		var section = d.getElementById(href.replace(/.*?\#(.+)/, '$1'));
+		
+		if (!history.pushState || !section) {
+			return;
+		}
+		
+		event.preventDefault();
+		
+		var rect = section.getBoundingClientRect();
+		var root = /firefox/i.test(navigator.userAgent) ? d.documentElement : d.body;
+		var amount = rect.top + root.scrollTop;
+		
+		scrollTo(root, amount, amount/7);
+		history.pushState(null, '', href);
+	}
+	
 	var as = d.getElementsByTagName('a');
 	
 	for (var i = 0; i < as.length; i++) {
 		as[i].addEventListener('click', trackOutBoundClicks, true);
+		as[i].addEventListener('click', scrollRelativeLinks, true);
 	}
 	
 	// Quit execution
