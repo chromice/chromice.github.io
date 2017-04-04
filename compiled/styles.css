@@ -640,6 +640,9 @@ figure.concept {
     margin-right: -2.25%;
   }
 }
+figure.concept.plain {
+  box-shadow: none;
+}
 figure.mini {
   float: right;
   width: 300px;
