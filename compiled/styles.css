@@ -386,17 +386,21 @@ video {
   margin: 0;
 }
 .ext-clearfix,
+#recent-projects header > dl,
 #recent-projects .double {
   *zoom: 1;
 }
 .ext-clearfix:before,
 .ext-clearfix:after,
+#recent-projects header > dl:before,
+#recent-projects header > dl:after,
 #recent-projects .double:before,
 #recent-projects .double:after {
   content: " ";
   display: table;
 }
 .ext-clearfix:after,
+#recent-projects header > dl:after,
 #recent-projects .double:after {
   clear: both;
 }
@@ -991,8 +995,52 @@ button:focus {
   top: -0.190825rem;
   font: 400 29px / 1.125 'Alice';
   font-size: 1.45rem;
+  margin-bottom: 14.5px;
+  margin-bottom: calc(0.725rem + -0.18125rem);
+}
+#recent-projects header > dl {
+  margin-top: 14.5px;
+  margin-top: 0.725rem;
   margin-bottom: 29px;
-  margin-bottom: calc(1.45rem + -0.18125rem);
+  margin-bottom: 1.45rem;
+}
+#recent-projects header > dl dt,
+#recent-projects header > dl dd {
+  float: left;
+}
+#recent-projects header > dl dt {
+  margin-right: 0.4em;
+  position: relative;
+  top: 5.762px;
+  top: 0.2881rem;
+  font: 500 14px / 1.45 'Oswald', sans-serif;
+  font-size: 0.7rem;
+}
+#recent-projects header > dl dt:after {
+  content: ': ';
+  font: 400 14px / 1.45 'Lato', sans-serif;
+  font-size: 0.7rem;
+}
+#recent-projects header > dl dd {
+  margin-left: 0;
+  margin-right: 4.25531915%;
+  margin-right: calc(0% + 0px + 40px);
+  position: relative;
+  top: 6.672px;
+  top: 0.3336rem;
+  font: italic 400 14px / 1.45 'Lato', sans-serif;
+  font-size: 0.7rem;
+}
+#recent-projects header > dl dd:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 740px) {
+  #recent-projects header > dl dt {
+    clear: left;
+  }
+  #recent-projects header > dl dd {
+    float: none;
+  }
 }
 #recent-projects .body {
   max-height: 150em;
@@ -1065,7 +1113,7 @@ button:focus {
     left: auto;
     right: auto;
     width: 66%;
-    margin: 30% auto 30%;
+    margin: 33% auto 30%;
   }
 }
 #recent-projects .combined + footer {

@@ -532,7 +532,44 @@ a, button {
 	}
 	header > p {
 		.font-align(1, 1.125, accent);
+		.margin-bottom(0.5);
+	}
+	header > dl {
+		.clearfix();
+		.margin-top(0.5);
 		.margin-bottom(1);
+		
+		dt, dd {
+			float: left;
+		}
+		dt {
+			margin-right: 0.4em;
+			.font-align(-1, 1.45, section);
+			
+			&:after {
+				content: ': ';
+				.font(-1, 1.45);
+			}
+			
+		}
+		dd {
+			margin-left: 0;
+			.margin-right(@grid-gutter);
+			.font-align(-1, 1.45, highlight);
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		
+		@media screen and (max-width: @bp-compact-layout) {
+			dt {
+				clear: left;
+			}
+			dd {
+				float: none;
+			}
+		}
 	}
 	
 	/*
@@ -619,7 +656,7 @@ a, button {
 				left: auto;
 				right: auto;
 				width: 66%;
-				margin: 30% auto 30%;
+				margin: 33% auto 30%;
 			}
 		}
 		
