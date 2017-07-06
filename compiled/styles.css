@@ -568,8 +568,8 @@ section + footer a {
   text-decoration: none;
 }
 article + article {
-  margin-top: 116px;
-  margin-top: 5.8rem;
+  margin-top: 174px;
+  margin-top: 8.7rem;
 }
 /*
 	Headings
@@ -598,6 +598,17 @@ h3 {
   margin-top: 0;
   margin-bottom: 29px;
   margin-bottom: 1.45rem;
+}
+h4 {
+  position: relative;
+  top: -8.065px;
+  top: -0.40325rem;
+  font: 400 29px / 1.25 'Sansita', serif;
+  font-size: 1.45rem;
+  margin-top: 65.25px;
+  margin-top: 3.2625rem;
+  margin-bottom: 7.25px;
+  margin-bottom: calc(0.3625rem + -0.3625rem);
 }
 /*
 	Body copy
@@ -1129,6 +1140,10 @@ button:focus {
 #recent-projects .combined + .body > p:first-child {
   margin-top: 72.5px;
   margin-top: 3.625rem;
+}
+#recent-projects .combined + .body > h4:first-child {
+  margin-top: 101.5px;
+  margin-top: 5.075rem;
 }
 @media screen and (max-width: 414px) {
   #recent-projects .combined .screen.ipad {

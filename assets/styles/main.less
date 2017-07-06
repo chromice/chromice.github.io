@@ -117,7 +117,7 @@ section {
 	}
 }
 article + article {
-	.margin-top(4);
+	.margin-top(6);
 }
 	
 /*
@@ -139,6 +139,11 @@ h3 {
 	.font-align(1, 1, heading);
 	.margin-top(0);
 	.margin-bottom(1);
+}
+h4 {
+	.font-align(1, 1.25, heading);
+	.margin-top(2.25);
+	.margin-bottom(0.25);
 }
 
 /*
@@ -675,6 +680,9 @@ a, button {
 		}
 		+ .body > p:first-child {
 			.margin-top(2.5);
+		}
+		+ .body > h4:first-child {
+			.margin-top(3.5);
 		}
 		
 		@media screen and (max-width: @bp-hide-ipad) {
