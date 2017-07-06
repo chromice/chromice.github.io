@@ -512,7 +512,7 @@ html {
 }
 @media screen and (max-width: 568px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 body {
@@ -524,12 +524,18 @@ body {
 section {
   position: relative;
   margin: 0 auto;
-  padding: 6.25%;
+  padding: 10%;
   max-width: 940px;
   padding-top: 87px;
   padding-top: 4.35rem;
   padding-bottom: 87px;
   padding-bottom: 4.35rem;
+}
+@media screen and (max-width: 1023px) {
+  section {
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
 }
 section + section:before {
   display: block;
@@ -638,11 +644,7 @@ figure.concept {
   margin-right: -4.5%;
   box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.25);
 }
-@media screen and (max-width: 1024px) {
-  figure.concept {
-    margin-left: -2.25%;
-    margin-right: -2.25%;
-  }
+@media screen and (max-width: 1023px) {
 }
 figure.concept.plain {
   box-shadow: none;
@@ -683,8 +685,6 @@ figure.screen video {
 }
 figure.screen.ipad {
   max-width: 1024px;
-  margin-left: -4.5%;
-  margin-right: -4.5%;
 }
 figure.screen.ipad:before {
   padding-top: 75%;
@@ -699,11 +699,7 @@ figure.screen.ipad:after {
   background: no-repeat url(../assets/graphics/iPad.png) 0 0;
   background-size: 100%;
 }
-@media screen and (max-width: 1024px) {
-  figure.screen.ipad {
-    margin-left: -2.25%;
-    margin-right: -2.25%;
-  }
+@media screen and (max-width: 1023px) {
 }
 figure.screen.iphone {
   max-width: 320px;
@@ -893,8 +889,8 @@ button:focus {
 }
 #profile .content {
   position: relative;
-  padding-right: 34.75177305%;
-  padding-right: calc(33.33333333% + 13.33333333px);
+  padding-right: 39.09574468%;
+  padding-right: calc(37.5% + 15px);
 }
 #profile aside {
   position: absolute;
@@ -986,7 +982,28 @@ button:focus {
 }
 @media screen and (max-width: 568px) {
   #recent-projects h3 {
+    padding-top: 21.75px;
+    padding-top: 1.0875rem;
+    padding-bottom: 21.75px;
+    padding-bottom: 1.0875rem;
+    margin-bottom: 36.25px;
+    margin-bottom: calc(1.8125rem + -1.175rem);
+    position: relative;
+    top: -8.065px;
+    top: -0.40325rem;
+    font: 700 29px / 1.25 'Sansita', serif;
+    font-size: 1.45rem;
     padding-left: 80px;
+  }
+}
+@media screen and (max-width: 460px) {
+  #recent-projects #aub h3 {
+    padding-top: 3.625px;
+    padding-top: 0.18125rem;
+    padding-bottom: 3.625px;
+    padding-bottom: 0.18125rem;
+    margin-bottom: 21.75px;
+    margin-bottom: 1.0875rem;
   }
 }
 #recent-projects header > p {
@@ -1066,7 +1083,9 @@ button:focus {
   float: right;
   width: 33%;
   max-width: 160px;
-  margin-left: 5%;
+  margin-left: 10%;
+  margin-bottom: 29px;
+  margin-bottom: 1.45rem;
 }
 #recent-projects .aside img {
   border-width: 1px;
@@ -1082,7 +1101,7 @@ button:focus {
 }
 #recent-projects .combined .screen.iphone {
   position: absolute;
-  top: 14.5%;
+  top: 6.2%;
   left: -3%;
   width: 33%;
 }
@@ -1094,9 +1113,9 @@ button:focus {
   margin-top: 0;
   margin-bottom: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #recent-projects .combined .screen.iphone {
-    top: 10.5%;
+    top: 5.5%;
   }
 }
 #recent-projects .combined + .body > p:first-child {
@@ -1131,8 +1150,8 @@ button:focus {
   margin-left: 0;
   margin-right: 0;
   float: left;
-  width: 47.87234043%;
-  width: calc(50% - 20px);
+  width: 48.93617021%;
+  width: calc(50% - 10px);
 }
 #recent-projects .double > .concept + .concept {
   float: right;
@@ -1143,7 +1162,7 @@ button:focus {
     width: auto;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #recent-projects .double {
     margin-left: -2.25%;
     margin-right: -2.25%;

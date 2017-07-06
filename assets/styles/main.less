@@ -20,7 +20,7 @@
 @bp-small-copy: 568px;
 @bp-compact-layout: 740px;
 @bp-hide-ipad: 414px;
-@bp-compact-screens: 1024px;
+@bp-compact-screens: 1023px;
 
 // =======================
 // = Typography & Layout =
@@ -66,7 +66,7 @@ html {
 	color: @color-text;
 	
 	@media screen and (max-width: @bp-small-copy) {
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 body {
@@ -79,10 +79,15 @@ body {
 section {
 	position: relative;
 	margin: 0 auto;
-	padding: 6.25%;
+	padding: 10%;
 	max-width: @grid-width;
 	.padding-top(3);
 	.padding-bottom(3);
+	
+	@media screen and (max-width: @bp-compact-screens) {
+		padding-left: 6.25%;
+		padding-right: 6.25%;
+	}
 	
 	+ section:before {
 		display: block;
@@ -181,8 +186,8 @@ figure {
 		box-shadow: 0 1px 2px 0px rgba(0,0,0,0.25);
 		
 		@media screen and (max-width: @bp-compact-screens) {
-			margin-left: -2.25%;
-			margin-right: -2.25%;
+			// margin-left: -2.25%;
+			// margin-right: -2.25%;
 		}
 		
 		&.plain {
@@ -237,8 +242,8 @@ figure {
 			@-height: 892px;
 			
 			max-width: @width;
-			margin-left: -4.5%;
-			margin-right: -4.5%;
+			// margin-left: -4.5%;
+			// margin-right: -4.5%;
 			
 			&:before {
 				padding-top: percentage((@height / @width));
@@ -256,8 +261,8 @@ figure {
 			}
 			
 			@media screen and (max-width: @bp-compact-screens) {
-				margin-left: -2.25%;
-				margin-right: -2.25%;
+				// margin-left: -2.25%;
+				// margin-right: -2.25%;
 			}
 		}
 		
@@ -451,7 +456,7 @@ a, button {
 	*/
 	.content {
 		position: relative;
-		.padding-right(2);
+		.padding-right(2.25);
 	}
 	
 	aside {
@@ -486,6 +491,13 @@ a, button {
 		aside {
 			position: static;
 			width: auto;
+		}
+	}
+	@media screen and (max-width: @bp-small-copy) {
+		aside {
+			ul {
+				// margin-left: 1.25em;
+			}
 		}
 	}
 }
@@ -527,9 +539,21 @@ a, button {
 		.margin-bottom(0.5);
 		
 		@media screen and (max-width: @bp-small-copy) {
+			.padding-top(0.75);
+			.padding-bottom(0.75);
+			.margin-bottom(1.25);
+			.font-align(1, 1.25, title);
 			padding-left: (@grid-gutter / 2 + 60px);
 		}
 	}
+	#aub h3 {
+		@media screen and (max-width: 460px) {
+			.padding-top(0.125);
+			.padding-bottom(0.125);
+			.margin-bottom(0.75);
+		}
+	}
+	
 	header > p {
 		.font-align(1, 1.125, accent);
 		.margin-bottom(0.5);
@@ -608,7 +632,8 @@ a, button {
 		float: right;
 		width: 33%;
 		max-width: 160px;
-		margin-left: 5%;
+		margin-left: 10%;
+		.margin-bottom(1);
 		
 		img {
 			border-width: 1px;
@@ -624,7 +649,7 @@ a, button {
 		
 		.screen.iphone {
 			position: absolute;
-			top: 14.5%;
+			top: 6.2%;
 			left: -3%;
 			width: 33%;
 		
@@ -639,7 +664,7 @@ a, button {
 			}
 			
 			@media screen and (max-width: @bp-compact-screens) {
-				top: 10.5%;
+				top: 5.5%;
 			}
 		}
 		+ .body > p:first-child {
@@ -665,6 +690,7 @@ a, button {
 		}
 	}
 	.double {
+		.use-column-grid(940px, 20px, 6);
 		.clearfix();
 		max-width: 1024px;
 		margin-left: -4.5%;
