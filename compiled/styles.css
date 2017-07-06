@@ -926,6 +926,14 @@ button:focus {
     width: auto;
   }
 }
+@media screen and (max-width: 380px) {
+  #profile .role {
+    margin-top: 14.5px;
+    margin-top: 0.725rem;
+    margin-bottom: 14.5px;
+    margin-bottom: 0.725rem;
+  }
+}
 /*
 	Case studies
 */
