@@ -889,8 +889,8 @@ button:focus {
 }
 #profile .content {
   position: relative;
-  padding-right: 39.09574468%;
-  padding-right: calc(37.5% + 15px);
+  padding-right: 36.92375887%;
+  padding-right: calc(35.41666667% + 14.16666667px);
 }
 #profile aside {
   position: absolute;
