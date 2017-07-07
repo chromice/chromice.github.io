@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<link href="http://microformats.org/profile/hcard" rel="profile">
-	<link href="/compiled/styles.css?v=2.3" rel="stylesheet">
+	<link href="/compiled/styles.css?v=2.4" rel="stylesheet">
 	<!--[if lt IE 9]><script src="/compiled/html5shiv.js"></script><![endif]-->
 </head>
 <body><div class="wrapper">
@@ -87,10 +87,16 @@
 			
 			<div class="combined">
 				<figure class="screen ipad">
-					<img src="/content/timers_ipad_final.png">
+					<video title="Timers (iPad)" poster="/content/timers_ipad_final.png" width="1024" height="768" loop> 
+						<source src="/content/timers_ipad_final.webm" type="video/webm; codecs=vp8,vorbis" />
+						<source src="/content/timers_ipad_final.mp4" />
+					</video>
 				</figure>
-				<figure class="screen iphone">
-					<img src="/content/timers_iphone_final.png">
+				<figure class="screen iphone left">
+					<video title="Timers (iPhone)" poster="/content/timers_iphone_final.png" width="320" height="568" loop> 
+						<source src="/content/timers_iphone_final.webm" type="video/webm; codecs=vp8,vorbis" />
+						<source src="/content/timers_iphone_final.mp4" />
+					</video>
 				</figure>
 			</div>
 			
@@ -369,6 +375,6 @@
 		ga('create', 'UA-6662553-3', 'auto');
 		ga('send', 'pageview');
 	</script>
-	<script src="/compiled/scripts.js?v=2.3"></script>
+	<script src="/compiled/scripts.js?v=2.4"></script>
 </div></body>
 </html>

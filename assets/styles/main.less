@@ -332,7 +332,7 @@ video {
 		
 		transition: all 100ms @ease-out-sine;
 	
-		.playing & {
+		.playing > & {
 			opacity: 0;
 			transform: scale(1.4);
 		}
@@ -657,7 +657,12 @@ a, button {
 	}
 	.combined {
 		position: relative;
+		margin-left: -2.25%;
+		margin-right: -2.25%;
 		
+		.screen.ipad {
+			transform: scale(0.96);
+		}
 		.screen.iphone {
 			position: absolute;
 			top: 6.2%;
@@ -740,16 +745,41 @@ a, button {
 		Show/hide screens
 	*/
 	.screen {
-		transition: opacity 100ms 100ms, transform 500ms @ease-in-out-back;
+		transition: opacity 150ms, transform 200ms @ease-in-out-sine;
 	}
 	.playing {
-		.screen.iphone.static {
-			transform: translateX(-150%);
-			transition-delay: 300ms, 0ms;
-			opacity: 0;
+		.screen.iphone {
+			transform: translateX(-150%) scale(0.97);
+			
+			&.playing {
+				transform: translate(108%);
+				
+				@media screen and (max-width: @bp-hide-ipad) {
+					transform: none;
+				}
+			}
 		}
-		.screen.iphone.static.right {
-			transform: translateX(150%);
+		.screen.iphone.right {
+			transform: translateX(150%) scale(0.97);
+			
+			&.playing {
+				transform: translate(-75%);
+				
+				@media screen and (max-width: @bp-hide-ipad) {
+					transform: none;
+				}
+			}
+		}
+		.screen.ipad {
+			transform: scale(0.95);
+			opacity: 0.75;
+			filter: blur(1px);
+			
+			&.playing {
+				opacity: 1.0;
+				transform: scale(1.0);
+				filter: none;
+			}
 		}
 	}
 }

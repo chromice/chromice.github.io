@@ -68,22 +68,32 @@
 	/*
 		Video player
 	*/
+	var playing = null;
 	var videos = d.getElementsByTagName('video');
+	
 	Array.prototype.forEach.call(videos, function(v, i) {
-		var container = v.parentNode.parentNode;
+		var frame = v.parentNode;
+		var container = frame.parentNode;
 		var button = d.createElement('span');
 		button.className = 'status';
 		v.parentNode.appendChild(button);
 		
 		v.addEventListener('click', function (e) {
 			if (v.paused) {
+				if (playing) {
+					playing.pause();
+					playing = v.currentTime = 0;
+				}
 				v.play();
+				playing = v;
 			} else {
 				v.pause();
 				v.currentTime = 0;
+				playing = null;
 			}
 		});
 		v.addEventListener('play', function () {
+			addClass(frame, 'playing');
 			addClass(container, 'playing');
 			
 			if (ga) {
@@ -96,6 +106,7 @@
 			}
 		});
 		v.addEventListener('pause', function () {
+			removeClass(frame, 'playing');
 			removeClass(container, 'playing');
 			
 			if (ga) {

@@ -753,7 +753,7 @@ video + span {
   pointer-events: none;
   transition: all 100ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-.playing video + span {
+.playing > video + span {
   opacity: 0;
   -webkit-transform: scale(1.4);
   -ms-transform: scale(1.4);
@@ -1117,6 +1117,13 @@ button:focus {
 }
 #recent-projects .combined {
   position: relative;
+  margin-left: -2.25%;
+  margin-right: -2.25%;
+}
+#recent-projects .combined .screen.ipad {
+  -webkit-transform: scale(0.96);
+  -ms-transform: scale(0.96);
+  transform: scale(0.96);
 }
 #recent-projects .combined .screen.iphone {
   position: absolute;
@@ -1192,20 +1199,58 @@ button:focus {
   }
 }
 #recent-projects .screen {
-  transition: opacity 100ms 100ms, -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: opacity 100ms 100ms, transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: opacity 150ms, -webkit-transform 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: opacity 150ms, transform 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-#recent-projects .playing .screen.iphone.static {
-  -webkit-transform: translateX(-150%);
-  -ms-transform: translateX(-150%);
-  transform: translateX(-150%);
-  transition-delay: 300ms, 0ms;
-  opacity: 0;
+#recent-projects .playing .screen.iphone {
+  -webkit-transform: translateX(-150%) scale(0.97);
+  -ms-transform: translateX(-150%) scale(0.97);
+  transform: translateX(-150%) scale(0.97);
 }
-#recent-projects .playing .screen.iphone.static.right {
-  -webkit-transform: translateX(150%);
-  -ms-transform: translateX(150%);
-  transform: translateX(150%);
+#recent-projects .playing .screen.iphone.playing {
+  -webkit-transform: translate(108%);
+  -ms-transform: translate(108%);
+  transform: translate(108%);
+}
+@media screen and (max-width: 414px) {
+  #recent-projects .playing .screen.iphone.playing {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+#recent-projects .playing .screen.iphone.right {
+  -webkit-transform: translateX(150%) scale(0.97);
+  -ms-transform: translateX(150%) scale(0.97);
+  transform: translateX(150%) scale(0.97);
+}
+#recent-projects .playing .screen.iphone.right.playing {
+  -webkit-transform: translate(-75%);
+  -ms-transform: translate(-75%);
+  transform: translate(-75%);
+}
+@media screen and (max-width: 414px) {
+  #recent-projects .playing .screen.iphone.right.playing {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+#recent-projects .playing .screen.ipad {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  opacity: 0.75;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+#recent-projects .playing .screen.ipad.playing {
+  opacity: 1.0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: none;
+  filter: none;
 }
 /*
 	Employment history
