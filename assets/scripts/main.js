@@ -51,7 +51,7 @@
 		var root = /firefox/i.test(navigator.userAgent) ? d.documentElement : d.body;
 		var amount = rect.top + root.scrollTop;
 		
-		scrollTo(root, amount, amount/7);
+		scrollTo(root, amount, amount > 100 ? 700 : amount/7);
 		history.pushState(null, '', href);
 	}
 	

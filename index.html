@@ -55,6 +55,13 @@
 				<h4>Mission</h4>
 				<p>Time tracking has always been an important part my workflow, but I never liked any of the existing time tracking solutions and &ndash; considering how few people willingly track their time despite all the benefits &ndash; I felt I was not&nbsp;alone.</p>
 				
+				<p>Soon after I bought my Apple Watch, I began exploring the idea of making my own time tracking app. It had to be easy to understand and use, so I was really keen on exposing all functionality through a single screen. It had to work on both my Mac and iPhone, and I wanted to build it myself, so it had to be designed primarily as a web&nbsp;app.</p>
+				
+				
+				<h4>Prototype #1</h4>
+				
+				<p>Having no idea of what functionality should be included in the minimal viable product specification, I decided that the best course of action would be to build a prototype and use it for a few months to validate the core concept, expose any limitations, and gather a dataset that could drive future design decisions. It just had to help me track my time and break it down by activity and&nbsp;date.</p>
+				
 				<div class="double">
 				
 					<figure class="concept">
@@ -64,22 +71,18 @@
 						<img src="/content/timers_concept_1.jpg">
 					</figure>
 				</div>
-			
-				<p>Soon after I bought my Apple Watch, I began exploring the idea of making my own time tracking app. It had to be easy to understand and use, so I was really keen on exposing all functionality through a single screen. It had to work on both my Mac and iPhone, and I wanted to build it myself, so it had to be designed primarily as a web&nbsp;app.</p>
-				
-				<h4>Prototype #1</h4>
-				
-				<p>Having no idea of what functionality should be included in the minimal viable product specification, I decided that the best course of action would be to build a prototype and use it for a few months to validate the core concept, expose any limitations, and gather a dataset that could drive future design decisions. It just had to help me track my time and break it down by activity and&nbsp;date.</p>
 
-				<figure class="concept">
-					<img src="/content/timers_concept_3.jpg">
-				</figure>
-			
 				<p>The <a href="//github.com/chromice/timelier.app">prototype</a> worked quite well, but it quickly became apparent that a very long list of timers broken down by date was completely unmanageable and unnecessary. I also found myself calculating and comparing weekly and monthly totals too often, so I had to find a way to integrate this functionality without bloating the&nbsp;interface.</p>
 				
 				<h4>Prototype #2</h4>
 				
 				<p>It took a few iterations to arrive at the final look and feel that could work on any platform at any resolution, but it was worth the effort and I am quite happy with the&nbsp;result.</p>
+				
+				<figure class="concept">
+					<img src="/content/timers_concept_3.jpg">
+				</figure>
+				
+				<p>Unfortunately, testing of the second prototype on older mobile devices revealed serious performance issues, caused by ambitious transitions and animations. Long term usability of the app on mobile devices in general was problematic. The app had no access – as a purely web application – to notifications, quick shortcuts, and other device&nbsp;services, which made using it daily a lot more cumbersome than a native app would ever be.</p>
 			</div>
 			
 			<div class="combined">
@@ -92,8 +95,6 @@
 			</div>
 			
 			<div class="body">
-				
-				<p>Unfortunately, testing of the second prototype on older mobile devices revealed serious performance issues, caused by ambitious transitions and animations. The longer term usability of the app on mobile devices in general was called into question, having no access – as a web application – to notifications, quick shortcuts, and other device&nbsp;services.</p>
 				
 				<h4>Result</h4>
 				
