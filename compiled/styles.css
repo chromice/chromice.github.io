@@ -1246,9 +1246,9 @@ button:focus {
 }
 #recent-projects .playing .screen.ipad.playing {
   opacity: 1.0;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
   -webkit-filter: none;
   filter: none;
 }
