@@ -1208,9 +1208,9 @@ button:focus {
   transform: translateX(-150%) scale(0.97);
 }
 #recent-projects .playing .screen.iphone.playing {
-  -webkit-transform: translate(108%);
-  -ms-transform: translate(108%);
-  transform: translate(108%);
+  -webkit-transform: translate(111%);
+  -ms-transform: translate(111%);
+  transform: translate(111%);
 }
 @media screen and (max-width: 414px) {
   #recent-projects .playing .screen.iphone.playing {
@@ -1225,9 +1225,9 @@ button:focus {
   transform: translateX(150%) scale(0.97);
 }
 #recent-projects .playing .screen.iphone.right.playing {
-  -webkit-transform: translate(-75%);
-  -ms-transform: translate(-75%);
-  transform: translate(-75%);
+  -webkit-transform: translate(-111%);
+  -ms-transform: translate(-111%);
+  transform: translate(-111%);
 }
 @media screen and (max-width: 414px) {
   #recent-projects .playing .screen.iphone.right.playing {
