@@ -20,16 +20,9 @@
 				eventAction: 'click',
 				eventLabel: href
 			});
-		} else if (href.substr(0, 1) === '#') {
-			ga('send', 'event', {
-				eventCategory: 'Inbound Link',
-				eventAction: 'click',
-				eventLabel: href,
-				transport: 'beacon'
-			});
 		} else {
 			ga('send', 'event', {
-				eventCategory: 'Outbound Link',
+				eventCategory: 'Link',
 				eventAction: 'click',
 				eventLabel: href,
 				transport: 'beacon'
