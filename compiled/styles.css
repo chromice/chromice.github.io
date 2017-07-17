@@ -1164,6 +1164,9 @@ button:focus {
     width: 66%;
     margin: 33% auto 30%;
   }
+  #recent-projects .combined .screen.iphone.right {
+    right: 0;
+  }
 }
 #recent-projects .combined + footer {
   margin-top: 87px;
