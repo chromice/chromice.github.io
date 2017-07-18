@@ -586,25 +586,25 @@ a, button {
 		}
 		dt {
 			margin-right: 0.4em;
-			.font-align(-1, 1.45, section);
+			.font-align(-1, 1.5, section);
 			
 			&:after {
 				content: ': ';
-				.font(-1, 1.45);
+				.font(-1, 1.5);
 			}
 			
 		}
 		dd {
 			margin-left: 0;
 			.margin-right(@grid-gutter);
-			.font-align(-1, 1.45, highlight);
+			.font-align(-1, 1.5, highlight);
 			
 			&:last-child {
 				margin-right: 0;
 			}
 		}
 		
-		@media screen and (max-width: @bp-compact-layout) {
+		@media screen and (max-width: 810px) {
 			dt {
 				clear: left;
 			}
@@ -861,7 +861,7 @@ a, button {
 			margin-right: 0;
 		}
 		
-		@media screen and (max-width: 740px) {
+		@media screen and (max-width: @bp-compact-layout) {
 			width: auto;
 			margin-right: 0;
 		}

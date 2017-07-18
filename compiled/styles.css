@@ -1078,14 +1078,14 @@ button:focus {
 #recent-projects header > dl dt {
   margin-right: 0.4em;
   position: relative;
-  top: 3.408px;
-  top: 0.1704rem;
-  font: 500 16px / 1.45 'Oswald', sans-serif;
+  top: 3.008px;
+  top: 0.1504rem;
+  font: 500 16px / 1.5 'Oswald', sans-serif;
   font-size: 0.8rem;
 }
 #recent-projects header > dl dt:after {
   content: ': ';
-  font: 400 16px / 1.45 'Lato', sans-serif;
+  font: 400 16px / 1.5 'Lato', sans-serif;
   font-size: 0.8rem;
 }
 #recent-projects header > dl dd {
@@ -1093,15 +1093,15 @@ button:focus {
   margin-right: 4.25531915%;
   margin-right: calc(0% + 0px + 40px);
   position: relative;
-  top: 4.448px;
-  top: 0.2224rem;
-  font: italic 400 16px / 1.45 'Lato', sans-serif;
+  top: 4.048px;
+  top: 0.2024rem;
+  font: italic 400 16px / 1.5 'Lato', sans-serif;
   font-size: 0.8rem;
 }
 #recent-projects header > dl dd:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 810px) {
   #recent-projects header > dl dt {
     clear: left;
   }
