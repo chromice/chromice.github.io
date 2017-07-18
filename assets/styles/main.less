@@ -54,7 +54,7 @@
 @accent-font-variation: 400;
 @accent-font-offset: 0.836;
 
-.use-custom-scale(20px, 10px 14px 20px 29px 42px 61px 88px 128px);
+.use-custom-scale(20px, 10px 16px 20px 29px 42px 61px 88px 128px);
 .use-baseline-grid(0, 1.45, regular);
 .use-column-grid(940px, 40px, 6);
 
@@ -453,33 +453,42 @@ a, button {
 	}
 	
 	.content > p {
-		// .font-align(1, 1.25, accent);
+		margin-left: auto;
+		margin-right: auto;
 	}
 	
 	/*
 		Expertise
 	*/
-	.content {
-		position: relative;
-		.padding-right(2.125);
-	}
-	
 	aside {
-		position: absolute;
-		.top(0);
-		.right(0);
-		.width(2);
+		.width(2.625);
+		.padding-left(0.25);
+		.padding-right(0.125);
+		.margin-top(0.5);
+		.margin-bottom(0.5);
+		float: left;
+		
+		+ aside {
+			float: right;
+			.padding-left(0);
+			.padding-right(0.375);
+			
+			+ p {
+				clear: both;
+			}
+		}
 		
 		h2 {
 			.font-align(0, 1.25, section);
 			.margin-top(0);
-			.margin-bottom(0.25);
-			
-			> span {
-				// border-bottom: 2px solid @color-text;
-			}
+			.margin-bottom(0.6, -2px);
+			border-bottom: 2px solid @color-text;
+			.padding-bottom(0.15);
 		}
-		
+		p {
+			.font-size(-1);
+			.margin-bottom(0.5);
+		}
 		ul {
 			.font-size(-1);
 			
@@ -489,12 +498,17 @@ a, button {
 		}
 	}
 	
-	@media screen and (max-width: 740px) {
-		.content {
-			padding-right: 0;
+	@media screen and (max-width: @bp-compact-screens) {
+		aside, aside + aside {
+			.width(2.875);
+			.padding-left(0);
+			.padding-right(0.125);
 		}
-		aside {
-			position: static;
+	}
+	
+	@media screen and (max-width: 640px) {
+		aside, aside + aside {
+			float: none;
 			width: auto;
 		}
 	}
@@ -502,13 +516,6 @@ a, button {
 		.role {
 			.margin-top(0.5);
 			.margin-bottom(0.5);
-		}
-	}
-	@media screen and (max-width: @bp-small-copy) {
-		aside {
-			ul {
-				// margin-left: 1.25em;
-			}
 		}
 	}
 }

@@ -557,10 +557,10 @@ section + footer {
 }
 section + footer p {
   position: relative;
-  top: 6.672px;
-  top: 0.3336rem;
-  font: 400 14px / 1.45 'Lato', sans-serif;
-  font-size: 0.7rem;
+  top: 4.448px;
+  top: 0.2224rem;
+  font: 400 16px / 1.45 'Lato', sans-serif;
+  font-size: 0.8rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -898,17 +898,31 @@ button:focus {
 #profile .contact a {
   text-decoration: none;
 }
-#profile .content {
-  position: relative;
-  padding-right: 36.92375887%;
-  padding-right: calc(35.41666667% + 14.16666667px);
+#profile .content > p {
+  margin-left: auto;
+  margin-right: auto;
 }
 #profile aside {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30.4964539%;
-  width: calc(33.33333333% - 26.66666667px);
+  width: 41.35638298%;
+  width: calc(43.75% - 22.5px);
+  padding-left: 4.34397163%;
+  padding-left: calc(4.16666667% + 1.66666667px);
+  padding-right: 2.17198581%;
+  padding-right: calc(2.08333333% + 0.83333333px);
+  margin-top: 14.5px;
+  margin-top: 0.725rem;
+  margin-bottom: 14.5px;
+  margin-bottom: 0.725rem;
+  float: left;
+}
+#profile aside + aside {
+  float: right;
+  padding-left: 0;
+  padding-right: 6.51595745%;
+  padding-right: calc(6.25% + 2.5px);
+}
+#profile aside + aside + p {
+  clear: both;
 }
 #profile aside h2 {
   position: relative;
@@ -917,23 +931,40 @@ button:focus {
   font: 500 20px / 1.25 'Oswald', sans-serif;
   font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 7.25px;
-  margin-bottom: calc(0.3625rem + 0.2rem);
+  margin-bottom: 17.4px;
+  margin-bottom: calc(0.87rem + -2px + 0.2rem);
+  border-bottom: 2px solid #333;
+  padding-bottom: 4.35px;
+  padding-bottom: 0.2175rem;
+}
+#profile aside p {
+  font-size: 16px;
+  font-size: 0.8rem;
+  margin-bottom: 14.5px;
+  margin-bottom: 0.725rem;
 }
 #profile aside ul {
-  font-size: 14px;
-  font-size: 0.7rem;
+  font-size: 16px;
+  font-size: 0.8rem;
 }
 #profile aside ul li {
   margin-bottom: 7.25px;
   margin-bottom: 0.3625rem;
 }
-@media screen and (max-width: 740px) {
-  #profile .content {
-    padding-right: 0;
+@media screen and (max-width: 1023px) {
+  #profile aside,
+  #profile aside + aside {
+    width: 45.70035461%;
+    width: calc(47.91666667% - 20.83333333px);
+    padding-left: 0;
+    padding-right: 2.17198581%;
+    padding-right: calc(2.08333333% + 0.83333333px);
   }
-  #profile aside {
-    position: static;
+}
+@media screen and (max-width: 640px) {
+  #profile aside,
+  #profile aside + aside {
+    float: none;
     width: auto;
   }
 }
@@ -1047,25 +1078,25 @@ button:focus {
 #recent-projects header > dl dt {
   margin-right: 0.4em;
   position: relative;
-  top: 5.762px;
-  top: 0.2881rem;
-  font: 500 14px / 1.45 'Oswald', sans-serif;
-  font-size: 0.7rem;
+  top: 3.408px;
+  top: 0.1704rem;
+  font: 500 16px / 1.45 'Oswald', sans-serif;
+  font-size: 0.8rem;
 }
 #recent-projects header > dl dt:after {
   content: ': ';
-  font: 400 14px / 1.45 'Lato', sans-serif;
-  font-size: 0.7rem;
+  font: 400 16px / 1.45 'Lato', sans-serif;
+  font-size: 0.8rem;
 }
 #recent-projects header > dl dd {
   margin-left: 0;
   margin-right: 4.25531915%;
   margin-right: calc(0% + 0px + 40px);
   position: relative;
-  top: 6.672px;
-  top: 0.3336rem;
-  font: italic 400 14px / 1.45 'Lato', sans-serif;
-  font-size: 0.7rem;
+  top: 4.448px;
+  top: 0.2224rem;
+  font: italic 400 16px / 1.45 'Lato', sans-serif;
+  font-size: 0.8rem;
 }
 #recent-projects header > dl dd:last-child {
   margin-right: 0;
