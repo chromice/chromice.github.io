@@ -931,8 +931,8 @@ button:focus {
   font: 500 20px / 1.25 'Oswald', sans-serif;
   font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 17.4px;
-  margin-bottom: calc(0.87rem + -2px + 0.2rem);
+  margin-bottom: 10.15px;
+  margin-bottom: calc(0.5075rem + -2px + 0.2rem);
   border-bottom: 2px solid #333;
   padding-bottom: 4.35px;
   padding-bottom: 0.2175rem;
