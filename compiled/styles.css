@@ -1235,16 +1235,18 @@ button:focus {
 #recent-projects .screen {
   transition: opacity 150ms, -webkit-transform 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: opacity 150ms, transform 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition-delay: 200ms;
 }
 #recent-projects .playing .screen.iphone {
-  -webkit-transform: translateX(-150%) scale(0.97);
-  -ms-transform: translateX(-150%) scale(0.97);
-  transform: translateX(-150%) scale(0.97);
+  transition-delay: 0ms;
+  -webkit-transform: translateX(-150%) scale(0.95);
+  -ms-transform: translateX(-150%) scale(0.95);
+  transform: translateX(-150%) scale(0.95);
 }
 #recent-projects .playing .screen.iphone.playing {
-  -webkit-transform: translate(111%);
-  -ms-transform: translate(111%);
-  transform: translate(111%);
+  -webkit-transform: translate(113%);
+  -ms-transform: translate(113%);
+  transform: translate(113%);
 }
 @media screen and (max-width: 414px) {
   #recent-projects .playing .screen.iphone.playing {
@@ -1254,14 +1256,14 @@ button:focus {
   }
 }
 #recent-projects .playing .screen.iphone.right {
-  -webkit-transform: translateX(150%) scale(0.97);
-  -ms-transform: translateX(150%) scale(0.97);
-  transform: translateX(150%) scale(0.97);
+  -webkit-transform: translateX(150%) scale(0.95);
+  -ms-transform: translateX(150%) scale(0.95);
+  transform: translateX(150%) scale(0.95);
 }
 #recent-projects .playing .screen.iphone.right.playing {
-  -webkit-transform: translate(-111%);
-  -ms-transform: translate(-111%);
-  transform: translate(-111%);
+  -webkit-transform: translate(-113%);
+  -ms-transform: translate(-113%);
+  transform: translate(-113%);
 }
 @media screen and (max-width: 414px) {
   #recent-projects .playing .screen.iphone.right.playing {

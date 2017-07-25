@@ -756,13 +756,15 @@ a, button {
 	*/
 	.screen {
 		transition: opacity 150ms, transform 200ms @ease-in-out-sine;
+		transition-delay: 200ms;
 	}
 	.playing {
 		.screen.iphone {
-			transform: translateX(-150%) scale(0.97);
+			transition-delay: 0ms;
+			transform: translateX(-150%) scale(0.95);
 			
 			&.playing {
-				transform: translate(111%);
+				transform: translate(113%);
 				
 				@media screen and (max-width: @bp-hide-ipad) {
 					transform: none;
@@ -770,10 +772,10 @@ a, button {
 			}
 		}
 		.screen.iphone.right {
-			transform: translateX(150%) scale(0.97);
+			transform: translateX(150%) scale(0.95);
 			
 			&.playing {
-				transform: translate(-111%);
+				transform: translate(-113%);
 				
 				@media screen and (max-width: @bp-hide-ipad) {
 					transform: none;
