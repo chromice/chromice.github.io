@@ -19,7 +19,7 @@
     "gulp-util": "^3.0.4",
     "jshint-stylish": "^2.0.0",
     "node-notifier": "^4.2.1",
-    "open": "0.0.5"
+    "open": "7.2.1"
   },
   "scripts": {
   },
