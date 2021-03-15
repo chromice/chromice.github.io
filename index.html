@@ -7,8 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<link href="http://microformats.org/profile/hcard" rel="profile">
-	<link href="/compiled/styles.css?v=2.5" rel="stylesheet">
-	<!--[if lt IE 9]><script src="/compiled/html5shiv.js"></script><![endif]-->
+	<link href="/styles.css?v=2.66" rel="stylesheet">
+	<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
 </head>
 <body><div class="wrapper">
 	<section id="profile" class="h-card vcard">
@@ -53,15 +53,51 @@
 				</ul>
 			</aside>
 			
-			<p>I have been programming since a very young age &ndash; making basic text adventures in <em>Pascal</em>, modifying Quake&rsquo;s game logic in <em>QuakeC</em>, creating neat visual effects in <em>MASM</em>, cobbling together an odd utility application in <em>C++</em> &ndash; and have intuitive understanding of many software development paradigms and&nbsp;principles.</p>
-
-			<p>I find great pleasure in the process of identifying a problem, taking into consideration a wide range of technical and business constraints, and implementing a solution that is both efficient and humane in its execution. Especially when it helps my client reach their audience, serve their customers, or improve their internal&nbsp;processes.</p>
+			<p>I find great pleasure in the process of identifying the problem, taking into consideration the full range of technical and business constraints, and implementing a solution that is both efficient and humane in its execution. Especially when it helps my client reach their audience, serve their customers, or improve their internal&nbsp;processes.</p>
 			
 			<p class="contact">Whether you are looking for someone to enhance your team&rsquo;s expertise or want to completely outsource your web development needs, feel free to contact me via&nbsp;<a class="u-email email" href="mailto:anton@goodmoaning.me">anton@goodmoaning.me</a></p>
 		</div>
 	</section>
 	<section id="recent-projects">
 		<h2>Case studies</h2>
+		
+		<article id="timers-app" class="expandable">
+			<header>
+				<span class="icon clean"><img src="/content/smart_space_logo.png"></span>
+				<h3>Smartspace</h3>
+				<p>A fully functional recreation of Smartspace Meeting Room Booking addons for Microsoft&nbsp;Outlook.</p>
+				<dl>
+					<dt>Responsibilities</dt>
+					<dd>Development</dd>
+					<dt>Technology used</dt>
+					<dd>Vue.js, Electron</dd>
+				</dl>
+			</header>
+			
+			<div class="body">
+				<h4>Mission</h4>
+				<p>SmartSpace already had a great product, when they contacted me. But it required a very involved deployment process that was simply too much for a member of the sales team who just wanted to demostrate all the functionality the addons&nbsp;provided.</p>
+				<p>In order to create a version that could be easily sent to prospective clients, I had to faithfully recreate parts of the Outlook interface and a lot of functionality of its Calendar and Mail parts to provide context, as well as all the features of the addons themselves, including search and filtering functionality, interactive maps and floorplans, dynamic report generation, and always up-to-date demo&nbsp;data.</p>
+			</div>
+			
+			<figure class="screen macbook">
+				<video title="Smartspace" poster="/content/smart_space.jpeg" width="1280" height="800" loop> 
+					<source src="/content/smart_space.webm" type="video/webm; codecs=vp8,vorbis" />
+					<source src="/content/smart_space.mp4" />
+				</video>
+			</figure>
+
+			
+			<div class="body">
+				<h4>Result</h4>
+				
+				<p>Thankfully, all the functionality requirements have been exhaustively captured in the original addons, which I could use for reference. This project took about 6 weeks from an empty project directory to a fully featured Electron application, which most people would struggle to distinguish from the real&nbsp;thing.</p>
+			</div>
+			
+			<footer>
+				<p class="links"></p>
+			</footer>
+		</article>
 		
 		<article id="timers-app" class="expandable">
 			<header>
@@ -399,6 +435,6 @@
 		ga('create', 'UA-6662553-3', 'auto');
 		ga('send', 'pageview');
 	</script>
-	<script src="/compiled/scripts.js?v=2.5"></script>
+	<script src="/main.js?v=2.66"></script>
 </div></body>
 </html>
