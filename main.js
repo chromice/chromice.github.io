@@ -1,4 +1,5 @@
 (function (w, d, c) {
+	var ga = false
 	/*
 		Track outbound clicks
 	*/
@@ -43,7 +44,7 @@
 		var rect = section.getBoundingClientRect();
 		var root = d.documentElement;
 		var amount = rect.top + root.scrollTop;
-		console.log('Scrolling to ', rect, root, amount)
+		// console.log('Scrolling to ', rect, root, amount)
 		scrollTo(root, amount, amount > 100 ? 700 : amount/7);
 		history.pushState(null, '', href);
 	}
@@ -164,7 +165,7 @@
 			currentTime += increment;
 			var val = Math.easeInOutQuad(currentTime, start, change, duration);
 			element.scrollTop = val;
-			console.log('Scroll', element, element.scrollTop)
+			// console.log('Scroll', element, element.scrollTop)
 			if (currentTime < duration) {
 				animate(animateScroll);
 			}
