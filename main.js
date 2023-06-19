@@ -137,7 +137,8 @@
 			setTimeout(function () {
 				article.className = '';
 				var rect = article.getBoundingClientRect();
-				var root = /firefox/i.test(navigator.userAgent) ? d.documentElement : d.body;
+				var root = d.documentElement;
+				// var root = /firefox/i.test(navigator.userAgent) ? d.documentElement : d.body;
 				scrollTo(root, rect.top + root.scrollTop - 29, 500);
 			}, 100);
 			
